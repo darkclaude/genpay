@@ -1,0 +1,46 @@
+page-authenticate {
+
+}
+.rb{
+    height: 80%;
+}
+.ss{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div {
+    
+        margin-left: auto;
+        margin-right: auto;
+    }
+    input{
+        
+        font-size : 30px;
+    }
+    .ff{
+        width: 100%;
+    }
+  
+    
+    .app-font{
+        white-space: inherit;
+        font-size: 50px;
+        opacity: 0.7;
+      }
+    .toast-success {
+        > div{
+             background-color:#32db64!important;
+         }
+      }
+      .toast-failure {
+        > div{
+             background-color:#e23434!important;
+         }
+      }
+    
+      .login{
+          margin-top: 40px;
+         margin-left: 90px;
+         width:120px;
+      }

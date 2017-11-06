@@ -1,0 +1,76 @@
+page-home {
+   
+   
+}
+.container{ width:100%; }
+
+.align-left{ float: left;width:50%; }
+.align-right{float: right;width:50%}
+div {
+
+    margin-left: auto;
+    margin-right: auto;
+}
+ion-label{
+    margin-left: auto;
+    margin-right: auto;
+}
+input{
+    
+    font-size : 30px;
+}
+.ff{
+    width: 100%;
+}
+
+.ss{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.logb{
+
+    /*
+    
+    background-image: -ms-linear-gradient(bottom, #FDFFFC 0%, #8C8ADE 50%, #49ACDE 100%, #807779 100%);
+    
+ 
+    background-image: -moz-linear-gradient(bottom, #FDFFFC 0%, #8C8ADE 50%, #49ACDE 100%, #807779 100%);
+    
+  
+    background-image: -o-linear-gradient(bottom, #FDFFFC 0%, #8C8ADE 50%, #49ACDE 100%, #807779 100%);
+    
+ 
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #FDFFFC), color-stop(50, #8C8ADE), color-stop(100, #49ACDE), color-stop(100, #807779));
+    
+  
+    background-image: -webkit-linear-gradient(bottom, #FDFFFC 0%, #8C8ADE 50%, #49ACDE 100%, #807779 100%);
+    
+ 
+    background-image: linear-gradient(to top, #FDFFFC 0%, #8C8ADE 50%, #49ACDE 100%, #807779 100%);
+    background-repeat: no-repeat;
+    */
+    
+}
+
+.app-font{
+    white-space: inherit;
+    font-size: 50px;
+    opacity: 0.7;
+  }
+.toast-success {
+    > div{
+         background-color:#32db64!important;
+     }
+  }
+  .toast-failure {
+    > div{
+         background-color:#e23434!important;
+     }
+  }
+
+  .login{
+      margin-top: 40px;
+     margin-left: 90px;
+     width:120px;
+  }

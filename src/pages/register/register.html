@@ -1,0 +1,64 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+   Register
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="fff" text-center padding>
+  
+  <br>
+
+    <h1 text-center ><font class="app-font">GENPAY</font></h1>
+    
+  <ion-item   >
+   
+    <ion-label floating >Enter First Name</ion-label>
+ <ion-input type="text"  class="btnp" [(ngModel)]="firstname" name="title"></ion-input>
+ </ion-item>
+ <ion-item >
+  
+   <ion-label floating >Enter Last Name</ion-label>
+<ion-input type="text"  class="btnp" [(ngModel)]="lastname" name="title"></ion-input>
+</ion-item>
+<ion-item >
+  
+   <ion-label floating >Enter Mobile Wallet Number</ion-label>
+<ion-input type="text"  class="btnp" [(ngModel)]="phone" name="title"></ion-input>
+</ion-item>
+<ion-item >
+  
+   <ion-label floating >Enter Password</ion-label>
+<ion-input type="password"  class="btnp" [(ngModel)]="password" name="title"></ion-input>
+</ion-item>
+<ion-item>
+<ion-label floating >Confirm Password</ion-label>
+<ion-input type="password"  class="btnp" [(ngModel)]="passwordc" name="title"></ion-input>
+</ion-item>
+
+
+
+ <br>
+ <br>
+ <!--
+ <ion-item>
+ <ion-label floating >Enter your Password </ion-label>
+ <ion-input type="password" [(ngModel)]="pass" name="title"></ion-input>
+ </ion-item>
+-->
+ <br>
+ 
+ <div >
+    <button   class="logb" [disabled]="isd" ion-button large (click)="register()">{{btnt}}
+      </button>
+</div>
+
+<br>
+<br>
+<div class='container'><div class=""><button   ion-button color="secondary" (click)="goback()">Go Back</button></div></div> 
+
+ 
+
+
+</ion-content>
