@@ -49,7 +49,7 @@ export class AuthenticatePage {
     this.btnt = "Activate";
   }
 
-  resend(): void{
+  resend(): void{ 
 
   }
   activate() :  void{

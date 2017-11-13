@@ -18,7 +18,7 @@ export class SearchPipe implements PipeTransform {
     if (searchTerm) {
        searchTerm = searchTerm.toUpperCase();
        return list.filter(item => {
-         return item.name.toUpperCase().indexOf(searchTerm) !== -1 
+         return item.merchantName.toUpperCase().indexOf(searchTerm) !== -1 
        });
      } else {
        return list;

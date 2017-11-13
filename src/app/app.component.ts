@@ -12,11 +12,12 @@ import { MainPage } from '../pages/main/main';
 import {ChangepasswordPage} from '../pages/changepassword/changepassword';
 import {EditprofilePage} from '../pages/editprofile/editprofile';
 import {BillerPage} from '../pages/biller/biller';
+//import {  ItemDetailsPageRegister  } from '../pages/item-details-register/item-details-register';
 @Component({
-  templateUrl: 'app.html'
+  templateUrl: 'app.html'     
 })
 export class MyApp {
-  rootPage:any = EditprofilePage;
+  rootPage:any = HomePage;
 
   constructor(private oneSignal : OneSignal,platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {

@@ -54,6 +54,14 @@ export class RegisterPage {
      this.class = "toast-failure";
      this.presentToast("Lastname required!")
    }
+   else if(!this.password){
+    this.class = "toast-failure";
+    this.presentToast("Password required!")
+  }
+  else if(!this.passwordc){
+    this.class = "toast-failure";
+    this.presentToast("Password required!")
+  }
    else if( !this.phone ||this.phone.length < 10 || this.phone.length>10 ){
     this.class = "toast-failure";
     this.presentToast("Invalid Phone Number!")

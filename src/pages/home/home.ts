@@ -61,6 +61,7 @@ this.isd = false;
 if(data.responseCode== 1){
   this.class ="toast-success";
   console.log(data);
+  this.storage.set('phone',this.udata.data.network);
   this.storage.set('phone',this.udata.data.phoneNumber);
   this.storage.set('firstname',this.udata.data.firstName);
   this.storage.set('fullname',this.udata.data.fullName);

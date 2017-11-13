@@ -35,7 +35,7 @@ sparam: string;
 term: string = '';
 snip: boolean=true;
 snip2: boolean = false;
-  constructor(private remoteService : RemoteServiceProvider,public storage: Storage,private toastCtrl : ToastController ,private navCtrl: NavController, private navParams: NavParams) {
+  constructor(private loadingCtrl: LoadingController,private remoteService : RemoteServiceProvider,public storage: Storage,private toastCtrl : ToastController ,private navCtrl: NavController, private navParams: NavParams) {
    
    
    
@@ -55,7 +55,24 @@ snip2: boolean = false;
 
   }
  logdata (val: any) {
-  this.navCtrl.push(BillerPage,{data : val});
+     
+  let loading = this.loadingCtrl.create({
+    content: 'Please wait...'
+  });
+
+  loading.present();
+  var url="http://172.18.12.212:8000/api/billers/"+val.merchantId.toString()+"/"+val.ova.toString();
+  //alert(this.url);
+  var body = {}
+  this.remoteService.getPosts(url).subscribe((data)=>{
+    console.log(data);
+    loading.dismiss();
+   // this.udata = data;
+    this.navCtrl.push(BillerPage,{data : data});
+    
+    //console.log(data);
+      });
+  
   //console.log(val)
   // alert(val.phonenumber);
   // this.sparam = val.phonenumber;
