@@ -22,6 +22,7 @@ import {EditprofilePage} from '../pages/editprofile/editprofile';
 import {BillerPage} from '../pages/biller/biller';
 import {BillerRefPage} from '../pages/billeref/billeref';
 import {BillerPayPage} from '../pages/billerpay/billerpay';
+import { BillerLookupPage} from '../pages/billerlookup/billerlookup';
 //import {SearchPipe} from '../pipes/search/search';
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import {BillerPayPage} from '../pages/billerpay/billerpay';
     BillerRefPage,
     MainPage,
     BillerPayPage,
+    BillerLookupPage,
     SettingsPage,
     ChangepasswordPage,
     BillerPage,
@@ -56,6 +58,7 @@ import {BillerPayPage} from '../pages/billerpay/billerpay';
     RegisterPage,
     MainPage,
     BillerPayPage,
+    BillerLookupPage,
     AuthenticatePage,
     BillerPage,
     BillerRefPage,

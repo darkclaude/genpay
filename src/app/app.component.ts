@@ -17,7 +17,7 @@ import {BillerPage} from '../pages/biller/biller';
   templateUrl: 'app.html'     
 })
 export class MyApp {
-  rootPage:any = HomePage;
+rootPage:any = HomePage;
 
   constructor(private oneSignal : OneSignal,platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
@@ -47,7 +47,7 @@ export class MyApp {
       this.oneSignal.handleNotificationOpened().subscribe(() => {
         // do something when a notification is opened
       });
-    
+     //this.oneSignal.enableVibrate(true);
       this.oneSignal.endInit();
      
       } catch (error) {

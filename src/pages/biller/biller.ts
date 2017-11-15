@@ -6,6 +6,7 @@ import {LoadingController} from 'ionic-angular';
 import { MainPage } from '../../pages/main/main';
 import { RegisterPage } from '../../pages/register/register';
 import { BillerRefPage} from '../../pages/billeref/billeref';
+import { BillerLookupPage} from '../../pages/billerlookup/billerlookup';
 import { RemoteServiceProvider } from '../../providers/remote-service/remote-service';
 
 /**
@@ -85,7 +86,7 @@ changepass(){
 
       this.storage.set('billeracc',this.accountno);
       this.storage.set('billeracc',this.accountno);
-    this.navCtrl.push(BillerRefPage,{data : this.data});
+    this.navCtrl.push(BillerLookupPage,{data : this.data});
     // this.navCtrl.setRoot(MainPage,{data: JSON.stringify(this.udata)});
     }
    
@@ -131,7 +132,8 @@ changepass(){
       
       if(data.responseCode== "01"){
         this.class ="toast-success";
-      
+        this.storage.set('holder',data.data.name);
+        this.storage.set('holder',data.data.name);
         this.presentToast("Lookup Successful");
         
       }
