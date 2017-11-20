@@ -10,7 +10,7 @@ import { Injectable,Pipe, PipeTransform } from '@angular/core';
   pure:true
 })
 @Injectable()
-export class SearchPipe implements PipeTransform {
+export class SearchCatPipe implements PipeTransform {
   /**
    * Takes a value and makes it lowercase.
    */

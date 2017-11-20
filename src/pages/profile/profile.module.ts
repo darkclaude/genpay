@@ -8,7 +8,9 @@ import { SearchPipe } from '../../pipes/search/search';
     SearchPipe
   ],
   imports: [
+
     IonicPageModule.forChild(ProfilePage),
+   
   ],
 })
 export class ProfilePageModule {}

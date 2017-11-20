@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
+import { FormsModule }   from '@angular/forms';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
@@ -20,11 +21,12 @@ import { MainPage } from '../pages/main/main';
 import {ChangepasswordPage} from '../pages/changepassword/changepassword';
 import {EditprofilePage} from '../pages/editprofile/editprofile';
 import {BillerPage} from '../pages/biller/biller';
-import {ProfilePage2} from '../pages/profile2/profile2';
+
 import {BillerRefPage} from '../pages/billeref/billeref';
 import {BillerPayPage} from '../pages/billerpay/billerpay';
 import { BillerLookupPage} from '../pages/billerlookup/billerlookup';
-//import {SearchPipe} from '../pipes/search/search';
+//mport { SearchPipe } from '../pipes/search/search';
+//import { SearchBarLayout3 } from '../components/search-bar/layout-3/search-bar-layout-3';
 @NgModule({
   declarations: [
     MyApp,
@@ -33,12 +35,12 @@ import { BillerLookupPage} from '../pages/billerlookup/billerlookup';
     BillerRefPage,
     MainPage,
     BillerPayPage,
-    ProfilePage2,
+    //ProfilePage2,
     BillerLookupPage,
     SettingsPage,
     ChangepasswordPage,
     BillerPage,
-   
+  //SearchPipe,
     EditprofilePage,
  
     AuthenticatePage
@@ -46,12 +48,14 @@ import { BillerLookupPage} from '../pages/billerlookup/billerlookup';
   ],
   imports: [
     BrowserModule,
+  
     IonicModule.forRoot(MyApp),
     IonicStorageModule.forRoot({
       name: '__mydb',
          driverOrder: ['sqlite','websql','indexeddb']
     }),
-    HttpModule
+    HttpModule,
+    
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -60,7 +64,7 @@ import { BillerLookupPage} from '../pages/billerlookup/billerlookup';
     RegisterPage,
     MainPage,
     BillerPayPage,
-    ProfilePage2,
+   // ProfilePage2,
     BillerLookupPage,
     AuthenticatePage,
     BillerPage,

@@ -20,14 +20,15 @@ import { RemoteServiceProvider } from '../../providers/remote-service/remote-ser
 
 @IonicPage()
 
+
 @Component({
   selector: 'page-profile',
-  templateUrl: 'profile2.html',
+  templateUrl: 'profilecat.html',
 })
 
 
 
-export class ProfilePage2 {
+export class ProfilePageCat {
 datas : any;
 data : any = [];
 data2: any=[];
@@ -48,7 +49,7 @@ snip2: boolean = false;
   ga(){
     
   }
- logdata (val: any) {
+ passdata(val: any) {
      
   let loading = this.loadingCtrl.create({
     content: 'Please wait...'

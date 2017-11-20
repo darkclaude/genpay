@@ -31,6 +31,17 @@ ut : any=[];
 bng : any=[];
 rt: any=[];
 pt: any=[];
+it: any=[];
+fn: any=[];
+at: any=[];
+ngof: any=[];
+od:any=[];
+ch:any = [];
+mch : any =[];
+ins : any=[];
+ong: any=[];
+air: any=[];
+hc : any=[];
 
 udata : any;
 phone : string='';
@@ -127,35 +138,72 @@ var s = 2;
   toast.onDidDismiss(() => {
     
    if(this.class=="allbillers"){
-     /*
-     for(var i in this.udata){
-       if(this.udata[i].category=="schools"){
-         this.sl.push(this.udata[i].data);
+     
+     for(var i in this.udata.data){
+     //  console.log(this.udata.data[i]);
+       if(this.udata.data[i].category=="school"){
+         this.sl.push(this.udata.data[i]);
        }
-      else if(this.udata[i].category=="utilities"){
-        this.ut.push(this.udata[i].data);
+      else if(this.udata.data[i].category=="utilities"){
+        this.ut.push(this.udata.data[i]);
       }
-      else if(this.udata[i].category=="govern"){
-        this.ga.push(this.udata[i].data);
+      else if(this.udata.data[i].category=="government"){
+        this.ga.push(this.udata.data[i]);
       }
-     else if(this.udata[i].category=="betting"){
-        this.bng.push(this.udata[i].data);
+     else if(this.udata.data[i].category=="gaming"){
+        this.bng.push(this.udata.data[i]);
       }
-      else if(this.udata[i].category=="retail"){
-        this.rt.push(this.udata[i].data);
+      else if(this.udata.data[i].category=="finance"){
+        this.fn.push(this.udata.data[i]);
       }
-     else if(this.udata[i].category=="tv"){
-        this.pt.push(this.udata[i].data);
+     else if(this.udata.data[i].category=="paytv"){
+        this.pt.push(this.udata.data[i]);
+      }
+      else if(this.udata.data[i].category=="healthcare"){
+        this.hc.push(this.udata.data[i]);
+        console.log(this.hc);
+      }
+      else if(this.udata.data[i].category=="internet"){
+        this.it.push(this.udata.data[i]);
+      }
+      else if(this.udata.data[i].category="oil_and_gas"){
+        this.ong.push(this.udata.data[i]);
+      }
+      else if(this.udata.data[i].category=="airline"){
+        this.air.push(this.udata.data[i]);
+      }
+      else if(this.udata.data[i].category=="ngos_and_foundations"){
+        this.ngof.push(this.udata.data[i]);
+      }
+      else if(this.udata.data[i].category=="merchants"){
+        this.mch.push(this.udata.data[i]);
+      }
+      else if(this.udata.data[i].category=="church"){
+        this.ch.push(this.udata.data[i]);
+      }
+      else if(this.udata.data[i].category=="airtime"){
+        this.at.push(this.udata.data[i]);
+      }
+      else if(this.udata.data[i].category=="other" || this.udata.data[i].category=="dummyCategory" ){
+        this.od.push(this.udata.data[i]);
       }
       else{}
      }
      this.storage.set('schoollist',JSON.stringify(this.sl));
-     this.storage.set('retaillist',JSON.stringify(this.rt));
+     this.storage.set('financelist',JSON.stringify(this.fn));
      this.storage.set('governlist',JSON.stringify(this.ga));
      this.storage.set('bettinggameslist',JSON.stringify(this.bng));
      this.storage.set('utilitylist',JSON.stringify(this.ut));
       this.storage.set('paytv',JSON.stringify(this.pt));
-      */
+      this.storage.set('healthcare',JSON.stringify(this.hc));
+      this.storage.set('internet',JSON.stringify(this.it));
+      this.storage.set('oilgas',JSON.stringify(this.ong));
+      this.storage.set('airline',JSON.stringify(this.air));
+      this.storage.set('ngof',JSON.stringify(this.ngof));
+      this.storage.set('merchants',JSON.stringify(this.mch));
+      this.storage.set('church',JSON.stringify(this.ch));
+      this.storage.set('airtime',JSON.stringify(this.at));
+      this.storage.set('others',JSON.stringify(this.od));
       this.storage.set('billerlist',JSON.stringify(this.udata));
       this.navCtrl.push("ProfilePage",{data : JSON.stringify(this.udata)});
    

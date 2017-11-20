@@ -7,7 +7,7 @@ import { Storage } from '@ionic/storage';
 import { AuthenticatePage } from '../../pages/authenticate/authenticate';
 import { HomePage } from '../../pages/home/home';
 import {BillerPage} from '../../pages/biller/biller';
-import {ProfilePage2} from '../../pages/profile2/profile2';
+ 
 import { SettingsPage } from '../../pages/settings/settings';
 import { RemoteServiceProvider } from '../../providers/remote-service/remote-service';
 //import { Pipe, PipeTransform } from '@angular/core';
@@ -44,23 +44,26 @@ snip2: boolean = false;
   this.storage.get('billerlist').then((val) => {
   //  console.log(val)
    this.data= JSON.parse(val).data;
+   console.log(this.data)
   // console.log(this.gdata);
   });
   //this.gdata= JSON.parse(this.navParams.get("data"));
   //this.data = this.gdata.data;
-  console.log(this.data)
+  
  } catch (error) {
    
  }
     
 
   }
+   
+
   ga(){
     this.storage.get('governlist').then((val) => {
       //  console.log(val)
      //  this.data= JSON.parse(val);
 
-   this.navCtrl.push(ProfilePage2,{data: val});
+   this.navCtrl.push("ProfilePageCat",{data: val});
       // console.log(this.gdata);
       });
      
@@ -72,16 +75,16 @@ snip2: boolean = false;
     this.storage.get('schoollist').then((val) => {
       //  console.log(val)
 
-      this.navCtrl.push(ProfilePage2,{data: val});
+      this.navCtrl.push("ProfilePageCat",{data: val});
       // console.log(this.gdata);
       });
      
   }
-  rt(){
-    this.storage.get('retaillist').then((val) => {
+  fn(){
+    this.storage.get('financelist').then((val) => {
       //  console.log(val)
    
-      this.navCtrl.push(ProfilePage2,{data: val});
+      this.navCtrl.push("ProfilePageCat",{data: val});
       // console.log(this.gdata);
       });
      
@@ -90,7 +93,7 @@ snip2: boolean = false;
     this.storage.get('bettinggameslist').then((val) => {
       //  console.log(val)
      
-   this.navCtrl.push(ProfilePage2,{data: val});
+   this.navCtrl.push("ProfilePageCat",{data: val});
       // console.log(this.gdata);
       });
      
@@ -99,7 +102,7 @@ snip2: boolean = false;
     this.storage.get('utilitylist').then((val) => {
       //  console.log(val)
      
-   this.navCtrl.push(ProfilePage2,{data: val});
+   this.navCtrl.push("ProfilePageCat",{data: val});
       // console.log(this.gdata);
       });
      
@@ -108,12 +111,97 @@ snip2: boolean = false;
     this.storage.get('paytv').then((val) => {
       //  console.log(val)
     
-   this.navCtrl.push(ProfilePage2,{data: val});
+   this.navCtrl.push("ProfilePageCat",{data: val});
       // console.log(this.gdata);
       });
      
   }
- 
+  hc(){
+    this.storage.get('healthcare').then((val) => {
+       console.log(val)
+    
+   this.navCtrl.push("ProfilePageCat",{data: val});
+      // console.log(this.gdata);
+      });
+     
+  }
+  it(){
+    this.storage.get('internet').then((val) => {
+      //  console.log(val)
+    
+   this.navCtrl.push("ProfilePageCat",{data: val});
+      // console.log(this.gdata);
+      });
+     
+  }
+  air(){
+    this.storage.get('airline').then((val) => {
+      //  console.log(val)
+    
+   this.navCtrl.push("ProfilePageCat",{data: val});
+      // console.log(this.gdata);
+      });
+     
+  }
+  
+  at(){
+    this.storage.get('airtime').then((val) => {
+      //  console.log(val)
+    
+   this.navCtrl.push("ProfilePageCat",{data: val});
+      // console.log(this.gdata);
+      });
+     
+  }
+  ins(){
+    this.storage.get('insurance').then((val) => {
+      //  console.log(val)
+    
+   this.navCtrl.push("ProfilePageCat",{data: val});
+      // console.log(this.gdata);
+      });
+  }
+  ong(){
+    this.storage.get('oilgas').then((val) => {
+      //  console.log(val)
+    
+   this.navCtrl.push("ProfilePageCat",{data: val});
+      // console.log(this.gdata);
+      });
+  }
+  ngo(){
+    this.storage.get('ngof').then((val) => {
+      //  console.log(val)
+    
+   this.navCtrl.push("ProfilePageCat",{data: val});
+      // console.log(this.gdata);
+      });
+  }
+  ch(){
+    this.storage.get('church').then((val) => {
+      //  console.log(val)
+    
+   this.navCtrl.push("ProfilePageCat",{data: val});
+      // console.log(this.gdata);
+      });
+  }
+  mcn(){
+    this.storage.get('merchants').then((val) => {
+      //  console.log(val)
+    
+   this.navCtrl.push("ProfilePageCat",{data: val});
+      // console.log(this.gdata);
+      });
+  }
+  od(){
+    this.storage.get('others').then((val) => {
+      //  console.log(val)
+    
+   this.navCtrl.push("ProfilePageCat",{data: val});
+      // console.log(this.gdata);
+      });
+  }
+  
 
  logdata (val: any) {
      
