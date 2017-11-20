@@ -20,6 +20,7 @@ import { MainPage } from '../pages/main/main';
 import {ChangepasswordPage} from '../pages/changepassword/changepassword';
 import {EditprofilePage} from '../pages/editprofile/editprofile';
 import {BillerPage} from '../pages/biller/biller';
+import {ProfilePage2} from '../pages/profile2/profile2';
 import {BillerRefPage} from '../pages/billeref/billeref';
 import {BillerPayPage} from '../pages/billerpay/billerpay';
 import { BillerLookupPage} from '../pages/billerlookup/billerlookup';
@@ -32,6 +33,7 @@ import { BillerLookupPage} from '../pages/billerlookup/billerlookup';
     BillerRefPage,
     MainPage,
     BillerPayPage,
+    ProfilePage2,
     BillerLookupPage,
     SettingsPage,
     ChangepasswordPage,
@@ -58,6 +60,7 @@ import { BillerLookupPage} from '../pages/billerlookup/billerlookup';
     RegisterPage,
     MainPage,
     BillerPayPage,
+    ProfilePage2,
     BillerLookupPage,
     AuthenticatePage,
     BillerPage,

@@ -7,7 +7,6 @@ import { Storage } from '@ionic/storage';
 import { AuthenticatePage } from '../../pages/authenticate/authenticate';
 import { HomePage } from '../../pages/home/home';
 import {BillerPage} from '../../pages/biller/biller';
-import {ProfilePage2} from '../../pages/profile2/profile2';
 import { SettingsPage } from '../../pages/settings/settings';
 import { RemoteServiceProvider } from '../../providers/remote-service/remote-service';
 //import { Pipe, PipeTransform } from '@angular/core';
@@ -20,14 +19,15 @@ import { RemoteServiceProvider } from '../../providers/remote-service/remote-ser
 //profile page
 
 @IonicPage()
+
 @Component({
   selector: 'page-profile',
-  templateUrl: 'profile.html',
+  templateUrl: 'profile2.html',
 })
 
 
 
-export class ProfilePage {
+export class ProfilePage2 {
 datas : any;
 data : any = [];
 data2: any=[];
@@ -40,81 +40,14 @@ snip2: boolean = false;
    
    
    
- try {
-  this.storage.get('billerlist').then((val) => {
-  //  console.log(val)
-   this.data= JSON.parse(val).data;
-  // console.log(this.gdata);
-  });
-  //this.gdata= JSON.parse(this.navParams.get("data"));
-  //this.data = this.gdata.data;
-  console.log(this.data)
- } catch (error) {
-   
- }
-    
+
+
+  this.data= JSON.parse(this.navParams.get("data")); 
 
   }
   ga(){
-    this.storage.get('governlist').then((val) => {
-      //  console.log(val)
-     //  this.data= JSON.parse(val);
-
-   this.navCtrl.push(ProfilePage2,{data: val});
-      // console.log(this.gdata);
-      });
-     
-       
-     
-        
-  }
-  sl(){
-    this.storage.get('schoollist').then((val) => {
-      //  console.log(val)
-
-      this.navCtrl.push(ProfilePage2,{data: val});
-      // console.log(this.gdata);
-      });
-     
-  }
-  rt(){
-    this.storage.get('retaillist').then((val) => {
-      //  console.log(val)
-   
-      this.navCtrl.push(ProfilePage2,{data: val});
-      // console.log(this.gdata);
-      });
-     
-  }
-  bng(){
-    this.storage.get('bettinggameslist').then((val) => {
-      //  console.log(val)
-     
-   this.navCtrl.push(ProfilePage2,{data: val});
-      // console.log(this.gdata);
-      });
-     
-  }
-  ut(){
-    this.storage.get('utilitylist').then((val) => {
-      //  console.log(val)
-     
-   this.navCtrl.push(ProfilePage2,{data: val});
-      // console.log(this.gdata);
-      });
-     
-  }
-  pt(){
-    this.storage.get('paytv').then((val) => {
-      //  console.log(val)
     
-   this.navCtrl.push(ProfilePage2,{data: val});
-      // console.log(this.gdata);
-      });
-     
   }
- 
-
  logdata (val: any) {
      
   let loading = this.loadingCtrl.create({

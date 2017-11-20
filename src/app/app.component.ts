@@ -38,7 +38,7 @@ rootPage:any = HomePage;
       //this.oneSignal.startInit('4975cd1d-9d10-41c8-9cda-c5852513ab7f', '347536568651');
       this.oneSignal.startInit('82928709-50f8-4861-830f-a57f718bb3f7', '813645120142');
       
-      this.oneSignal.inFocusDisplaying(this.oneSignal.OSInFocusDisplayOption.InAppAlert);
+      this.oneSignal.inFocusDisplaying(this.oneSignal.OSInFocusDisplayOption.Notification);
       
       this.oneSignal.handleNotificationReceived().subscribe(() => {
        // do something when notification is received

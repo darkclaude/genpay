@@ -25,6 +25,12 @@ export class MainPage {
 name : string='';
 data : any;
 class :string;
+sl: any=[];
+ga : any=[];
+ut : any=[];
+bng : any=[];
+rt: any=[];
+pt: any=[];
 
 udata : any;
 phone : string='';
@@ -121,9 +127,36 @@ var s = 2;
   toast.onDidDismiss(() => {
     
    if(this.class=="allbillers"){
-     
-   
-      this.storage.set('billerlist',JSON.stringify(this.udata))
+     /*
+     for(var i in this.udata){
+       if(this.udata[i].category=="schools"){
+         this.sl.push(this.udata[i].data);
+       }
+      else if(this.udata[i].category=="utilities"){
+        this.ut.push(this.udata[i].data);
+      }
+      else if(this.udata[i].category=="govern"){
+        this.ga.push(this.udata[i].data);
+      }
+     else if(this.udata[i].category=="betting"){
+        this.bng.push(this.udata[i].data);
+      }
+      else if(this.udata[i].category=="retail"){
+        this.rt.push(this.udata[i].data);
+      }
+     else if(this.udata[i].category=="tv"){
+        this.pt.push(this.udata[i].data);
+      }
+      else{}
+     }
+     this.storage.set('schoollist',JSON.stringify(this.sl));
+     this.storage.set('retaillist',JSON.stringify(this.rt));
+     this.storage.set('governlist',JSON.stringify(this.ga));
+     this.storage.set('bettinggameslist',JSON.stringify(this.bng));
+     this.storage.set('utilitylist',JSON.stringify(this.ut));
+      this.storage.set('paytv',JSON.stringify(this.pt));
+      */
+      this.storage.set('billerlist',JSON.stringify(this.udata));
       this.navCtrl.push("ProfilePage",{data : JSON.stringify(this.udata)});
    
     

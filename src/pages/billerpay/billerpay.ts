@@ -106,9 +106,9 @@ changepass(){
     let loading = this.loadingCtrl.create({
       content: 'Please wait...'
     });
-  
+
     loading.present();
-    var body = {'accountRef':'','amount':this.amount,'paymentRef':'','user_id':'','product_id':'','merchant_id':''    };
+    var body = {'ova':'','accountRef':'','amount':this.amount,'paymentRef':'','user_id':'','product_id':'','merchant_id':''    };
     //this.url = 
     
     this.url="http://172.18.12.212:8000/api/payment/pay";
@@ -123,6 +123,7 @@ changepass(){
 
     body.merchant_id = this.data.data[0].merchantId;
     body.product_id= this.data.data[0].productId;
+    body.ova= this.data.data[0].ova;
     console.log(body);
     this.remoteService.getPosts2(this.url,body).subscribe((data)=>{
       console.log(data);
