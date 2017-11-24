@@ -1,0 +1,45 @@
+<!--
+  Generated template for the SettingsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Payment History</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <br><br>
+  <ion-item-divider class="bil" color="light">  <b>History</b></ion-item-divider>
+
+  <ion-item class="listh" (click)="week()">
+    <font >
+       <font class="bil">This Week</font><ion-icon  float-right name="arrow-forward"></ion-icon>
+        
+    </font>
+    <br>
+    </ion-item>
+    <ion-item class="listh" (click)="month()">
+        <font>
+           <font class="bil">This Month</font><ion-icon  float-right name="arrow-forward"></ion-icon>
+            
+        </font>
+        <br>
+        </ion-item>
+        <div></div>
+    <br><br>
+    <ion-item-divider class="bil" color="light">  <b>Statement</b></ion-item-divider>
+  
+    <ion-item class="listh" (click)="statement()">
+      <font>
+         <font class="bil">Email Statement</font><ion-icon  float-right name="arrow-forward"></ion-icon>
+          
+      </font>
+      <br>
+      </ion-item>
+</ion-content>

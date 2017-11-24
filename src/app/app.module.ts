@@ -21,10 +21,14 @@ import { MainPage } from '../pages/main/main';
 import {ChangepasswordPage} from '../pages/changepassword/changepassword';
 import {EditprofilePage} from '../pages/editprofile/editprofile';
 import {BillerPage} from '../pages/biller/biller';
-
+import { HistoryDataPage } from '../pages/historydata/historydata';
 import {BillerRefPage} from '../pages/billeref/billeref';
 import {BillerPayPage} from '../pages/billerpay/billerpay';
 import { BillerLookupPage} from '../pages/billerlookup/billerlookup';
+import { HistoryPage} from '../pages/history/history';
+import { StatementPage } from '../pages/statement/statement';
+import { Statement } from '@angular/compiler/src/output/output_ast';
+
 //mport { SearchPipe } from '../pipes/search/search';
 //import { SearchBarLayout3 } from '../components/search-bar/layout-3/search-bar-layout-3';
 @NgModule({
@@ -34,6 +38,9 @@ import { BillerLookupPage} from '../pages/billerlookup/billerlookup';
     RegisterPage,
     BillerRefPage,
     MainPage,
+    HistoryDataPage,
+    HistoryPage,
+    StatementPage,
     BillerPayPage,
     //ProfilePage2,
     BillerLookupPage,
@@ -63,12 +70,15 @@ import { BillerLookupPage} from '../pages/billerlookup/billerlookup';
     HomePage,
     RegisterPage,
     MainPage,
+    HistoryDataPage,
     BillerPayPage,
    // ProfilePage2,
     BillerLookupPage,
     AuthenticatePage,
+    HistoryPage,
     BillerPage,
     BillerRefPage,
+    StatementPage,
     ChangepasswordPage,
     EditprofilePage,
     SettingsPage

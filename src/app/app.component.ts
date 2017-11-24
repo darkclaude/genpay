@@ -12,6 +12,9 @@ import { MainPage } from '../pages/main/main';
 import {ChangepasswordPage} from '../pages/changepassword/changepassword';
 import {EditprofilePage} from '../pages/editprofile/editprofile';
 import {BillerPage} from '../pages/biller/biller';
+import { HistoryPage} from '../pages/history/history';
+import { StatementPage } from '../pages/statement/statement';
+
 //import {  ItemDetailsPageRegister  } from '../pages/item-details-register/item-details-register';
 @Component({
   templateUrl: 'app.html'     

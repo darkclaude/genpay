@@ -9,6 +9,7 @@ import { HomePage } from '../../pages/home/home';
 import { ProfilePage } from '../../pages/profile/profile';
 import { SettingsPage } from '../../pages/settings/settings';
 import { RemoteServiceProvider } from '../../providers/remote-service/remote-service';
+import { HistoryPage } from '../../pages/history/history';
 /**
  * Generated class for the MainPage page.
  *
@@ -240,7 +241,7 @@ torecentbillers(){
   
 }
 topaymenthistory(){
-
+/*
   let loading = this.loadingCtrl.create({
     content: 'Please wait...'
   });
@@ -252,7 +253,8 @@ topaymenthistory(){
     this.class ="toast-failure";
     this.presentToast("No Payment history found!");
   }, 5000);
- 
+ */
+this.navCtrl.push(HistoryPage);
   
 }
 tosettings(){

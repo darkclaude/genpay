@@ -1,0 +1,39 @@
+
+.listh {
+    background-color: #ffffff;
+}
+.listh:hover {
+    background-color: #ccd4e2;
+}
+ion-searchbar{
+    width: 100%;
+
+}
+
+.list .item.item-accordion {
+    line-height: 38px;
+    padding-top: 0;
+    padding-bottom: 0;
+    transition: 0.09s all linear;
+  }
+  .list .item.item-accordion.ng-hide {
+    line-height: 0px;
+  }
+  .list .item.item-accordion.ng-hide-add,
+  .list .item.item-accordion.ng-hide-remove {
+    display: block !important;
+  }
+.app-font{
+    white-space: inherit;
+    font-size: 40px;
+    opacity: 0.7;
+  }
+  .bil{
+    font-size: 20px;
+}
+ .low{
+    margin: 0 !important;
+    padding: 0;
+    line-height: 1.5;
+    font-size: 20px;
+}
