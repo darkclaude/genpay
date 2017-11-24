@@ -29,6 +29,7 @@ import { HistoryPage} from '../pages/history/history';
 import { StatementPage } from '../pages/statement/statement';
 import { Statement } from '@angular/compiler/src/output/output_ast';
 import { ForgotPage } from '../pages/forgot/forgot';
+import { Forgot2Page } from '../pages/forgot2/forgot2';
 //mport { SearchPipe } from '../pipes/search/search';
 //import { SearchBarLayout3 } from '../components/search-bar/layout-3/search-bar-layout-3';
 @NgModule({
@@ -38,6 +39,7 @@ import { ForgotPage } from '../pages/forgot/forgot';
     RegisterPage,
     BillerRefPage,
     MainPage,
+    Forgot2Page,
     HistoryDataPage,
     HistoryPage,
     StatementPage,
@@ -74,6 +76,7 @@ import { ForgotPage } from '../pages/forgot/forgot';
     HistoryDataPage,
     BillerPayPage,
     ForgotPage,
+    Forgot2Page,
    // ProfilePage2,
     BillerLookupPage,
     AuthenticatePage,

@@ -18,9 +18,9 @@ import { HomePage } from '../home/home';
 @IonicPage()
 @Component({
 
-  templateUrl: 'forgot.html',
+  templateUrl: 'forgot2.html',
 })
-export class ForgotPage {
+export class Forgot2Page {
   name : string;
   data : any;
   class :string;
@@ -28,6 +28,7 @@ export class ForgotPage {
   udata : any;
   phone : string;
   btnt : string;
+  code : string;
   url : string;
 billername: string='';
 payref: string;
@@ -40,7 +41,7 @@ payref: string;
    
   }
   forgot(){
-    var body = {'phoneNumber':this.phone};
+    var body = {'phoneNumber':this.data.phone,'code': this.code};
     //this.url = 
     this.url="http://172.18.12.212:8000/api/forgot";
   this.remoteService.getPosts2(this.url,body).subscribe((data)=>{
@@ -50,18 +51,19 @@ payref: string;
   if(data.responseCode== 1){
     this.class ="toast-success";
     console.log(data)
-    this.presentToast("A Confirmation SMS has been sent");
+    this.presentToast("New Temp Password Sent Via SMS Please Login and Change to Desired Password");
     
   }
-  else if(data.responseCode== 0){
+  if(data.responseCode== 0){
     this.class ="toast-failure";
     console.log(data)
-    this.presentToast("Account Not Found");
+    this.presentToast("Invalid Code");
     
   }
+
   else{
     this.class ="toast-failure";
-    this.presentToast("An Error Occured!");
+    this.presentToast("An Error Occuered!");
   }
     });
   }
@@ -81,7 +83,7 @@ changepass(){
      // alert(this.)
      if(this.class=="toast-success"){
       //alert("moving to Authen");
-     this.navCtrl.push(HomePage,{data: this.phone});
+     this.navCtrl.setRoot(HomePage);
     }
    
     //  this.navCtrl.setRoot("ProfilePage",{data : JSON.stringify(this.udata)});
