@@ -1,0 +1,29 @@
+<!--
+  Generated template for the BillerPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Forgot Password</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  
+      <br><br>
+
+       <ion-item>
+        <ion-label  floating>Enter Phone Number To Recover</ion-label>
+       <ion-input type="text"  class="btnp" [(ngModel)]="phone" name="title"></ion-input>
+       
+       </ion-item>
+       <br>
+       <button   class="logb" [disabled]="isd" ion-button  (click)="forgot()">Recover</button>
+       
+      
+</ion-content>

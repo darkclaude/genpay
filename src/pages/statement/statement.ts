@@ -32,8 +32,8 @@ export class StatementPage {
   phone : string;
   btnt : string;
   url : string;
-  startDate: string= "Select Date";
-endDate: string= "Select Date";
+  startDate: string;
+endDate: string;
 billername: string='';
   constructor(private loadingCtrl: LoadingController ,private navParams: NavParams,public storage: Storage,private toastCtrl : ToastController ,private navCtrl: NavController,private remoteService : RemoteServiceProvider) {
  

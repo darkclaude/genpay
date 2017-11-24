@@ -10,7 +10,7 @@
 
   <br>
 
-    <h1 text-center ><font class="app-font">GENPAY</font></h1>
+    <h1 text-center ><font class="app-font" color="#23aadb">GENPAY</font></h1>
     <br>
   <ion-item  padding-top  >
    
@@ -23,26 +23,27 @@
 <ion-input type="password"  class="btnp" [(ngModel)]="password" (ngModelChange)="searchchanged2($event)"name="title"></ion-input>
 </ion-item>
  <br>
- <br>
+ 
  <!--
  <ion-item>
  <ion-label floating >Enter your Password </ion-label>
  <ion-input type="password" [(ngModel)]="pass" name="title"></ion-input>
  </ion-item>
 -->
- <br>
  
- <div >
-    <button   class="logb" [disabled]="isd" ion-button large (click)="login()">{{btnt}}
+ 
+ <div class="ss">
+    <button  ion-button class="logb" [disabled]="isd"  large (click)="login()">{{btnt}}
       </button>
 </div>
 
 <br>
+<a (click)="forgot()" >Forgot Password?</a>
 <br>
 <br>
 <br>
 <div class="ss">
-  <button   ion-button  color="secondary" (click)="openregister()">Signup</button>
+  <button   ion-button color="secondary" ion-button large (click)="openregister()">Signup</button>
 </div>
 <!--<div class='container'><div class="align-left"><ion-label fixed><b>New User?</b></ion-label> </div><div class="align-right"><button   ion-button color="secondary" (click)="openregister()">Signup</button></div></div> -->
 

@@ -6,6 +6,7 @@ import { Storage } from '@ionic/storage';
 import { MainPage } from '../../pages/main/main';
 import { RegisterPage } from '../../pages/register/register';
 import { RemoteServiceProvider } from '../../providers/remote-service/remote-service';
+import { ForgotPage } from '../../pages/forgot/forgot';
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -30,6 +31,11 @@ getApiUrl : string = "https://jsonplaceholder.typicode.com/posts/1";
       // Or to get a key/value pair
      
     
+  }
+
+  forgot(): void {
+
+this.navCtrl.push(ForgotPage);
   }
 
 login() :  void{

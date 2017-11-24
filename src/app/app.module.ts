@@ -28,7 +28,7 @@ import { BillerLookupPage} from '../pages/billerlookup/billerlookup';
 import { HistoryPage} from '../pages/history/history';
 import { StatementPage } from '../pages/statement/statement';
 import { Statement } from '@angular/compiler/src/output/output_ast';
-
+import { ForgotPage } from '../pages/forgot/forgot';
 //mport { SearchPipe } from '../pipes/search/search';
 //import { SearchBarLayout3 } from '../components/search-bar/layout-3/search-bar-layout-3';
 @NgModule({
@@ -41,6 +41,7 @@ import { Statement } from '@angular/compiler/src/output/output_ast';
     HistoryDataPage,
     HistoryPage,
     StatementPage,
+    ForgotPage,
     BillerPayPage,
     //ProfilePage2,
     BillerLookupPage,
@@ -72,6 +73,7 @@ import { Statement } from '@angular/compiler/src/output/output_ast';
     MainPage,
     HistoryDataPage,
     BillerPayPage,
+    ForgotPage,
    // ProfilePage2,
     BillerLookupPage,
     AuthenticatePage,

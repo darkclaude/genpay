@@ -14,7 +14,7 @@ import {EditprofilePage} from '../pages/editprofile/editprofile';
 import {BillerPage} from '../pages/biller/biller';
 import { HistoryPage} from '../pages/history/history';
 import { StatementPage } from '../pages/statement/statement';
-
+import { ForgotPage } from '../pages/forgot/forgot';
 //import {  ItemDetailsPageRegister  } from '../pages/item-details-register/item-details-register';
 @Component({
   templateUrl: 'app.html'     
