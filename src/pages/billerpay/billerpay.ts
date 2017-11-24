@@ -108,7 +108,7 @@ changepass(){
     });
 
     loading.present();
-    var body = {'ova':'','accountRef':'','amount':this.amount,'paymentRef':'','user_id':'','product_id':'','merchant_id':''    };
+    var body = {'ova':'','user_accountRef':'','amount':this.amount,'paymentRef':'','user_id':'','product_id':'','merchant_id':'' ,'merchant_name': ''   };
     //this.url = 
     
     this.url="http://172.18.12.212:8000/api/payment/pay";
@@ -119,9 +119,10 @@ changepass(){
     this.storage.get('payref').then((val2) => {
     body.paymentRef= val2;
     this.storage.get('billeracc').then((val3) => {
-    body.accountRef = val3;
+    body.user_accountRef = val3;
 
     body.merchant_id = this.data.data[0].merchantId;
+    body.merchant_name = this.data.data[0].merchantName;
     body.product_id= this.data.data[0].productId;
     body.ova= this.data.data[0].ova;
     console.log(body);

@@ -43,7 +43,7 @@ snip2: boolean = false;
    
 
 
-  //this.data= JSON.parse(this.navParams.get("data")); 
+  this.data= this.navParams.get("data").data; 
 
   }
   ga(){

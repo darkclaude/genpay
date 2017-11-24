@@ -15,7 +15,12 @@
 
 <ion-content padding>
 
-<ion-item class="listh" *ngFor="let d of data" >
+<ion-item text-wrap class="listh" *ngFor="let d of data" >
+
+     <ion-icon style="padding-right: 10px" name="logo-buffer"></ion-icon> {{d.merchantName}} <font float-right>GHC {{d.amount}}</font><br>
+
+    <font float-right>{{d.created_at}}</font>
+
 
 </ion-item>
 

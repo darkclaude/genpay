@@ -12,6 +12,7 @@ import { ProfilePage } from '../../pages/profile/profile';
 
 import { RemoteServiceProvider } from '../../providers/remote-service/remote-service';
 import { StatementPage } from '../statement/statement';
+import { HistoryDataPage } from '../historydata/historydata';
 /**
  * Generated class for the SettingsPage page.
  *
@@ -40,13 +41,16 @@ billername: string='';
   }
  
   week(){
-  /*
     let loading = this.loadingCtrl.create({
       content: 'Please wait...'
     });
   
     loading.present();
-    this.url="http://172.18.12.212:8000/api/billers";
+   // http://0.0.0.0:8000/api/user/{user_id}/payHistory/{month}
+     
+   this.storage.get('id').then((val) => {
+  this.url="http://172.18.12.212:8000/api/user/"+val+"/payHistory/week";
+  
     //alert(this.url);
     var body = {}
     this.remoteService.getPosts(this.url).subscribe((data)=>{
@@ -56,25 +60,30 @@ billername: string='';
       //this.isd = false;
       if(data.responseCode==1){
         this.class ="toast-success";
-        this.storage.set('billerlist',JSON.stringify(this.udata))
-      this.presentToast("Got biller list!");
-      this.class="allbillers";
+     
+      this.presentToast("Success!");
+      
       
       }
      
       
       //console.log(data);
         });
-        */
+   });
+   
   }
 month(){
-  /*
+  
   let loading = this.loadingCtrl.create({
     content: 'Please wait...'
   });
 
   loading.present();
-  this.url="http://172.18.12.212:8000/api/billers";
+ // http://0.0.0.0:8000/api/user/{user_id}/payHistory/{month}
+   
+ this.storage.get('id').then((val) => {
+this.url="http://172.18.12.212:8000/api/user/"+val+"/payHistory/month";
+
   //alert(this.url);
   var body = {}
   this.remoteService.getPosts(this.url).subscribe((data)=>{
@@ -84,16 +93,18 @@ month(){
     //this.isd = false;
     if(data.responseCode==1){
       this.class ="toast-success";
-      this.storage.set('billerlist',JSON.stringify(this.udata))
-    this.presentToast("Got biller list!");
-    this.class="allbillers";
+   
+    this.presentToast("Success!");
+    
     
     }
    
     
     //console.log(data);
       });
-      */
+ });
+ 
+      
   }
   statement(){
 
@@ -111,7 +122,7 @@ this.navCtrl.push(StatementPage);
     });
   var s = 2;
     toast.onDidDismiss(() => {
-      
+       this.navCtrl.push(HistoryDataPage,{data: this.udata})
     
      
     });

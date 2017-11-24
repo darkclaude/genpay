@@ -41,7 +41,7 @@ payref: string;
    
   }
   forgot(){
-    var body = {'phoneNumber':this.data.phone,'code': this.code};
+    var body = {'phoneNumber':this.data.data,'code': this.code};
     //this.url = 
     this.url="http://172.18.12.212:8000/api/forgot";
   this.remoteService.getPosts2(this.url,body).subscribe((data)=>{

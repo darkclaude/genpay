@@ -8,6 +8,7 @@ import { RegisterPage } from '../../pages/register/register';
 import { RemoteServiceProvider } from '../../providers/remote-service/remote-service';
 import {BillerPayPage} from '../../pages/billerpay/billerpay';
 import { HomePage } from '../home/home';
+import { Forgot2Page } from '../forgot2/forgot2';
 /**
  * Generated class for the BillerPage page.
  *
@@ -40,6 +41,7 @@ payref: string;
    
   }
   forgot(){
+    /*
     var body = {'phoneNumber':this.phone};
     //this.url = 
     this.url="http://172.18.12.212:8000/api/forgot";
@@ -64,6 +66,8 @@ payref: string;
     this.presentToast("An Error Occured!");
   }
     });
+    */
+    this.navCtrl.push(Forgot2Page);
   }
 changepass(){
   

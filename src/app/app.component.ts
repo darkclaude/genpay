@@ -20,7 +20,7 @@ import { ForgotPage } from '../pages/forgot/forgot';
   templateUrl: 'app.html'     
 })
 export class MyApp {
-rootPage:any = HomePage;
+rootPage:any = HistoryPage;
 
   constructor(private oneSignal : OneSignal,platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
