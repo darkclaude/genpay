@@ -63,6 +63,10 @@ snip2: boolean = false;
     console.log(data);
     loading.dismiss();
    // this.udata = data;
+   
+   this.storage.set('ovat',val.ova);
+   
+   this.storage.set('ovat',val.ova);
     this.navCtrl.push(BillerPage,{data : data});
     
     //console.log(data);

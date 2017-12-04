@@ -7,6 +7,7 @@ import { MainPage } from '../../pages/main/main';
 import { RegisterPage } from '../../pages/register/register';
 import { RemoteServiceProvider } from '../../providers/remote-service/remote-service';
 import { ForgotPage } from '../../pages/forgot/forgot';
+import { AuthenticatePage } from '../../pages/authenticate/authenticate';
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -87,6 +88,8 @@ else if(data.responseCode=="44"){
 else if(data.responseCode=="43"){
   this.class ="toast-failure";
   this.presentToast("Account Not Activated!");
+  this.navCtrl.setRoot(AuthenticatePage,{data: this.phone.toString()});
+  
  // this.class="str";
 
 }

@@ -106,6 +106,7 @@ changepass(){
     let loading = this.loadingCtrl.create({
       content: 'Please wait...'
     });
+    
 
     loading.present();
     var body = {'ova':'','user_accountRef':'','amount':this.amount,'paymentRef':'','user_id':'','product_id':'','merchant_id':'' ,'merchant_name': ''   };
@@ -114,6 +115,9 @@ changepass(){
     this.url="http://34.242.75.122/api/v1/payment/pay";
     //var body = {'accountRef':this.accountno,'user_id':'','productId':'','merchantId':'','serviceCode':'','apiIndex':''   };
     //this.url = 
+    
+   this.storage.get('ovat').then((valova) =>{
+body.ova= valova;
     this.storage.get('id').then((val) => {
     body.user_id = val;
     this.storage.get('payref').then((val2) => {
@@ -124,7 +128,7 @@ changepass(){
     body.merchant_id = this.data.data[0].merchantId;
     body.merchant_name = this.data.data[0].merchantName;
     body.product_id= this.data.data[0].productId;
-    body.ova= this.data.data[0].ova;
+    
     console.log(body);
     this.remoteService.getPosts2(this.url,body).subscribe((data)=>{
       console.log(data);
@@ -146,6 +150,7 @@ changepass(){
     });
     });
   });
+});
  
   }
   pay(){

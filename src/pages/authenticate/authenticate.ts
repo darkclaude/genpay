@@ -38,7 +38,7 @@ export class AuthenticatePage {
  } catch (error) {
    
  }
- let TIME_IN_MS = 1000*60*5;
+ let TIME_IN_MS = 1000*60*3;
  let hideFooterTimeout = setTimeout( () => {
       this.resd = false;
  }, TIME_IN_MS);
@@ -47,6 +47,7 @@ export class AuthenticatePage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad AuthenticatePage');
     this.btnt = "Activate";
+    alert("Code Resend Will be Available after 3 Minutes incase you dont receive any verification code")
   }
 
   resend(): void{ 

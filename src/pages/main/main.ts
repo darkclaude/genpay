@@ -131,9 +131,9 @@ url : string;
 presentToast(msg: string) {
   const toast = this.toastCtrl.create({
     message: msg,
-    duration: 1000,
+    duration: 2000,
     cssClass: this.class,
-    position: 'button'
+    position: 'middle'
   });
 var s = 2;
   toast.onDidDismiss(() => {

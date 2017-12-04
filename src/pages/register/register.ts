@@ -58,6 +58,10 @@ export class RegisterPage {
     this.class = "toast-failure";
     this.presentToast("Password required!")
   }
+  else if(this.password.length<8){
+    this.class = "toast-failure";
+    this.presentToast("Too Short password Mininum length is 8!")
+  }
   else if(!this.passwordc){
     this.class = "toast-failure";
     this.presentToast("Password required!")
@@ -111,9 +115,9 @@ export class RegisterPage {
  presentToast(msg: string) {
    const toast = this.toastCtrl.create({
      message: msg,
-     duration: 1000,
+     duration: 2000,
      cssClass: this.class,
-     position: 'button'
+     position: 'middle'
    });
  
    toast.onDidDismiss(() => {
