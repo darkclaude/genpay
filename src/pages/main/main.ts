@@ -53,7 +53,7 @@ url : string;
   try{
     
     this.storage.get('id').then((val) => {
-      this.url="http://172.18.12.212:8000/api/redis";
+      this.url="http://34.242.75.122/api/v1/redis";
       //alert(this.url);
     //  alert(val);
       this.oneSignal.getIds().then((ids) => {
@@ -268,7 +268,7 @@ tobillers(){
   });
 
   loading.present();
-  this.url="http://172.18.12.212:8000/api/billers";
+  this.url="http://34.242.75.122/api/v1/billers";
   //alert(this.url);
   var body = {}
   this.remoteService.getPosts(this.url).subscribe((data)=>{
@@ -276,10 +276,10 @@ tobillers(){
     loading.dismiss();
     this.udata = data;
     //this.isd = false;
-    if(data.responseCode==1){
+    if(data.responseCode=="200"){
       this.class ="toast-success";
       this.storage.set('billerlist',JSON.stringify(this.udata))
-    this.presentToast("Got biller list!");
+    this.presentToast("Success!");
     this.class="allbillers";
     
     }

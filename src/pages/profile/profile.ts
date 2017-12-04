@@ -210,7 +210,7 @@ snip2: boolean = false;
   });
 
   loading.present();
-  var url="http://172.18.12.212:8000/api/billers/"+val.merchantId.toString()+"/"+val.ova.toString();
+  var url="http://34.242.75.122/api/v1/billers/"+val.merchantId.toString()+"/"+val.ova.toString();
   //alert(this.url);
   var body = {}
   this.remoteService.getPosts(url).subscribe((data)=>{

@@ -73,9 +73,9 @@ changepass(){
   presentToast(msg: string) {
     const toast = this.toastCtrl.create({
       message: msg,
-      duration: 500,
+      duration: 2000,
       cssClass: this.class,
-      position: 'button'
+      position: 'middle'
     });
   
     toast.onDidDismiss(() => {
@@ -101,6 +101,11 @@ changepass(){
    
   }
   continue(){
+    if(!this.payref){
+      this.class="toast-failure";
+      this.presentToast("Empty Fields");
+    }
+    else{
     try{
     this.storage.set('payref',this.payref);
     this.storage.set('payref',this.payref);
@@ -109,6 +114,6 @@ changepass(){
     catch(error){
 
     }
-   
+  }
   }
 }

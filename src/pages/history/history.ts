@@ -40,6 +40,43 @@ billername: string='';
 
   }
  
+  
+  today(){
+    let loading = this.loadingCtrl.create({
+      content: 'Please wait...'
+    });
+  
+    loading.present();
+   // http://0.0.0.0:8000/api/user/{user_id}/payHistory/{month}
+     
+   this.storage.get('id').then((val) => {
+  this.url="http://34.242.75.122/api/v1/user/"+val+"/payHistory/today";
+  
+    //alert(this.url);
+    var body = {}
+    this.remoteService.getPosts(this.url).subscribe((data)=>{
+      console.log(data);
+      loading.dismiss();
+      this.udata = data;
+      //this.isd = false;
+      if(data.responseCode=="200"){
+        this.class ="toast-success";
+     
+      this.presentToast("Success!");
+      
+      
+      }
+      else{
+        this.class ="toast-failure";
+      
+         this.presentToast("No History Data Available");
+      }    
+      
+      //console.log(data);
+        });
+   });
+   
+  }
   week(){
     let loading = this.loadingCtrl.create({
       content: 'Please wait...'
@@ -49,7 +86,7 @@ billername: string='';
    // http://0.0.0.0:8000/api/user/{user_id}/payHistory/{month}
      
    this.storage.get('id').then((val) => {
-  this.url="http://172.18.12.212:8000/api/user/"+val+"/payHistory/week";
+  this.url="http://34.242.75.122/api/v1/user/"+val+"/payHistory/week";
   
     //alert(this.url);
     var body = {}
@@ -58,7 +95,7 @@ billername: string='';
       loading.dismiss();
       this.udata = data;
       //this.isd = false;
-      if(data.responseCode==1){
+      if(data.responseCode=="200"){
         this.class ="toast-success";
      
       this.presentToast("Success!");
@@ -66,7 +103,11 @@ billername: string='';
       
       }
      
+      else{
+        this.class ="toast-failure";
       
+         this.presentToast("No History Data Available");
+      }
       //console.log(data);
         });
    });
@@ -82,7 +123,7 @@ month(){
  // http://0.0.0.0:8000/api/user/{user_id}/payHistory/{month}
    
  this.storage.get('id').then((val) => {
-this.url="http://172.18.12.212:8000/api/user/"+val+"/payHistory/month";
+this.url="http://34.242.75.122/api/v1/user/"+val+"/payHistory/month";
 
   //alert(this.url);
   var body = {}
@@ -91,14 +132,19 @@ this.url="http://172.18.12.212:8000/api/user/"+val+"/payHistory/month";
     loading.dismiss();
     this.udata = data;
     //this.isd = false;
-    if(data.responseCode==1){
+    if(data.responseCode=="200"){
       this.class ="toast-success";
    
     this.presentToast("Success!");
     
     
     }
-   
+   else{
+    this.class ="toast-failure";
+  
+     this.presentToast("No History Data Available");
+     
+   }
     
     //console.log(data);
       });

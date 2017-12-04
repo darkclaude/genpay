@@ -56,7 +56,7 @@ export class AuthenticatePage {
     this.isd = true;
      this.btnt = "Please wait.....";
    
-     this.url="http://172.18.12.212:8000/api/verifyCode";
+     this.url="http://34.242.75.122/api/v1/verifyCode";
      //alert(this.url);
      var body = {'code': this.code,'phoneNumber':this.data.toString()}
      console.log(body)
@@ -71,12 +71,12 @@ export class AuthenticatePage {
   this.udata = data;
   this.btnt="Continue";
   this.isd = false;
-  if(data.responseCode==0){
+  if(data.responseCode=="49"){
     this.class ="toast-failure";
   this.presentToast("Invalid Code!");
   
   }
-  else if(data.responseCode==1){
+  else if(data.responseCode=="200"){
     this.class ="toast-success";
   this.presentToast("Account Activated!");
   }

@@ -70,7 +70,7 @@ export class RegisterPage {
     this.isd = true;
     this.btnt = "Please wait.....";
    // this.url="http://gyara.herokuapp.com/logintest/"+this.user.toString()+"/"+this.pass.toString();
-     this.url="http://172.18.12.212:8000/api/register";
+     this.url="http://34.242.75.122/api/v1/register";
     var body = {'phoneNumber':this.phone.toString() || '','firstName':this.firstname.toString()|| '','lastName':this.lastname.toString()|| '','password': this.password.toString()||'','password_confirmation':this.passwordc.toString()||''}
      console.log(body);
     this.getPost2(this.url,body);
@@ -84,23 +84,23 @@ export class RegisterPage {
  this.udata = this.phone.toString();
  this.btnt="Continue";
  this.isd = false;
- if(data.responseCode== 1){
+ if(data.responseCode== "200"){
    this.class ="toast-success";
    this.presentToast("Registration succesfull");
   // this.class ="str";
  }
- else if(data.responseCode==0){
+ else if(data.responseCode=="203"){
    this.class ="toast-failure";
-   this.presentToast("Account Already Exists!");
+   this.presentToast("Account Already Exists, Login!");
    this.class="str";
  
  }
- else if(data.responseCode==2){
+ else if(data.responseCode=="400"){
   this.class ="toast-failure";
-  this.presentToast("Passwords do not Match");
+  this.presentToast("Validation failed");
   this.class="str";
  }
- else if(data.responseCode==3){
+ else if(data.responseCode=="34"){
   this.class ="toast-failure";
   this.presentToast("Invalid Phone Number");
   this.class="str";

@@ -1,6 +1,6 @@
 {
   "name": "restapp",
-  "app_id": "",
+  "app_id": "d6e87caa",
   "type": "ionic-angular",
   "integrations": {
     "cordova": {}

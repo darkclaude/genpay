@@ -74,9 +74,9 @@ changepass(){
   presentToast(msg: string) {
     const toast = this.toastCtrl.create({
       message: msg,
-      duration: 500,
+      duration: 2000,
       cssClass: this.class,
-      position: 'button'
+      position: 'middle'
     });
   
     toast.onDidDismiss(() => {
@@ -124,16 +124,19 @@ changepass(){
       body.merchantId = this.data.data[0].merchantId;
       body.serviceCode= this.data.data[0].serviceCode;
 
-      this.url="http://172.18.12.212:8000/api/billers/lookup";
+      this.url="http://34.242.75.122/api/v1/billers/lookup";
       this.remoteService.getPosts2(this.url,body).subscribe((data)=>{
       console.log(data);
       loading.dismiss();
       this.udata = data;
       
-      if(data.responseCode== "01"){
+      if(data.responseCode== "200"){
         this.class ="toast-success";
         this.storage.set('holder',data.data.name);
         this.storage.set('holder',data.data.name);
+         
+      this.storage.set('billeracc',this.accountno);
+      this.storage.set('billeracc',this.accountno);
         this.presentToast("Lookup Successful");
         
       }
@@ -150,11 +153,15 @@ changepass(){
     
     }
     else{
-    
+    if(!this.accountno){
+      this.class="toast-failure";
+      this.presentToast("Empty fields");
+    }
+    else{
       this.storage.set('billeracc',this.accountno);
       this.storage.set('billeracc',this.accountno);
     this.navCtrl.push(BillerRefPage,{data : this.data|| ""});
-   
+    }
     }
    
   

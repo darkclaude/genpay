@@ -41,7 +41,8 @@ this.navCtrl.push(ForgotPage);
 login() :  void{
   
   // this.url="http://gyara.herokuapp.com/logintest/"+this.user.toString()+"/"+this.pass.toString();
-    this.url="http://172.18.12.212:8000/api/login";
+    //this.url="http://172.18.12.212:8000/api/login";
+    this.url = "http://34.242.75.122/api/v1/login";
   //alert(this.url);
   if(!this.phone){
     this.class ="toast-failure";
@@ -64,7 +65,7 @@ console.log(data);
 this.udata = data;
 this.btnt="Login";
 this.isd = false;
-if(data.responseCode== 1){
+if(data.responseCode== "200"){
   this.class ="toast-success";
   console.log(data);
   this.storage.set('phone',this.udata.data.network);
@@ -77,13 +78,19 @@ if(data.responseCode== 1){
   this.presentToast("Welcome "+data.data.fullName);
   
 }
-else if(data.responseCode==0){
+else if(data.responseCode=="44"){
   this.class ="toast-failure";
   this.presentToast("Account not found!");
  // this.class="str";
 
 }
-else if(data.responseCode==2){
+else if(data.responseCode=="43"){
+  this.class ="toast-failure";
+  this.presentToast("Account Not Activated!");
+ // this.class="str";
+
+}
+else if(data.responseCode=="46"){
   this.class ="toast-failure";
   this.presentToast("Invalid Password!");
 //  this.class="str";
@@ -123,9 +130,9 @@ searchchanged2(ch: any){
 presentToast(msg: string) {
   const toast = this.toastCtrl.create({
     message: msg,
-    duration: 500,
+    duration: 1000,
     cssClass: this.class,
-    position: 'button'
+    position: 'middle'
   });
 
   toast.onDidDismiss(() => {

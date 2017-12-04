@@ -42,7 +42,7 @@ payref: string;
 changepass(){
     var body = {};
     //this.url = 
-    this.url="http://172.18.12.212:8000/api/verifyCode";
+    this.url="/api/verifyCode";
   this.remoteService.getPosts2(this.url,body).subscribe((data)=>{
   console.log(data);
   this.udata = data;
@@ -74,9 +74,9 @@ changepass(){
   presentToast(msg: string) {
     const toast = this.toastCtrl.create({
       message: msg,
-      duration: 500,
+      duration: 2000,
       cssClass: this.class,
-      position: 'button'
+      position: 'middle'
     });
   
     toast.onDidDismiss(() => {
@@ -111,7 +111,7 @@ changepass(){
     var body = {'ova':'','user_accountRef':'','amount':this.amount,'paymentRef':'','user_id':'','product_id':'','merchant_id':'' ,'merchant_name': ''   };
     //this.url = 
     
-    this.url="http://172.18.12.212:8000/api/payment/pay";
+    this.url="http://34.242.75.122/api/v1/payment/pay";
     //var body = {'accountRef':this.accountno,'user_id':'','productId':'','merchantId':'','serviceCode':'','apiIndex':''   };
     //this.url = 
     this.storage.get('id').then((val) => {
@@ -131,7 +131,7 @@ changepass(){
       loading.dismiss();
       this.udata = data;
       
-      if(data.responseCode== "03"){
+      if(data.responseCode== "200"){
         this.class ="toast-success";
         console.log(data)
         this.presentToast("Bill Prompt SENT");

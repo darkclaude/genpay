@@ -54,19 +54,19 @@ else{
     var body = {'userId':val,'oldPassword':this.oldpass,'newPassword':this.newpass};
     //this.url = 
     console.log(body);
-    this.url="http://172.18.12.212:8000/api/password/change";
+    this.url="http://34.242.75.122/api/v1/password/change";
   this.remoteService.getPosts2(this.url,body).subscribe((data)=>{
     loading.dismiss();
   console.log(data);
   this.udata = data;
   
-  if(data.responseCode== 1){
+  if(data.responseCode== "200"){
     this.class ="toast-success";
     console.log(data)
     this.presentToast("Password changed successfully!");
     
   }
-  else if(data.responseCode==0){
+  else if(data.responseCode=="46"){
     this.class ="toast-failure";
     this.presentToast("Old password Incorrect!");
    // this.class="str";
