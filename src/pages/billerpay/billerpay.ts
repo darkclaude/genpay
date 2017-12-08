@@ -138,7 +138,7 @@ body.ova= valova;
       if(data.responseCode== "200"){
         this.class ="toast-success";
         console.log(data)
-        this.presentToast("Bill Prompt SENT");
+        this.presentToast("Success, A bill prompt has been sent");
         
       }else{
         this.class ="toast-failure";
