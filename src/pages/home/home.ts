@@ -61,6 +61,7 @@ login() :  void{
   
 }
 getPost2(url: string,body : any){
+  console.log("ENTERD HTTP");
   this.remoteService.getPosts2(url,body).subscribe((data)=>{
 console.log(data);
 this.udata = data;

@@ -53,7 +53,7 @@ url : string;
   try{
     
     this.storage.get('id').then((val) => {
-      this.url="http://34.242.75.122/api/v1/redis";
+      this.url="http://34.242.75.122/api/v1/pushtoken";
       //alert(this.url);
     //  alert(val);
       this.oneSignal.getIds().then((ids) => {
