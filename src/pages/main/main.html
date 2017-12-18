@@ -30,7 +30,7 @@
       <br>
       <ion-item class="listh" (click)="torecentbillers()" padding-top>
         
-      <font style="size: 20px">
+      <font color="#23aadb"  style="size: 20px">
           <ion-icon  style="padding-right: 10px" name="clipboard"></ion-icon><font   color="#23aadb" class="bil">Recent Billers</font>
     
           
@@ -38,21 +38,21 @@
    
       </ion-item>
       <ion-item class="listh" (click)="tobillers()">
-          <font style="size:30px">
+          <font color="#23aadb"  style="size:30px">
               <ion-icon style="padding-right: 10px" name="clipboard" ></ion-icon><font  color="#23aadb" class="bil">Billers</font>
               
           </font>
           <br>
           </ion-item>
           <ion-item class="listh" (click)="topaymenthistory()">
-              <font >
+              <font color="#23aadb" >
                   <ion-icon style="padding-right: 10px" name="clock"></ion-icon><font  color="#23aadb"class="bil" >Payments History</font>
                   
               </font>
               <br>
               </ion-item>
               <ion-item class="listh" (click)="tosettings()">
-                <font >
+                <font color="#23aadb" >
                     <ion-icon style="padding-right: 10px" name="settings"></ion-icon><font color="#23aadb" class="bil">Settings</font>
                     
                 </font>
@@ -60,7 +60,7 @@
                 </ion-item>
                 <br><br>
                 <div >
-                  <button  class="logb" [disabled]="isd" ion-button large (click)="logout()">Log Out
+                  <button  class="logb" [disabled]="isd" [strong]="true" ion-button large (click)="logout()">Log Out
                     </button>
               </div>
       </div>

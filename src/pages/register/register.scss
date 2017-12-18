@@ -1,13 +1,12 @@
+
 page-register {
-    [logo] {
-        overflow: hidden;
-    }
+  
   
     img {
       max-width: 250px;
       display: block;
-      text-align: right;
-      float: right;
+      text-align: center;
+      margin: 0 auto;
     }
   
     .form {
@@ -18,12 +17,10 @@ page-register {
           margin-left: 10px !important;
       }
   
-      .item-md ion-icon[item-left] {
-        margin: 25px 0 0;
-      }
+     
   
       .item-inner {
-        border-bottom-color: theme-colors('mainColors', 'primary') !important;
+        border-bottom-color: theme-colors('mainColors', 'secondary') !important;
         box-shadow: none !important;
       }
   
@@ -56,30 +53,7 @@ page-register {
  .ff{
      width: 100%;
  }
- .logb{
  
-     /*
-     
-     background-image: -ms-linear-gradient(bottom, #FDFFFC 0%, #8C8ADE 50%, #49ACDE 100%, #807779 100%);
-     
-  
-     background-image: -moz-linear-gradient(bottom, #FDFFFC 0%, #8C8ADE 50%, #49ACDE 100%, #807779 100%);
-     
-   
-     background-image: -o-linear-gradient(bottom, #FDFFFC 0%, #8C8ADE 50%, #49ACDE 100%, #807779 100%);
-     
-  
-     background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #FDFFFC), color-stop(50, #8C8ADE), color-stop(100, #49ACDE), color-stop(100, #807779));
-     
-   
-     background-image: -webkit-linear-gradient(bottom, #FDFFFC 0%, #8C8ADE 50%, #49ACDE 100%, #807779 100%);
-     
-  
-     background-image: linear-gradient(to top, #FDFFFC 0%, #8C8ADE 50%, #49ACDE 100%, #807779 100%);
-     background-repeat: no-repeat;
-     */
-     
- }
  
  .app-font{
      white-space: inherit;

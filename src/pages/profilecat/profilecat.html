@@ -7,26 +7,25 @@
 <ion-header>
 
     <ion-navbar>
-    <ion-title>GENPAY</ion-title>
+    <ion-title>BILLERS</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-  
-<h1 text-center ><font class="app-font"><b>BILLERS</b></font></h1>
+ 
     <ion-item>
        
         <ion-searchbar class="low" [(ngModel)]= "sparam" placeholder="Search Billers" type="text" value=""></ion-searchbar>
       </ion-item>
       <div >
 <ion-item class="listh" *ngFor="let d of data | search: sparam "  (click)="passdata(d)">
-<h2 text-wrap >
+<font color="#23aadb"  text-wrap >
    
-    <ion-icon style="padding-right: 10px" name="logo-buffer"></ion-icon> {{d.merchantName}} <ion-icon  float-right name="arrow-forward"></ion-icon>
-</h2>
-<br>
+    <ion-icon style="padding-right: 10px" name="logo-buffer"></ion-icon> <font text-wrap>{{d.merchantName}}<ion-icon  float-right name="arrow-forward"></ion-icon> </font>
+</font>
+
 </ion-item>
 </div>
 

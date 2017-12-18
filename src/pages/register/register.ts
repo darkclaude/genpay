@@ -23,6 +23,7 @@ export class RegisterPage {
 
   postList = [];
   phone : string;
+  itclogo: string = "itclogo.png"
   password : string;
   firstname : string;
   lastname : string;

@@ -1,4 +1,4 @@
-<!-- Themes Register + Image -->
+
 <ion-header>
   <ion-navbar>
     <ion-title>
@@ -8,52 +8,58 @@
 </ion-header>
 
 <ion-content has-header white-background>
+  <div style="margin: 0 auto; display: block;" >
+    <img     height="80"  src="assets/images/itclogo.png" />
+  </div>
+     
+    
 <ion-grid>
   <ion-row wrap padding>
+      
+        
     <ion-col col-12 col-sm-12 col-md-12 offset-lg-3 col-lg-6 offset-xl-3 col-xl-6>
-      <!--Logo-->
-      <div logo>
-        <img [src]="" >
-      </div><!--End logo-->
-      <!--Form-->
-      <div class="form">
-        <ion-item no-padding transparent>
-          <ion-icon item-left name="person"></ion-icon>
-          <!---Input field username-->
-          <ion-label floating>Enter First Name</ion-label>
+    
+     
+ 
+      <div   class="form">
+        <ion-item no-padding transparent color="#23aadb" >
+          <ion-icon color="#23aadb" item-left name="person"></ion-icon>
+          <img     height="80"  src="../assets/images/itclogo.png" />
+          
+         
+              
+          <ion-label >Enter First Name</ion-label>
           <ion-input required type="text" [(ngModel)]="firstname"></ion-input>
         </ion-item>
         <ion-item no-padding transparent>
-          <ion-icon item-left name="person"></ion-icon>
-          <!---Input field username-->
+        <ion-icon color="#23aadb" item-left name="person"></ion-icon>
+         
           <ion-label floating>Enter Last Name</ion-label>
           <ion-input required type="text" [(ngModel)]="lastname"></ion-input>
         </ion-item>
         <ion-item no-padding transparent>
-          <!--Icon for username-->
-       
-          <ion-icon  item-left name="call"></ion-icon>
-          <!---Input field username-->
+
+          <ion-icon color="#23aadb"  item-left name="call"></ion-icon>
+     
           <ion-label floating>Enter Phone Number</ion-label>
           <ion-input required type="number" [(ngModel)]="phone"></ion-input>
         </ion-item>
         <ion-item no-padding transparent>
-          <!--Icon for password-->
-          <ion-icon  item-left name="key"></ion-icon>
-          <!---Input field password-->
+    
+          <ion-icon color="#23aadb"  item-left name="key"></ion-icon>
+
           <ion-label floating>Password</ion-label>
           <ion-input required type="password" [(ngModel)]="password"></ion-input>
         </ion-item>
         <ion-item no-padding transparent>
-          <!--Icon for password-->
+  
         
-          <!---Input field password-->
-          <ion-icon  item-left name="key"></ion-icon>
+          <ion-icon  color="#23aadb"  item-left name="key"></ion-icon>
           <ion-label floating>Confirm Password</ion-label>
           <ion-input required type="password" [(ngModel)]="passwordc"></ion-input>
         </ion-item>
        
-        <!---Register button-->
+      
         <br>
         <button ion-button   left (click)="goback()">Go Back</button>
         <button ion-button  right (click)="register()">{{btnt}}</button>
@@ -63,4 +69,3 @@
 </ion-grid>
 
 </ion-content>
-
