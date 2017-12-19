@@ -34,6 +34,7 @@ $colors: (
   light:      #f4f4f4,
   accent:     #202020,
   dark:       #222222,
+  gpc:        #23aadb,
   favorite:   #69BB7B,
   // Button Twitter
   twitter:(
@@ -63,6 +64,15 @@ $colors: (
 // iOS only Sass variables can go here
 
 
+$item-ios-detail-push-show: true;
+
+
+$item-md-detail-push-show: true;
+$item-ios-detail-push-color: color($colors, gpc);
+$item-md-detail-push-color: color($colors, gpc);
+$item-wp-detail-push-color: color($colors, gpc);
+
+$item-wp-detail-push-show: true;
 
 
 // App Material Design Variables

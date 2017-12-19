@@ -6,23 +6,25 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content  text-center padding>
+<ion-content  text-center padding class="getstart">
 
   <br>
 
     <h1 text-center >   <div style="margin: 0 auto; display: block;" >
         <img     height="80"  src="assets/images/itclogo.png" />
       </div>
-         <font class="app-font" color="#23aadb">GENPAY</font></h1>
+         <font class="app-font" color="#FFFFFF"><b>GENPAY</b></font></h1>
     <br>
-  <ion-item  padding-top  >
+  <ion-item  padding-top transparent  >
    
-    <ion-label text-center floating>{{f1}}</ion-label>
- <ion-input type="number"  class="btnp" [(ngModel)]="phone" (ngModelChange)="searchchanged1($event)" name="title"></ion-input>
+    <ion-label text-center floating><font color="#FFFFFF"><ion-icon   color="#FFFFFF" item-left name="person"></ion-icon>
+      <b>{{f1}}</b></font></ion-label>
+ <ion-input type="number"  class="btnp"  [(ngModel)]="phone" (ngModelChange)="searchchanged1($event)" name="title"></ion-input>
  </ion-item>
- <ion-item  >
+ <ion-item   padding-top transparent>
   
-   <ion-label  text-center floating >{{f2}}</ion-label>
+   <ion-label  text-center floating ><font color="#FFFFFF                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           " ><ion-icon color="#ffff"  item-left name="key"></ion-icon>
+    <b>{{f2}}</b></font></ion-label>
 <ion-input type="password"  class="btnp" [(ngModel)]="password" (ngModelChange)="searchchanged2($event)"name="title"></ion-input>
 </ion-item>
  <br>
@@ -36,19 +38,19 @@
  
  
  <div class="ss">
-    <button  ion-button class="logb" [disabled]="isd"  [block]="true" large (click)="login()">{{btnt}}
+    <button  ion-button class="logb" [disabled]="isd"  [strong]="true"[block]="true" large (click)="login()">{{btnt}}
       </button>
 </div>
 
 <br>
-<a (click)="forgot()" >Forgot Password? Or Signup Below</a>
+<a (click)="forgot()" ><font color="lightblue">Forgot Password? Or Sign up Below</font></a>
 <br>
 <br>
 <br>
 <br>
 <br>
 <div class="ss">
-  <button   ion-button color="secondary" ion-button large (click)="openregister()">Signup</button>
+  <button   ion-button color="primary" ion-button large (click)="openregister()">Sign up</button>
 </div>
 <!--<div class='container'><div class="align-left"><ion-label fixed><b>New User?</b></ion-label> </div><div class="align-right"><button   ion-button color="secondary" (click)="openregister()">Signup</button></div></div> -->
 

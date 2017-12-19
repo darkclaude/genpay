@@ -20,125 +20,124 @@
         <ion-searchbar class="low" [(ngModel)]= "sparam" placeholder="Search Billers" (ngModelChange)="searchchanged($event)" type="text" value=""></ion-searchbar>
       </ion-item>
       <div *ngIf="snip2">
-<ion-item text-wrap class="listh" *ngFor="let d of data | search: sparam "  (click)="logdata(d)">
+<ion-item  detail-push text-wrap class="listh" *ngFor="let d of data | search: sparam "  (click)="logdata(d)">
 <font color="#23aadb" >
    
-    <ion-icon  color="#23aadb"  style="padding-right: 10px" name="logo-buffer"></ion-icon> {{d.merchantName}} <ion-icon  float-right name="arrow-forward"></ion-icon>
-</font>
+    <ion-icon  color="#23aadb"  style="padding-right: 10px" name="logo-buffer"></ion-icon> {{d.merchantName}}</font>
 
 </ion-item>
 </div>
 
 <div *ngIf="snip">
-    <ion-item class="listh" (click)="ga()">
+    <ion-item detail-push class="listh" (click)="ga()">
     <font color="#23aadb"  >
-        <ion-icon   color="#23aadb"  style="padding-right: 10px" name="list"></ion-icon><font color="#23aadb"  class="bil">Government Agencies</font><ion-icon  float-right name="arrow-forward"></ion-icon>
+        <ion-icon   color="#23aadb"  style="padding-right: 10px" name="list"></ion-icon><font color="#23aadb"  class="bil">Government Agencies</font>
         
     </font>
-
+    
     </ion-item>
-    <ion-item class="listh" (click)="ut()">
+    <ion-item detail-push class="listh" (click)="ut()">
         <font  color="#23aadb" >
-            <ion-icon style="padding-right: 10px" name="list"></ion-icon><font color="#23aadb" class="bil">Utilities</font><ion-icon  float-right name="arrow-forward"></ion-icon>
+            <ion-icon style="padding-right: 10px" name="list"></ion-icon><font color="#23aadb" class="bil">Utilities</font>
             
         </font>
         
         </ion-item>
-        <ion-item class="listh" (click)="bng()" >
+        <ion-item detail-push class="listh" (click)="bng()" >
             <font color="#23aadb"  >
-                <ion-icon  color="#23aadb"  style="padding-right: 10px" name="list"></ion-icon><font  color="#23aadb"  class="bil">Betting & Gaming</font><ion-icon  float-right name="arrow-forward"></ion-icon>
+                <ion-icon  color="#23aadb"  style="padding-right: 10px" name="list"></ion-icon><font  color="#23aadb"  class="bil">Betting & Gaming</font>
                 
             </font>
             
             </ion-item>
-            <ion-item class="listh" (click)="fn()">
+            <ion-item detail-push class="listh" (click)="fn()">
                 <font color="#23aadb"  >
-                    <ion-icon style="padding-right: 10px" name="list"></ion-icon><font color="#23aadb"  class="bil">Finance</font><ion-icon  float-right name="arrow-forward"></ion-icon>
+                    <ion-icon style="padding-right: 10px" name="list"></ion-icon><font color="#23aadb"  class="bil">Finance</font>
                     
                 </font>
 
                 
                 </ion-item>
-    <ion-item class="listh" (click)="pt()">
+    <ion-item detail-push class="listh" (click)="pt()">
         <font color="#23aadb"  >
-            <ion-icon style="padding-right: 10px" name="list"></ion-icon><font color="#23aadb" class="bil">PayTv</font><ion-icon  float-right name="arrow-forward"></ion-icon>
+            <ion-icon style="padding-right: 10px" name="list"></ion-icon><font color="#23aadb" class="bil">PayTv</font>
             
         </font>
         
         </ion-item>
-        <ion-item class="listh" (click)="sl()">
+        <ion-item detail-push class="listh" (click)="sl()">
             <font color="#23aadb"  >
-                <ion-icon style="padding-right: 10px" name="list"></ion-icon><font color="#23aadb" class="bil" >Schools</font><ion-icon  float-right name="arrow-forward"></ion-icon>
+                <ion-icon style="padding-right: 10px" name="list"></ion-icon><font color="#23aadb" class="bil" >Schools</font>
                 
             </font>
             
             </ion-item>
-            <ion-item class="listh" (click)="hc()">
+            <ion-item detail-push class="listh" (click)="hc()">
                 <font color="#23aadb"  >
-                    <ion-icon color="#23aadb"  style="padding-right: 10px" name="list"></ion-icon><font color="#23aadb" class="bil">Healthcare</font><ion-icon  float-right name="arrow-forward"></ion-icon>
+                    <ion-icon color="#23aadb"  style="padding-right: 10px" name="list"></ion-icon><font color="#23aadb" class="bil">Healthcare</font>
                     
                 </font>
                 
                 </ion-item>
-                <ion-item class="listh" (click)="it()">
+                <ion-item detail-push class="listh" (click)="it()">
                     <font color="#23aadb"  >
-                        <ion-icon color="#23aadb"  style="padding-right: 10px" name="list"></ion-icon><font olor="#23aadb" class="bil">Internet</font><ion-icon  float-right name="arrow-forward"></ion-icon>
+                        <ion-icon color="#23aadb"  style="padding-right: 10px" name="list"></ion-icon><font olor="#23aadb" class="bil">Internet</font>
                         
                     </font>
                     
                     </ion-item>
-                    <ion-item class="listh" (click)="air()">
+                    <ion-item detail-push class="listh" (click)="air()">
                         <font color="#23aadb" >
-                            <ion-icon color="#23aadb"  style="padding-right: 10px" name="list"></ion-icon><font color="#23aadb"  class="bil">Airline</font><ion-icon  float-right name="arrow-forward"></ion-icon>
+                            <ion-icon color="#23aadb"  style="padding-right: 10px" name="list"></ion-icon><font color="#23aadb"  class="bil">Airline</font>
                             
                         </font>
                         
                         </ion-item>
-                        <ion-item class="listh" (click)="at()">
+                        <ion-item detail-push class="listh" (click)="at()">
                             <font color="#23aadb" >
-                                <ion-icon color="#23aadb"  style="padding-right: 10px" name="list"></ion-icon><font color="#23aadb"  class="bil">Airtime</font><ion-icon  float-right name="arrow-forward"></ion-icon>
+                                <ion-icon color="#23aadb"  style="padding-right: 10px" name="list"></ion-icon><font color="#23aadb"  class="bil">Airtime</font>
                                 
                             </font>
                             
                             </ion-item>
-                        <ion-item class="listh" (click)="ins()">
+                        <ion-item detail-push class="listh" (click)="ins()">
                             <font color="#23aadb" >
-                                <ion-icon style="padding-right: 10px" name="list"></ion-icon><font color="#23aadb"  class="bil">Insurance</font><ion-icon  float-right name="arrow-forward"></ion-icon>
+                                <ion-icon style="padding-right: 10px" name="list"></ion-icon><font color="#23aadb"  class="bil">Insurance</font>
                                 
                             </font>
                             
                             </ion-item>
-                            <ion-item class="listh" (click)="ong()">
+                            <ion-item detail-push class="listh" (click)="ong()">
                                 <font color="#23aadb" >
-                                    <ion-icon color="#23aadb"   style="padding-right: 10px" name="list"></ion-icon><font color="#23aadb"  class="bil">Oil and Gas</font><ion-icon  float-right name="arrow-forward"></ion-icon>
+                                    <ion-icon color="#23aadb"   style="padding-right: 10px" name="list"></ion-icon><font color="#23aadb"  class="bil">Oil and Gas</font>
                                     
                                 </font>
                                 
                                 </ion-item>
-                                <ion-item class="listh" (click)="ngo()">
+                                <ion-item  detail-push class="listh" (click)="ngo()">
                                     <font color="#23aadb" >
-                                        <ion-icon style="padding-right: 10px" name="list"></ion-icon><font class="bil">NGO Foundations</font><ion-icon  float-right name="arrow-forward"></ion-icon>
+                                        <ion-icon style="padding-right: 10px" name="list"></ion-icon><font class="bil">NGO Foundations</font>
                                         
                                     </font>
                                     
                                     </ion-item>
-                                    <ion-item class="listh" (click)="ch()">
+                                    <ion-item detail-push  class="listh" (click)="ch()">
                                         <font color="#23aadb" >
-                                            <ion-icon style="padding-right: 10px" name="list"></ion-icon><font class="bil">Church</font><ion-icon  float-right name="arrow-forward"></ion-icon>
+                                            <ion-icon style="padding-right: 10px" name="list"></ion-icon><font class="bil">Church</font>
                                             
                                         </font>
                                         
                                         </ion-item>
-                                        <ion-item class="listh" (click)="mcn()">
+                                        <ion-item detail-push class="listh" (click)="mcn()">
                                             <font color="#23aadb"  >
-                                                <ion-icon style="padding-right: 10px" name="list"></ion-icon><font class="bil">General Merchants</font><ion-icon  float-right name="arrow-forward"></ion-icon>
+                                                <ion-icon style="padding-right: 10px" name="list"></ion-icon><font class="bil">General Merchants</font>
                                                 
                                             </font>
                                             
                                             </ion-item>
-                                    <ion-item class="listh" (click)="od()">
+                                    <ion-item detail-push class="listh" (click)="od()">
                                         <font color="#23aadb" >
-                                            <ion-icon style="padding-right: 10px" name="list"></ion-icon><font class="bil">Other</font><ion-icon  float-right name="arrow-forward"></ion-icon>
+                                            <ion-icon style="padding-right: 10px" name="list"></ion-icon><font class="bil">Other</font>
                                             
                                         </font>
                                     

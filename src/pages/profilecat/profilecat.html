@@ -20,10 +20,10 @@
         <ion-searchbar class="low" [(ngModel)]= "sparam" placeholder="Search Billers" type="text" value=""></ion-searchbar>
       </ion-item>
       <div >
-<ion-item class="listh" *ngFor="let d of data | search: sparam "  (click)="passdata(d)">
+<ion-item detail-push class="listh" *ngFor="let d of data | search: sparam "  (click)="passdata(d)">
 <font color="#23aadb"  text-wrap >
    
-    <ion-icon style="padding-right: 10px" name="logo-buffer"></ion-icon> <font text-wrap>{{d.merchantName}}<ion-icon  float-right name="arrow-forward"></ion-icon> </font>
+    <ion-icon style="padding-right: 10px" name="logo-buffer"></ion-icon> <font text-wrap>{{d.merchantName}}</font>
 </font>
 
 </ion-item>

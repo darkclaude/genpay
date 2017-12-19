@@ -13,56 +13,63 @@
   </ion-header>
   
   
-  <ion-content class="topbar" color="light" padding>
-    <div class="topbar">
-  <h1 text-center ><font class="app-font"  color="#23aadb"><b>GENPAY</b></font></h1>
+  <ion-content class="topbar"  padding>
+    <div class="topbarr">
+  <h1 text-center ><font text-center class="app-font"  color="#FFFFFF"><b text-center>GENPAY</b></font></h1>
     
   <br>
-  <div text-center><font  color="#23aadb" class="app-font2">Welcome</font><font class="app-font2"  color="#23aadb">{{name}}</font> </div>
+  <div text-center><font  color="#ffff00" class="app-font2"><b>Welcome</b></font><font class="app-font2"  color="#ffff00"><b>{{name}}</b></font> </div>
  <!-- <div class='container'><div class="align-left"></div><div class="align-right"><font><b>{{phone}}</b></font></div></div> -->
 <br>
- <div text-center><b text-center>{{phone}}</b></div>
+ <div text-center><font color="#ffff00"><b  text-center>{{phone}}</b></font></div>
 </div>
 
-  
-  <div class="topbar" padding-top >
-      <br>
-      <br>
-      <ion-item class="listh" (click)="torecentbillers()" padding-top>
+<br>
+<br>
+  <div class="topbar"  >
+    
+    <ion-item text-center transparent><font text-center class="app-font"  color="#FFFFFF"><b text-center>MENU</b></font></ion-item>
+      <ion-item  transparent class="listh" (click)="torecentbillers()" >
         
-      <font color="#23aadb"  style="size: 20px">
-          <ion-icon  style="padding-right: 10px" name="clipboard"></ion-icon><font   color="#23aadb" class="bil">Recent Billers</font>
+      <font color="#FFFFF"  style="size: 20px">
+          <ion-icon  style="padding-right: 10px" name="clipboard"></ion-icon><font    class="bil"><b>Recent Billers</b></font>
     
           
       </font>
    
       </ion-item>
-      <ion-item class="listh" (click)="tobillers()">
-          <font color="#23aadb"  style="size:30px">
-              <ion-icon style="padding-right: 10px" name="clipboard" ></ion-icon><font  color="#23aadb" class="bil">Billers</font>
+      <ion-item  transparent class="listh" (click)="tobillers()">
+          <font color="#FFFFFF"  style="size:30px">
+              <ion-icon style="padding-right: 10px" name="clipboard" ></ion-icon><font  color="#FFFFFF" class="bil"><b>Billers</b></font>
               
           </font>
           <br>
           </ion-item>
-          <ion-item class="listh" (click)="topaymenthistory()">
-              <font color="#23aadb" >
-                  <ion-icon style="padding-right: 10px" name="clock"></ion-icon><font  color="#23aadb"class="bil" >Payments History</font>
+          <ion-item  transparent class="listh" (click)="topaymenthistory()">
+              <font color="#FFFFF" >
+                  <ion-icon style="padding-right: 10px" name="clock"></ion-icon><font  color="#FFFFFF"class="bil" ><b>Payments History</b></font>
                   
               </font>
               <br>
               </ion-item>
-              <ion-item class="listh" (click)="tosettings()">
-                <font color="#23aadb" >
-                    <ion-icon style="padding-right: 10px" name="settings"></ion-icon><font color="#23aadb" class="bil">Settings</font>
+              <ion-item transparent class="listh" (click)="tosettings()">
+                <font color="#FFFFFFF" >
+                    <ion-icon style="padding-right: 10px" name="settings"></ion-icon><font color="#FFFFFF" class="bil"><b>Settings</b></font>
                     
                 </font>
                 <br>
                 </ion-item>
-                <br><br>
-                <div >
-                  <button  class="logb" [disabled]="isd" [strong]="true" ion-button large (click)="logout()">Log Out
-                    </button>
-              </div>
+            
+              
       </div>
+      <br>
+      <br>
+      <br>
+      <br>
+      <div padding-top ></div>
+      <div padding-top >
+            <button  class="logb" [disabled]="isd" [strong]="true" ion-button large (click)="logout()">Log Out
+              </button>
+        </div>
   </ion-content>
   

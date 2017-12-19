@@ -6,8 +6,20 @@ page-home {
 
 .align-left{ float: left;width:50%; }
 .align-right{float: right;width:50%}
+ion-icon {
+    font-size: 20px; //Preferred size here
+}
 
+#rounded {
+    width: 100%;
+    height: 100px;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 10px;
+    margin-bottom: 10px;  
+}
 
+.getstart { background-image: url('../assets/images/bg7.png')}
 div {
 
     margin-left: auto;
