@@ -30,6 +30,7 @@ import { StatementPage } from '../pages/statement/statement';
 import { Statement } from '@angular/compiler/src/output/output_ast';
 import { ForgotPage } from '../pages/forgot/forgot';
 import { Forgot2Page } from '../pages/forgot2/forgot2';
+import { Vibration } from '@ionic-native/vibration';
 //mport { SearchPipe } from '../pipes/search/search';
 //import { SearchBarLayout3 } from '../components/search-bar/layout-3/search-bar-layout-3';
 @NgModule({
@@ -92,6 +93,7 @@ import { Forgot2Page } from '../pages/forgot2/forgot2';
   providers: [
     StatusBar,
     OneSignal,
+    Vibration,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     RemoteServiceProvider

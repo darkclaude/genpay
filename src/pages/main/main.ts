@@ -32,6 +32,13 @@ ut : any=[];
 bng : any=[];
 rt: any=[];
 pt: any=[];
+options : any= {
+  message:'',
+  duration: 1000,
+  cssClass: this.class,
+  position: 'middle'
+};
+
 it: any=[];
 fn: any=[];
 at: any=[];
@@ -129,12 +136,8 @@ url : string;
   }
   
 presentToast(msg: string) {
-  const toast = this.toastCtrl.create({
-    message: msg,
-    duration: 2000,
-    cssClass: this.class,
-    position: 'middle'
-  });
+  this.options.message = msg;
+  const toast = this.toastCtrl.create(this.options);
 var s = 2;
   toast.onDidDismiss(() => {
     
@@ -279,6 +282,7 @@ tobillers(){
     if(data.responseCode=="200"){
       this.class ="toast-success";
       this.storage.set('billerlist',JSON.stringify(this.udata))
+      this.options.duration=1;
     this.presentToast("Success!");
     this.class="allbillers";
     

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
+import {LoadingController} from 'ionic-angular';
 import { ToastController } from 'ionic-angular';
 import { Storage } from '@ionic/storage';
 
@@ -36,7 +36,7 @@ export class RegisterPage {
    url: string = "";
  getApiUrl : string = "https://jsonplaceholder.typicode.com/posts/1";
  
-   constructor(public storage: Storage,private toastCtrl : ToastController ,private navCtrl: NavController,private remoteService : RemoteServiceProvider) {
+   constructor(public storage: Storage,private loadingCtrl:LoadingController, private toastCtrl : ToastController ,private navCtrl: NavController,private remoteService : RemoteServiceProvider) {
     // storage.set('test2', 'Max');
      
        // Or to get a key/value pair
@@ -84,7 +84,14 @@ export class RegisterPage {
   
  }
  getPost2(url: string,body : any){
+   
+  let loading = this.loadingCtrl.create({
+    content: 'Please wait...'
+  });
+
+  loading.present();
    this.remoteService.getPosts2(url,body).subscribe((data)=>{
+     loading.dismiss();
  console.log(data);
  this.udata = this.phone.toString();
  this.btnt="Continue";

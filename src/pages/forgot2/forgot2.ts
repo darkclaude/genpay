@@ -41,23 +41,35 @@ payref: string;
    
   }
   forgot(){
-    var body = {'phoneNumber':this.data.data,'code': this.code};
+  
+    var body = {'phoneNumber':this.data,'code': this.code};
+    console.log(body);
+
     //this.url = 
-    this.url="http://172.18.12.212:8000/api/forgot";
+   this.url="http://34.242.75.122/api/v1/password/reset";
+    //this.url="http://172.18.12.212:8000/api/v1/password/reset"
+     
+  let loading = this.loadingCtrl.create({
+    content: 'Please wait...'
+  });
+
+  loading.present();
+
   this.remoteService.getPosts2(this.url,body).subscribe((data)=>{
+    loading.dismiss();
   console.log(data);
   this.udata = data;
   
-  if(data.responseCode== 1){
+  if(data.responseCode== "200"){
     this.class ="toast-success";
     console.log(data)
     this.presentToast("New Temp Password Sent Via SMS Please Login and Change to Desired Password");
     
   }
-  if(data.responseCode== 0){
+  else if(data.responseCode== "400"){
     this.class ="toast-failure";
     console.log(data)
-    this.presentToast("Invalid Code");
+    this.presentToast("Verification Code is Not Correct!");
     
   }
 

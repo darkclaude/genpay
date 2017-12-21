@@ -31,34 +31,41 @@ export class ForgotPage {
   btnt : string;
   url : string;
 billername: string='';
+pt: string='';
 payref: string;
   constructor(private loadingCtrl: LoadingController,private remoteService : RemoteServiceProvider,public storage: Storage,private toastCtrl : ToastController ,private navCtrl: NavController, private navParams: NavParams) {
  
     
-      this.data= this.navParams.get("data");
-      console.log(this.data);
       
-   
   }
   forgot(){
-    /*
+    
     var body = {'phoneNumber':this.phone};
+    this.pt = this.phone;
     //this.url = 
-    this.url="http://172.18.12.212:8000/api/forgot";
+    this.url="http://34.242.75.122/api/v1/password/verify";
+   //  this.url="http://172.18.12.212:8000/api/v1/password/verify"
+  let loading = this.loadingCtrl.create({
+    content: 'Please wait...'
+  });
+
+  loading.present();
+   
   this.remoteService.getPosts2(this.url,body).subscribe((data)=>{
+    loading.dismiss();
   console.log(data);
   this.udata = data;
   
-  if(data.responseCode== 1){
+  if(data.responseCode== "200"){
     this.class ="toast-success";
     console.log(data)
-    this.presentToast("A Confirmation SMS has been sent");
+    this.presentToast("Verification SMS has been sent to you");
     
   }
-  else if(data.responseCode== 0){
+  else if(data.responseCode== "44"){
     this.class ="toast-failure";
     console.log(data)
-    this.presentToast("Account Not Found");
+    this.presentToast("This Account does not exist");
     
   }
   else{
@@ -66,8 +73,8 @@ payref: string;
     this.presentToast("An Error Occured!");
   }
     });
-    */
-    this.navCtrl.push(Forgot2Page);
+    
+
   }
 changepass(){
   
@@ -85,7 +92,11 @@ changepass(){
      // alert(this.)
      if(this.class=="toast-success"){
       //alert("moving to Authen");
-     this.navCtrl.push(HomePage,{data: this.phone});
+         // this.navCtrl.push(Forgot2Page);
+         console.log(this.phone)
+         console.log(this.pt)
+         console.log(".................")
+     this.navCtrl.push(Forgot2Page,{data: this.pt});
     }
    
     //  this.navCtrl.setRoot("ProfilePage",{data : JSON.stringify(this.udata)});
