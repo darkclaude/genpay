@@ -95,6 +95,7 @@ if(data.responseCode== "200"){
   this.storage.set('firstname',this.udata.data.firstName);
   this.storage.set('fullname',this.udata.data.fullName);
   this.storage.set('lastname',this.udata.data.lastName);
+ this.storage.set('email',this.udata.data.email);
   this.storage.set('id',this.udata.data.id);
   this.storage.set('apikey',this.udata.data.api_token);
   this.options.duration=1;
@@ -142,7 +143,7 @@ else{}
 
 searchchanged1(ch: any){
   if(ch.length>0){
-    this.f1 ="";
+    //this.f1 ="";
  
   }
   else{
@@ -155,7 +156,7 @@ searchchanged1(ch: any){
 searchchanged2(ch: any){
   if(ch.length>0){
    
-    this.f2= "";
+   // this.f2= "";
   }
   else{
   

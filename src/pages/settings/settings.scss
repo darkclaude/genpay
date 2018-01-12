@@ -1,6 +1,9 @@
 page-settings {
 
 }
+$item-ios-detail-push-color: color($colors, light);
+$item-md-detail-push-color: color($colors, light);
+$item-wp-detail-push-color: color($colors, light);
 .div{
     
         margin-left: auto;
@@ -22,16 +25,17 @@ page-settings {
         display:block; 
         height: 40px;
     }
+    
     .app-font{
         white-space: inherit;
         font-size: 40px;
-        opacity: 0.7;
+        opacity: 0.42;
       }
     
     .app-font2{
         white-space: inherit;
         font-size: 20px;
-        opacity: 0.7;
+        opacity: 0.92;
       }
       .bil{
         font-size: 20px;

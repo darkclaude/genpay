@@ -98,23 +98,28 @@ export class RegisterPage {
  this.isd = false;
  if(data.responseCode== "200"){
    this.class ="toast-success";
-   this.presentToast("Registration succesfull");
+   this.navCtrl.setRoot(AuthenticatePage,{data: JSON.stringify(this.udata)});
+  // this.presentToast("Registration succesfull");
   // this.class ="str";
  }
  else if(data.responseCode=="203"){
    this.class ="toast-failure";
-   this.presentToast("Account Already Exists, Login!");
+ //  this.presentToast);
+ alert("Account Already Exists, Login!")
+ 
    this.class="str";
  
  }
  else if(data.responseCode=="400"){
   this.class ="toast-failure";
-  this.presentToast("Validation failed");
+  //this.presentToast("Validation failed");
   this.class="str";
+  alert("Validation faiiled!");
  }
  else if(data.responseCode=="34"){
   this.class ="toast-failure";
-  this.presentToast("Invalid Phone Number");
+  //this.presentToast("Invalid Phone Number");
+  alert("Invalid Phone Number")
   this.class="str";
  }
    })

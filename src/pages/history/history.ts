@@ -33,14 +33,22 @@ export class HistoryPage {
   udata : any;
   phone : string;
   btnt : string;
+ 
   url : string;
+ // placeholderDate: null;
 billername: string='';
+options : any= {
+  message:'',
+  duration: 1000,
+  cssClass: this.class,
+  position: 'middle'
+};
   constructor(private loadingCtrl: LoadingController ,private navParams: NavParams,public storage: Storage,private toastCtrl : ToastController ,private navCtrl: NavController,private remoteService : RemoteServiceProvider) {
  
 
   }
  
-  
+ 
   today(){
     let loading = this.loadingCtrl.create({
       content: 'Please wait...'
@@ -61,15 +69,15 @@ billername: string='';
       //this.isd = false;
       if(data.responseCode=="200"){
         this.class ="toast-success";
-     
-      this.presentToast("Success!");
+     this.options.duration=1;
+      this.presentToast("");
       
       
       }
       else{
         this.class ="toast-failure";
-      
-         this.presentToast("No History Data Available");
+        alert("No History Data Available")
+       //  this.presentToast("No History Data Available");
       }    
       
       //console.log(data);
@@ -97,16 +105,16 @@ billername: string='';
       //this.isd = false;
       if(data.responseCode=="200"){
         this.class ="toast-success";
-     
-      this.presentToast("Success!");
+     this.options.duration= 1;
+      this.presentToast("");
       
       
       }
      
       else{
         this.class ="toast-failure";
-      
-         this.presentToast("No History Data Available");
+        alert("No History Data Available")
+       //  this.presentToast("No History Data Available");
       }
       //console.log(data);
         });
@@ -134,15 +142,17 @@ this.url="http://34.242.75.122/api/v1/user/"+val+"/payHistory/month";
     //this.isd = false;
     if(data.responseCode=="200"){
       this.class ="toast-success";
-   
-    this.presentToast("Success!");
+      this.navCtrl.push(HistoryDataPage,{data: this.udata})
+    
+    //this.options.duration= 1;
+    //this.presentToast("");
     
     
     }
    else{
     this.class ="toast-failure";
-  
-     this.presentToast("No History Data Available");
+  alert("No History Data Available")
+     //this.presentToast("No History Data Available");
      
    }
     
@@ -160,14 +170,11 @@ this.navCtrl.push(StatementPage);
   
     
   presentToast(msg: string) {
-    const toast = this.toastCtrl.create({
-      message: msg,
-      duration: 1000,
-      cssClass: this.class,
-      position: 'button'
-    });
+    this.options.message = msg;
+    const toast = this.toastCtrl.create(this.options);
   var s = 2;
     toast.onDidDismiss(() => {
+      
        this.navCtrl.push(HistoryDataPage,{data: this.udata})
     
      

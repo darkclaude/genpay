@@ -5,10 +5,19 @@ page-main {
      background-image: url('../assets/images/bg7.png');
    // background-color : #f9fbfc;
 }
+.topbar2 {
+    background-image: url('../assets/images/bg14.png');
+
+//color:#006cc5b6;
+  // background-color : #f9fbfc;
+}
 .div{
 
     margin-left: auto;
     margin-right: auto;
+}
+.pojj{
+   // color: #1fb8ffea;
 }
 
 .container{ width:60%; }
@@ -17,9 +26,15 @@ page-main {
 .align-right{float: right;width:50%}
 .listh {
     background-color: #ffffff;
+  
 }
 .listh:hover {
     background-color: #ccd4e2;
+}
+.bilh{
+    font-size: 20px;
+   
+    opacity: 0.9;
 }
 .logb{
     margin:0 auto;

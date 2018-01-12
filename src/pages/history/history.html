@@ -13,9 +13,9 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content class="topbar"padding>
   <br><br>
-  <ion-item-divider class="bil" color="light">  <b color="#23aadb">History</b></ion-item-divider>
+  <ion-item-divider class="bilh" color="#003e70">  <font color="#23aadb"><b>History</b></font></ion-item-divider>
   <ion-item  detail-push  class="listh" (click)="today()">
     <font color="#23aadb" >
        <font class="bil">Today</font>
@@ -38,8 +38,8 @@
         <br>
         </ion-item>
         <div></div>
-    <br><br>
-    <ion-item-divider class="bil" color="light">  <b color="#23aadb">Statement</b></ion-item-divider>
+    <br>
+    <ion-item-divider class="bilh" color="#003e70">  <font color="#23aadb"><b>Statement</b></font></ion-item-divider>
   
     <ion-item  detail-push  class="listh" (click)="statement()">
       <font color="#23aadb">
@@ -48,4 +48,5 @@
       </font>
       <br>
       </ion-item>
+
 </ion-content>

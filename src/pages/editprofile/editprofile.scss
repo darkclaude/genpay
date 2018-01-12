@@ -1,14 +1,28 @@
 page-editprofile {
-
+    ion-input[type="email"]
+    {
+        font-size:6px;
+    }
 }
 .div{
     
         margin-left: auto;
         margin-right: auto;
     }
-    
+    .topbar {
+        background-image: url('../assets/images/bg7.png');
+      // background-color : #f9fbfc;
+   }
+
+   .topbar2 {
+    background-image: url('../assets/images/bg14.png');
+
+//color:#006cc5b6;
+  // background-color : #f9fbfc;
+}
     .container{ width:60%; }
     
+   
     .align-left{ float: left;width:50%; }
     .align-right{float: right;width:50%}
     .listh {
@@ -17,8 +31,9 @@ page-editprofile {
     .listh:hover {
         background-color: #ccd4e2;
     }
-    .btnp{
-        font-size: 10px;
+    input
+    {
+        font-size:5px;
     }
     .logb{
         margin:0 auto;

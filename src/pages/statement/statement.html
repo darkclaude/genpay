@@ -13,24 +13,26 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content class="topbar" padding>
 
   
-  <ion-item-divider class="bil" color="light">  <b>Send Transactions Statement</b></ion-item-divider>
-  <ion-datetime displayFormat="MM/DD/YYYY">Here</ion-datetime>
+  <ion-item-divider color="#003e70"class="bil" > <font color="#23aadb"> <b>Transactions Statement</b></font></ion-item-divider>
+
   <ion-item>
-   
-    <ion-label> <h2><ion-icon name="calendar"></ion-icon>From: </h2></ion-label>
-   
+    <span ion-datepicker (ionChanged)="setDate($event);" ([value])="from"  clear class="ScheduleDate">
+      <span><font color="#23aadb">From:<ion-icon name="clipboard" item-left ></ion-icon></font><font color="#23aadb">{{from | date}}</font></span>
+      <div></div>
+    </span>
+  
   </ion-item>
   <ion-item>
-    
-     <ion-label> <h2><ion-icon name="calendar"></ion-icon>To: </h2></ion-label>
-     <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="endDate">
-     </ion-datetime>
+    <span ion-datepicker (ionChanged)="setDateT($event);" ([value])="to"  clear class="ScheduleDate">
+      <span><font color="#23aadb">To: &nbsp;&nbsp;&nbsp; <ion-icon name="clipboard" item-left ></ion-icon></font><font color="#23aadb">{{to | date}}</font></span>
+    </span>
    </ion-item>
+
   <br>
-   <button ion-button large right>Send Statement</button>
+   <button ion-button (click)="statement()"large right>Send Statement</button>
 
    
     <br><br>

@@ -34,6 +34,7 @@ payref: string;
  
     
       this.data= this.navParams.get("data");
+      console.log("Billerref HEE");
       console.log(this.data);
       
    

@@ -13,23 +13,30 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content  class="topbar" padding>
 
  <br>
-  <h1 text-center ><font class="app-font"><b>GENPAY</b></font></h1>
+  <h1 text-center ><font color="#FFFFFF"class="app-font"><b>GENPAY</b></font></h1>
   <br>
-  <div text-center><ion-label >Name</ion-label><font style="size: 20px"><b>{{name}}</b></font></div>
-<br>
-<div text-center><ion-label >Phone Number</ion-label><font style="size: 20px"><b>{{phone}}</b></font></div>
-<br>
-<ion-label text-center>Email Address</ion-label>
-<ion-item>
+  <div class="topbar">
+    <ion-item text-wrap >
+   <font color="#23aadb"><b>Name:</b></font>&nbsp;&nbsp;<font color="#23aadb"><b>{{name}}</b></font>
+    </ion-item>
+    <ion-item text-wrap >
+        <font color="#23aadb"><b>Phone No:</b></font>&nbsp;&nbsp;<font color="#23aadb"><b>{{phone}}</b></font>
+         </ion-item  >
+         <ion-item text-wrap >
+            <font color="#23aadb"><b>Email:</b></font>&nbsp;&nbsp;<font color="#23aadb"><b>{{email}}</b></font>
+             </ion-item>
+   
+</div>
+<ion-item transparent >
 
-<ion-input type="email"  class="btnp" [(ngModel)]="email" name="title"></ion-input>
+
+<ion-input   type="email"  class="btnp" [(ngModel)]="newemail" name="title"></ion-input>
 
 </ion-item>
 <br>
 <button   class="logb" [disabled]="isd" ion-button  (click)="addemail()">Add Email address</button>
-
 
 </ion-content>

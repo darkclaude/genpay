@@ -6,7 +6,28 @@ div{
         margin-left: auto;
         margin-right: auto;
     }
-    
+    .topbar {
+        background-image: url('../assets/images/bg7.png');
+      // background-color : #f9fbfc;
+   }
+
+   .topbar2 {
+    background-image: url('../assets/images/bg14.png');
+
+//color:#006cc5b6;
+  // background-color : #f9fbfc;
+}
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+   .oi{
+       opacity: 0.8;
+   }
     .container{ width:60%; }
     
     .align-left{ float: left;width:50%; }

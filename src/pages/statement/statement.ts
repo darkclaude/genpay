@@ -29,6 +29,8 @@ export class StatementPage {
   class :string;
   accountno: string;
   udata : any;
+  from : Date;
+  to: Date;
   phone : string;
   btnt : string;
   url : string;
@@ -40,66 +42,60 @@ billername: string='';
 
   }
  
-  week(){
-  /*
+  setDate(event){
+    this.from = new Date(event);
+   
+         }
+         setDateT(event){
+           this.to = new Date(event);
+          
+                }
+  
+  statement(){
+
+
     let loading = this.loadingCtrl.create({
       content: 'Please wait...'
     });
   
     loading.present();
-    this.url="http://172.18.12.212:8000/api/billers";
+   // http://0.0.0.0:8000/api/user/{user_id}/payHistory/{month}
+     
+   this.storage.get('id').then((val) => {
+  this.url="http://34.242.75.122/api/v1/user/"+val+"/statement";
+  
     //alert(this.url);
-    var body = {}
-    this.remoteService.getPosts(this.url).subscribe((data)=>{
+    var body = {'user_id': val,'from': this.from, 'to': this.to}
+  console.log(body);
+    this.remoteService.getPosts2(this.url,body).subscribe((data)=>{
       console.log(data);
+      
+  setTimeout(() => {
+    loading.dismiss();
+   
+  }, 6000);
       loading.dismiss();
       this.udata = data;
       //this.isd = false;
-      if(data.responseCode==1){
-        this.class ="toast-success";
-        this.storage.set('billerlist',JSON.stringify(this.udata))
-      this.presentToast("Got biller list!");
-      this.class="allbillers";
+      if(data.responseCode=="200"){
+      alert("Success! Statement has been sent your email");
       
       }
-     
-      
+      else if(data.responseCode=="400"){
+      alert("Please Add an Email First in Settings");
+      }    
+      else if(data.responseCode=="401"){
+        alert("Kindly Verify your email the Link has been sent")
+      }
+      else if(data.responseCode=="44"){
+        alert("No Transaction History Available");
+      }
+      else{
+
+      }
       //console.log(data);
         });
-        */
-  }
-month(){
-  /*
-  let loading = this.loadingCtrl.create({
-    content: 'Please wait...'
-  });
-
-  loading.present();
-  this.url="http://172.18.12.212:8000/api/billers";
-  //alert(this.url);
-  var body = {}
-  this.remoteService.getPosts(this.url).subscribe((data)=>{
-    console.log(data);
-    loading.dismiss();
-    this.udata = data;
-    //this.isd = false;
-    if(data.responseCode==1){
-      this.class ="toast-success";
-      this.storage.set('billerlist',JSON.stringify(this.udata))
-    this.presentToast("Got biller list!");
-    this.class="allbillers";
-    
-    }
-   
-    
-    //console.log(data);
-      });
-      */
-  }
-  statement(){
-
-
-    
+   });
   }
   
     
@@ -121,7 +117,6 @@ month(){
   }
   
 
-  
   
 
   ionViewDidLoad() {

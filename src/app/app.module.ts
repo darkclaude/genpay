@@ -4,6 +4,7 @@ import { FormsModule }   from '@angular/forms';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
+import { DatePickerModule } from 'ionic3-datepicker';
 //import { RemoteServiceProvider } from '../providers/remote-service/remote-service';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -29,6 +30,8 @@ import { HistoryPage} from '../pages/history/history';
 import { StatementPage } from '../pages/statement/statement';
 import { Statement } from '@angular/compiler/src/output/output_ast';
 import { ForgotPage } from '../pages/forgot/forgot';
+import {RecentBillersPage} from '../pages/recentbillers/recentbillers';
+import {RecentBillers2Page} from '../pages/recentbillers2/recentbillers2';
 import { Forgot2Page } from '../pages/forgot2/forgot2';
 import { Vibration } from '@ionic-native/vibration';
 //mport { SearchPipe } from '../pipes/search/search';
@@ -45,8 +48,10 @@ import { Vibration } from '@ionic-native/vibration';
     HistoryPage,
     StatementPage,
     ForgotPage,
+    RecentBillersPage,
     BillerPayPage,
     //ProfilePage2,
+    RecentBillers2Page,
     BillerLookupPage,
     SettingsPage,
     ChangepasswordPage,
@@ -59,7 +64,7 @@ import { Vibration } from '@ionic-native/vibration';
   ],
   imports: [
     BrowserModule,
-  
+  DatePickerModule,
     IonicModule.forRoot(MyApp),
     IonicStorageModule.forRoot({
       name: '__mydb',
@@ -78,6 +83,8 @@ import { Vibration } from '@ionic-native/vibration';
     BillerPayPage,
     ForgotPage,
     Forgot2Page,
+    RecentBillersPage,
+    RecentBillers2Page,
    // ProfilePage2,
     BillerLookupPage,
     AuthenticatePage,

@@ -13,13 +13,15 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content class="topbar"padding>
 
 <ion-item color="#23aadb" text-wrap class="listh" *ngFor="let d of data" >
 
-     <ion-icon color="#23aadb" style="padding-right: 10px" name="logo-buffer"></ion-icon> {{d.merchantName}} <font float-right>GHC {{d.amount}}</font><br>
+  <font color=#23aadb><b>{{d.merchantName}}</b></font> <font color="#23aadb"float-right><b>GHS {{d.amount}}</b></font><br>
 
-    <font color="#23aadb" float-right>{{d.created_at}}</font>
+   <br>
+
+    <font color="#23aadb" float-left>{{d.created_at}}</font>
 
 
 </ion-item>

@@ -27,6 +27,7 @@ export class AuthenticatePage {
  resd: boolean = true;
  data : any;
  isd: boolean=false;
+ phone : string;
  class: string;
  sfn: boolean=true;
   constructor(private toastCtrl: ToastController,private remoteService: RemoteServiceProvider,private navCtrl: NavController, private navParams: NavParams) {
@@ -38,7 +39,7 @@ export class AuthenticatePage {
  } catch (error) {
    
  }
- let TIME_IN_MS = 1000*60*3;
+ let TIME_IN_MS = 1000*60*1;
  let hideFooterTimeout = setTimeout( () => {
       this.resd = false;
  }, TIME_IN_MS);
@@ -47,11 +48,25 @@ export class AuthenticatePage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad AuthenticatePage');
     this.btnt = "Activate";
-    alert("Code Resend Will be Available after 3 Minutes incase you dont receive any verification code")
+    this.phone = this.data;
+    alert("Code Resend Will be Available after 1 minutes incase you dont receive any verification code")
   }
 
   resend(): void{ 
-
+    var body = {'phoneNumber':this.data}
+    this.url="http://34.242.75.122/api/v1/sendCode";
+    this.remoteService.getPosts2(this.url,body).subscribe((data)=>{
+      console.log(data);
+      this.udata = data;
+      if(data.responseCode=="200"){
+alert("Code has been Resent");
+      }
+      else{
+        alert("An Error Occuered please check your details");
+      }
+    
+      //console.log(data);
+        });
   }
   activate() :  void{
     this.isd = true;
@@ -74,20 +89,25 @@ export class AuthenticatePage {
   this.isd = false;
   if(data.responseCode=="49"){
     this.class ="toast-failure";
+
   this.presentToast("Invalid Code!");
   
   }
   else if(data.responseCode=="200"){
-    this.class ="toast-success";
-  this.presentToast("Account Activated!");
+   // this.class ="toast-success";
+    this.navCtrl.setRoot(HomePage);
+    
+  alert("Account Activated!");
   }
   else if(data.status=="02"){
     this.class ="toast-failure";
-  this.presentToast("Access Denied!");
+  alert("Access Denied!");
   }
   else{
     this.class ="toast-success";
-  this.presentToast("Access Granted!")
+    this.navCtrl.setRoot(HomePage);
+    
+  //this.presentToast("Access Granted!")
   }
   
   //console.log(data);

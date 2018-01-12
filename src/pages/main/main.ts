@@ -10,6 +10,7 @@ import { ProfilePage } from '../../pages/profile/profile';
 import { SettingsPage } from '../../pages/settings/settings';
 import { RemoteServiceProvider } from '../../providers/remote-service/remote-service';
 import { HistoryPage } from '../../pages/history/history';
+import { RecentBillersPage } from '../../pages/recentbillers/recentbillers';
 /**
  * Generated class for the MainPage page.
  *
@@ -60,7 +61,7 @@ url : string;
   try{
     
     this.storage.get('id').then((val) => {
-      this.url="http://34.242.75.122/api/v1/pushtoken";
+      this.url="http://34.242.75.122/api/v1/pushToken";
       //alert(this.url);
     //  alert(val);
       this.oneSignal.getIds().then((ids) => {
@@ -142,7 +143,21 @@ var s = 2;
   toast.onDidDismiss(() => {
     
    if(this.class=="allbillers"){
-     
+    this.sl =[];
+    this.ga =[];
+    this.ut =[];
+    this.bng =[];
+    this.rt=[];
+    this.pt =[];
+    this.hc=[];
+    this.it=[];
+    this.ong=[];
+    this.air=[];
+    this.ngof=[];
+    this.mch=[];
+    this.ch=[];
+    this.at=[];
+ this.od=[];
      for(var i in this.udata.data){
      //  console.log(this.udata.data[i]);
        if(this.udata.data[i].category=="school"){
@@ -223,7 +238,7 @@ logout(){
 }
 
 torecentbillers(){
-  
+  /*
   
   
   let loading = this.loadingCtrl.create({
@@ -238,7 +253,38 @@ torecentbillers(){
     this.presentToast("No Recent billers found!");
   }, 5000);
  
-  
+  */
+  let loading = this.loadingCtrl.create({
+    content: 'Please wait...'
+  });
+
+  loading.present();
+ // http://0.0.0.0:8000/api/user/{user_id}/payHistory/{month}
+   
+ this.storage.get('id').then((val) => {
+this.url="http://34.242.75.122/api/v1/recent/"+val;
+
+  //alert(this.url);
+  var body = {}
+  this.remoteService.getPosts(this.url).subscribe((data)=>{
+    console.log(data);
+    loading.dismiss();
+    this.udata = data;
+    //this.isd = false;
+    if(data.responseCode=="200"){
+     // this.class ="toast-success";
+     
+     this.navCtrl.push(RecentBillersPage,{data: this.udata})
+    
+    }
+   
+    else{
+    alert("Sorry you dont have any Recent billers");
+    }
+    //console.log(data);
+      });
+ });
+ 
 
   
   
@@ -283,7 +329,7 @@ tobillers(){
       this.class ="toast-success";
       this.storage.set('billerlist',JSON.stringify(this.udata))
       this.options.duration=1;
-    this.presentToast("Success!");
+    this.presentToast("");
     this.class="allbillers";
     
     }

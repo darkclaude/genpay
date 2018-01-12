@@ -13,23 +13,27 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content class="topbar" padding>
  
         <br>
         <img>
-         <h1 text-center ><font class="app-font"><b>{{billername}}</b></font></h1>
+        <div class="topbar2">
+         <h1 text-center ><font color="#FFFFFF" lass="app-font"><b>{{billername}}</b></font></h1>
          <br>
          <br>
          <br>
          <br>
-       <ion-label text-center>Enter Amount</ion-label>
-       <ion-item>
+       <ion-label text-center><font color="#FFFFFF"><b>Enter Amount</b></font></ion-label>
+       <ion-item transparent>
        
        <ion-input type="text"  class="btnp" [(ngModel)]="amount" name="title"></ion-input>
        
        </ion-item>
        <br>
        <button   class="logb" [disabled]="isd" ion-button large (click)="pay2()">Pay</button>
+       <br>
        
+      </div>
+     
       
 </ion-content>

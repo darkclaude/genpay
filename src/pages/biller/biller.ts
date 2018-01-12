@@ -137,7 +137,9 @@ changepass(){
          
       this.storage.set('billeracc',this.accountno);
       this.storage.set('billeracc',this.accountno);
-        this.presentToast("Lookup Successful");
+        //this.presentToast("Lookup Successful");
+       
+      this.navCtrl.push(BillerLookupPage,{data : this.data});
         
       }
       else{

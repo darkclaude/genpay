@@ -23,7 +23,7 @@ export class EditprofilePage {
   name : string;
   data : any;
   class :string;
- 
+ newemail: string;
   email: string;
   udata : any;
   phone : string;
@@ -44,50 +44,40 @@ this.phone = val;
   }
 
   addemail(){
+
     let loading = this.loadingCtrl.create({
       content: 'Please wait...'
     });
   
     loading.present();
-  
-    setTimeout(() => {
-      loading.dismiss();
-      this.class ="toast-failure";
-      this.presentToast("No Further Data");
+   // http://0.0.0.0:8000/api/user/{user_id}/payHistory/{month}
      
-    }, 2000);
-   
-/*
-    var body = {};
-    //this.url = 
-    this.url="http://172.18.12.212:8000/api/email";
-  this.remoteService.getPosts2(this.url,body).subscribe((data)=>{
-  console.log(data);
-  this.udata = data;
+   this.storage.get('id').then((val) => {
+  this.url="http://34.242.75.122/api/v1/user/"+val+"/email";
   
-  if(data.responseCode== 1){
-    this.class ="toast-success";
-    console.log(data)
-    this.presentToast("Welcome "+data.data.fullName);
+    //alert(this.url);
+    var body = {'email': this.newemail}
+  console.log(body);
+    this.remoteService.getPosts2(this.url,body).subscribe((data)=>{
+      console.log(data);
+      loading.dismiss();
+      this.udata = data;
+      //this.isd = false;
+      if(data.responseCode=="200"){
+      alert("Your email has been added Succesfully");
+      this.email = this.udata.data.email;
+      this.storage.set('email',this.udata.data.email);
+      this.storage.set('email',this.udata.data.email);
+      this.newemail="";
+      
+      }
     
-  }
-  else if(data.responseCode==0){
-    this.class ="toast-failure";
-    this.presentToast("Account not found!");
-   // this.class="str";
-  
-  }
-  else if(data.responseCode==2){
-    this.class ="toast-failure";
-    this.presentToast("Invalid Password!");
-  //  this.class="str";
-  
-  }
-  
-  
-  else{}
-    });
-    */
+      else{
+alert("An Error Occured Try again");
+      }
+      //console.log(data);
+        });
+   });
   }
   presentToast(msg: string) {
     const toast = this.toastCtrl.create({
