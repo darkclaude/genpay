@@ -52,7 +52,7 @@ snip2: boolean = false;
 
 recentacc(biller: any){
 console.log(biller)
-  
+console.log(biller);
 
 let loading = this.loadingCtrl.create({
   content: 'Please wait...'

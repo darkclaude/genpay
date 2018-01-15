@@ -8,31 +8,31 @@
   },
   "installed_plugins": {
     "cordova-plugin-backlight": {
-      "PACKAGE_NAME": "io.ionic.starter"
+      "PACKAGE_NAME": "ITC.genpay"
     },
     "cordova-plugin-device": {
-      "PACKAGE_NAME": "io.ionic.starter"
+      "PACKAGE_NAME": "ITC.genpay"
     },
     "cordova-plugin-ionic-webview": {
-      "PACKAGE_NAME": "io.ionic.starter"
+      "PACKAGE_NAME": "ITC.genpay"
     },
     "cordova-plugin-splashscreen": {
-      "PACKAGE_NAME": "io.ionic.starter"
+      "PACKAGE_NAME": "ITC.genpay"
     },
     "cordova-plugin-statusbar": {
-      "PACKAGE_NAME": "io.ionic.starter"
+      "PACKAGE_NAME": "ITC.genpay"
     },
     "cordova-plugin-vibration": {
-      "PACKAGE_NAME": "io.ionic.starter"
+      "PACKAGE_NAME": "ITC.genpay"
     },
     "cordova-plugin-whitelist": {
-      "PACKAGE_NAME": "io.ionic.starter"
+      "PACKAGE_NAME": "ITC.genpay"
     },
     "cordova-sqlite-storage": {
-      "PACKAGE_NAME": "io.ionic.starter"
+      "PACKAGE_NAME": "ITC.genpay"
     },
     "ionic-plugin-keyboard": {
-      "PACKAGE_NAME": "io.ionic.starter"
+      "PACKAGE_NAME": "ITC.genpay"
     }
   },
   "dependent_plugins": {}

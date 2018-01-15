@@ -28,11 +28,11 @@
     "cordova-plugin-whitelist": {
       "PACKAGE_NAME": "io.ionic.starter"
     },
-    "cordova-sqlite-storage": {
-      "PACKAGE_NAME": "io.ionic.starter"
-    },
     "ionic-plugin-keyboard": {
       "PACKAGE_NAME": "io.ionic.starter"
+    },
+    "cordova-sqlite-storage": {
+      "PACKAGE_NAME": "ITC.genpay"
     }
   },
   "dependent_plugins": {}
