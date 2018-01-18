@@ -23,7 +23,7 @@
 <ion-item detail-push class="listh" *ngFor="let d of data | search: sparam "  (click)="passdata(d)">
 <font color="#23aadb"  text-wrap >
    
-    <ion-icon style="padding-right: 10px" name="logo-buffer"></ion-icon> <font text-wrap>{{d.merchantName}}</font>
+    <ion-icon style="padding-right: 10px" name="logo-buffer"></ion-icon> <font text-wrap><b>{{d.merchantName}}</b></font>
 </font>
 
 </ion-item>

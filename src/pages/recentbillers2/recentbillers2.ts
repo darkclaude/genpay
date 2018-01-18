@@ -54,8 +54,15 @@ this.data2 = this.data.data;
 recentacc2(account: any){
   this.storage.set('billeracc',account.accountRef);
   this.storage.set('ovat',account.ova);
-  //alert(account.merchantName);
-  this.navCtrl.push(BillerRefPage,{data : this.data});
+  console.log(account);
+  console.log(this.data);
+  console.log(account.ova);
+  var passer ;
+  var dataa = [];
+  dataa.push(account);
+  passer = {'r':1,'b':2,data: dataa};
+  console.log(passer);
+  this.navCtrl.push(BillerRefPage,{data : passer});
     
 }
 /*

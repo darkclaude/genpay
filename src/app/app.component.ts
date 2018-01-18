@@ -15,6 +15,9 @@ import {BillerPage} from '../pages/biller/biller';
 import { HistoryPage} from '../pages/history/history';
 import { StatementPage } from '../pages/statement/statement';
 import { ForgotPage } from '../pages/forgot/forgot';
+import { BillerLookupPage } from '../pages/billerlookup/billerlookup';
+import { BillerPayPage } from '../pages/billerpay/billerpay';
+import { BillerRefPage } from '../pages/billeref/billeref';
 //import {  ItemDetailsPageRegister  } from '../pages/item-details-register/item-details-register';
 @Component({
   templateUrl: 'app.html'     

@@ -64,7 +64,7 @@ this.phone = val;
       this.udata = data;
       //this.isd = false;
       if(data.responseCode=="200"){
-      alert("Your email has been added Succesfully");
+      alert("Your email has been added. A verification link has been sent to your email address. Check to verify your email address.");
       this.email = this.udata.data.email;
       this.storage.set('email',this.udata.data.email);
       this.storage.set('email',this.udata.data.email);

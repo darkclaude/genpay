@@ -13,24 +13,24 @@
 </ion-header>
 
 
-<ion-content class="topbar" padding>
+<ion-content class="topbar61" padding>
   
         <br>
         <img>
-        <div class="topbar2">
-         <h1 text-center ><font color="#FFFFFF"  class="app-font"><b>{{billername}}</b></font></h1>
+        <div class="topbar62">
+         <h1 text-center ><font color="#03afd6"  class="app-font"><b>{{billername}}</b></font></h1>
          <br>
          <br>
          <br>
          <br>
-       <ion-label text-center><font color="#FFFFFF"><b>Enter Payment Reference</b></font></ion-label>
+       <ion-label text-center><font color="#03afd6"><b>Enter Payment Reference</b></font></ion-label>
        <ion-item transparent>
        
        <ion-input type="text"  class="btnp" [(ngModel)]="payref" name="title"></ion-input>
        
        </ion-item>
        <br>
-       <button   class="logb" [disabled]="isd" ion-button  (click)="continue()">Continue</button>
+       <button   class="logb" [strong]="true" [disabled]="isd" ion-button  (click)="continue()">Continue</button>
        
       <br>
       </div>

@@ -1,6 +1,16 @@
 page-authenticate {
-
+    ion-input {
+        text-align: center;
+        color:  #000000;
+        }
+    input{
+        text-align: center;
+        color:  #000000;
+        font-size : 30px;
+    }
+ 
 }
+
 .rb{
     height: 80%;
 }
@@ -9,8 +19,17 @@ page-authenticate {
     margin-right: auto;
 }
 .topbar {
-    background-image: url('../assets/images/bg7.png');
+  //  background-image: url('../assets/images/bg7.png');
   // background-color : #f9fbfc;
+}
+ion-input {
+    text-align: center;
+    color:  #000000;
+    }
+input{
+    text-align: center;
+    color:  #000000;
+    font-size : 30px;
 }
 
 div {
@@ -48,3 +67,7 @@ div {
          margin-left: 90px;
          width:120px;
       }
+      ion-label{
+        margin-left: auto;
+        margin-right: auto;
+    }

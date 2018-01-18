@@ -1,5 +1,13 @@
 page-home {
-   
+    ion-input {
+        text-align: center;
+        color:  #000000;
+        }
+        input{
+            text-align: center;
+            color:  #000000;
+            font-size : 30px;
+        }
    
 }
 .container{ width:100%; }
@@ -19,7 +27,8 @@ ion-icon {
     margin-bottom: 10px;  
 }
 
-.getstart { background-image: url('../assets/images/bg7.png')}
+.getstarta {// background-image: url('../assets/images/bg7.png')
+}
 div {
 
     margin-left: auto;
@@ -31,10 +40,11 @@ ion-label{
 }
 ion-input {
     text-align: center;
+    color:  #000000;
     }
 input{
     text-align: center;
-    color: #ffffff;
+    color:  #000000;
     font-size : 30px;
 }
 .ff{
@@ -82,8 +92,11 @@ input{
      }
   }
   .toast-failure {
+    text-align: center; 
     > div{
+         text-align: center; 
          background-color:#e23434!important;
+         
      }
   }
 

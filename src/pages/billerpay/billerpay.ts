@@ -124,10 +124,10 @@ body.ova= valova;
     body.paymentRef= val2;
     this.storage.get('billeracc').then((val3) => {
     body.user_accountRef = val3;
-
-    body.merchant_id = this.data.data[0].merchantId;
+console.log(this.data.data[0]);
+    body.merchant_id = this.data.data[0].merchantId || this.data.data[0].merchant_id;
     body.merchant_name = this.data.data[0].merchantName;
-    body.product_id= this.data.data[0].productId;
+    body.product_id= this.data.data[0].productId || this.data.data[0].merchant_id;
     
     console.log(body);
     this.remoteService.getPosts2(this.url,body).subscribe((data)=>{

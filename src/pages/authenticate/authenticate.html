@@ -13,25 +13,25 @@
 </ion-header>
 
 
-<ion-content class="topbar" text-center padding>
+<ion-content class="to" text-center padding>
   
         <br>
       
-          <h1 text-center ><font color="#FFFFFF" class="app-font">GENPAY</font></h1>
+          <h1 text-center ><font color="#03afd6" class="app-font">GENPAY</font></h1>
           <br>
           <img>
-          <ion-label fixed><font><b>{{phone}}</b></font></ion-label>
-<font color="#FFFFFF"><b>You will receive a txt message containing the code for verification shortly</b></font>
+          <h2 text-center><font color="#000000" ><b>{{phone}}</b></font></h2>
+<font color="#03afd6"><b>You will receive a txt message containing the code for verification shortly</b></font>
         <ion-item  transparent *ngIf="sfn" padding-top  >
          
-          <ion-label floating><font color="#FFFFFF" ><b>Enter Verification Code</b></font></ion-label>
+          <ion-label text-center floating><font color="#03afd6" ><b>Enter Verification Code</b></font></ion-label>
        <ion-input type="text"  class="btnp" [(ngModel)]="code" name="title"></ion-input>
        </ion-item>
        <br>
        <br>
       
        <div class="ss">
-        <button   class="rb" [disabled]="resd" ion-button (click)="resend()"><font color="#FFFFFF"><b>Resend Code</b></font>
+        <button   class="rb" [disabled]="resd" ion-button large (click)="resend()"><font color="#FFFFFF"><b>Resend Code</b></font>
           </button>
     </div>
        <br>

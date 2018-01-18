@@ -244,7 +244,7 @@ var BillerPage = (function () {
 }());
 BillerPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-biller',template:/*ion-inline-start:"/Users/DarkLord/genpay/src/pages/biller/biller.html"*/'<!--\n\n  Generated template for the BillerPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>BILLER PAYMENT</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content class="topbar" padding>\n\n   \n\n        <br>\n\n        <img>\n\n      <div class="topbar2">\n\n        <br>\n\n         <h1 text-center ><font color="#FFFFFF" class="app-font"><b>{{billername}}</b></font></h1>\n\n         <hr/>\n\n         <hr/>\n\n        \n\n         <br>\n\n         <br>\n\n         <br>\n\n       <ion-label text-center  ><font color="#FFFFFF"><b>Enter Account Number</b></font></ion-label>\n\n      \n\n       <ion-item transparent>\n\n       \n\n       <ion-input class="oi"  type="text"  class="btnp" [(ngModel)]="accountno" name="title"></ion-input>\n\n       \n\n       </ion-item>\n\n       <br>\n\n       <button   class="logb" [disabled]="isd" ion-button  (click)="continue()">Continue</button>\n\n       <br>\n\n      </div>\n\n     \n\n     \n\n</ion-content>\n\n'/*ion-inline-end:"/Users/DarkLord/genpay/src/pages/biller/biller.html"*/,
+        selector: 'page-biller',template:/*ion-inline-start:"/Users/DarkLord/genpay/src/pages/biller/biller.html"*/'<!--\n\n  Generated template for the BillerPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>BILLER PAYMENT</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content class="topbar51" padding>\n\n   \n\n        <br>\n\n        <img>\n\n      <div class="topbar52">\n\n        <br>\n\n         <h1 text-center ><font color="#03afd6" class="app-font"><b>{{billername}}</b></font></h1>\n\n         <hr/>\n\n         <hr/>\n\n        \n\n         <br>\n\n         <br>\n\n         <br>\n\n       <ion-label text-center  ><font color="#03afd6"><b>Enter Account Number</b></font></ion-label>\n\n      \n\n       <ion-item transparent>\n\n       \n\n       <ion-input class="oi"  type="text"  class="btnp" [(ngModel)]="accountno" name="title"></ion-input>\n\n       \n\n       </ion-item>\n\n       <br>\n\n       <button   class="logb" [disabled]="isd" ion-button  (click)="continue()">Continue</button>\n\n       <br>\n\n      </div>\n\n     \n\n     \n\n</ion-content>\n\n'/*ion-inline-end:"/Users/DarkLord/genpay/src/pages/biller/biller.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */], __WEBPACK_IMPORTED_MODULE_5__providers_remote_service_remote_service__["a" /* RemoteServiceProvider */], __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ToastController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]])
 ], BillerPage);
@@ -443,7 +443,7 @@ var EditprofilePage = (function () {
                 _this.udata = data;
                 //this.isd = false;
                 if (data.responseCode == "200") {
-                    alert("Your email has been added Succesfully");
+                    alert("Your email has been added. A verification link has been sent to your email address. Check to verify your email address.");
                     _this.email = _this.udata.data.email;
                     _this.storage.set('email', _this.udata.data.email);
                     _this.storage.set('email', _this.udata.data.email);
@@ -992,9 +992,10 @@ var BillerPayPage = (function () {
                     body.paymentRef = val2;
                     _this.storage.get('billeracc').then(function (val3) {
                         body.user_accountRef = val3;
-                        body.merchant_id = _this.data.data[0].merchantId;
+                        console.log(_this.data.data[0]);
+                        body.merchant_id = _this.data.data[0].merchantId || _this.data.data[0].merchant_id;
                         body.merchant_name = _this.data.data[0].merchantName;
-                        body.product_id = _this.data.data[0].productId;
+                        body.product_id = _this.data.data[0].productId || _this.data.data[0].merchant_id;
                         console.log(body);
                         _this.remoteService.getPosts2(_this.url, body).subscribe(function (data) {
                             console.log(data);
@@ -1034,7 +1035,7 @@ var BillerPayPage = (function () {
 }());
 BillerPayPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-biller',template:/*ion-inline-start:"/Users/DarkLord/genpay/src/pages/billerpay/billerpay.html"*/'<!--\n\n  Generated template for the BillerPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>BILLER PAYMENT</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content class="topbar" padding>\n\n \n\n        <br>\n\n        <img>\n\n        <div class="topbar2">\n\n         <h1 text-center ><font color="#FFFFFF" lass="app-font"><b>{{billername}}</b></font></h1>\n\n         <br>\n\n         <br>\n\n         <br>\n\n         <br>\n\n       <ion-label text-center><font color="#FFFFFF"><b>Enter Amount</b></font></ion-label>\n\n       <ion-item transparent>\n\n       \n\n       <ion-input type="text"  class="btnp" [(ngModel)]="amount" name="title"></ion-input>\n\n       \n\n       </ion-item>\n\n       <br>\n\n       <button   class="logb" [disabled]="isd" ion-button large (click)="pay2()">Pay</button>\n\n       <br>\n\n       \n\n      </div>\n\n     \n\n      \n\n</ion-content>\n\n'/*ion-inline-end:"/Users/DarkLord/genpay/src/pages/billerpay/billerpay.html"*/,
+        selector: 'page-biller',template:/*ion-inline-start:"/Users/DarkLord/genpay/src/pages/billerpay/billerpay.html"*/'<!--\n\n  Generated template for the BillerPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>BILLER PAYMENT</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content class="topbar41" padding>\n\n \n\n        <br>\n\n        <img>\n\n        <div class="topbar42">\n\n         <h1 text-center ><font color="#03afd6" lass="app-font"><b>{{billername}}</b></font></h1>\n\n         <br>\n\n         <br>\n\n         <br>\n\n         <br>\n\n       <ion-label text-center><font color="#03afd6"><b>Enter Amount</b></font></ion-label>\n\n       <ion-item transparent>\n\n       \n\n       <ion-input type="text"  class="btnp" [(ngModel)]="amount" name="title"></ion-input>\n\n       \n\n       </ion-item>\n\n       <br>\n\n       <button   class="logb" [disabled]="isd" ion-button large (click)="pay2()">Pay</button>\n\n       <br>\n\n       \n\n      </div>\n\n     \n\n      \n\n</ion-content>\n\n'/*ion-inline-end:"/Users/DarkLord/genpay/src/pages/billerpay/billerpay.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */], __WEBPACK_IMPORTED_MODULE_4__providers_remote_service_remote_service__["a" /* RemoteServiceProvider */], __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ToastController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]])
 ], BillerPayPage);
@@ -1106,7 +1107,7 @@ var BillerLookupPage = (function () {
 }());
 BillerLookupPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-biller',template:/*ion-inline-start:"/Users/DarkLord/genpay/src/pages/billerlookup/billerlookup.html"*/'<!--\n\n  Generated template for the BillerPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>BILLER PAYMENT</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content class="topbar" padding>\n\n  \n\n        <br>\n\n        <img>\n\n        <div class="topbar2">\n\n         <h1 text-center ><font color="#FFFFFF"   class="app-font"><b>{{billername}}</b></font></h1>\n\n         <br>\n\n         <br>\n\n         <br>\n\n         <br>\n\n       <ion-label text-center><font color="#FFFFFF"><b>Account Holder Name</b></font></ion-label>\n\n       <ion-item transparent>\n\n       \n\n     <ion-label text-center><font color="FFFFFF">{{holder}}</font></ion-label>\n\n       </ion-item>\n\n       <br>\n\n       <button   class="logb" [disabled]="isd" ion-button  (click)="continue()">Continue</button>\n\n       <br>\n\n      </div>\n\n     \n\n      \n\n</ion-content>\n\n'/*ion-inline-end:"/Users/DarkLord/genpay/src/pages/billerlookup/billerlookup.html"*/,
+        selector: 'page-biller',template:/*ion-inline-start:"/Users/DarkLord/genpay/src/pages/billerlookup/billerlookup.html"*/'<!--\n\n  Generated template for the BillerPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>BILLER PAYMENT</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content class="topbarbl1" padding>\n\n  \n\n        <br>\n\n        <img>\n\n        <div class="topbar3q" >\n\n         <h1 text-center ><font color="#03afd6"  class="app-font"><b>{{billername}}</b></font></h1>\n\n         <br>\n\n         <br>\n\n         <br>\n\n         <br>\n\n       <ion-label text-center><font color="#03afd6"><b>Account Holder Name</b></font></ion-label>\n\n       <ion-item transparent>\n\n       \n\n     <ion-label text-center><font color="#000000"><b>{{holder}}</b></font></ion-label>\n\n       </ion-item>\n\n       <br>\n\n       <button   class="logb" [disabled]="isd" ion-button  (click)="continue()">Continue</button>\n\n       <br>\n\n      </div>\n\n     \n\n      \n\n</ion-content>\n\n'/*ion-inline-end:"/Users/DarkLord/genpay/src/pages/billerlookup/billerlookup.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */], __WEBPACK_IMPORTED_MODULE_3__providers_remote_service_remote_service__["a" /* RemoteServiceProvider */], __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ToastController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]])
 ], BillerLookupPage);
@@ -1263,8 +1264,15 @@ var RecentBillers2Page = (function () {
     RecentBillers2Page.prototype.recentacc2 = function (account) {
         this.storage.set('billeracc', account.accountRef);
         this.storage.set('ovat', account.ova);
-        //alert(account.merchantName);
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__billeref_billeref__["a" /* BillerRefPage */], { data: this.data });
+        console.log(account);
+        console.log(this.data);
+        console.log(account.ova);
+        var passer;
+        var dataa = [];
+        dataa.push(account);
+        passer = { 'r': 1, 'b': 2, data: dataa };
+        console.log(passer);
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__billeref_billeref__["a" /* BillerRefPage */], { data: passer });
     };
     return RecentBillers2Page;
 }());
@@ -1440,7 +1448,7 @@ var RegisterPage = (function () {
 }());
 RegisterPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-register',template:/*ion-inline-start:"/Users/DarkLord/genpay/src/pages/register/register.html"*/'\n\n<ion-header>\n\n    <ion-navbar>\n\n      <ion-title>\n\n     Register\n\n      </ion-title>\n\n    </ion-navbar>\n\n  </ion-header>\n\n  \n\n  <ion-content text-center class="getstart">\n\n    <div style="margin: 0 auto; display: block;" >\n\n      <img     height="80"  src="assets/images/itclogo.png" />\n\n    </div>\n\n       \n\n  \n\n          <ion-item no-padding transparent  >\n\n              <ion-label floating >\n\n            <font color="#FFFFFF">\n\n              &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;<ion-icon color="#23aadb"  name="person"></ion-icon>\n\n          \n\n      \n\n              &nbsp;&nbsp; <b>First Name</b>\n\n          </font>\n\n        </ion-label>\n\n            <ion-input required type="text" [(ngModel)]="firstname"></ion-input>\n\n          </ion-item>\n\n          <ion-item no-padding transparent>\n\n               <ion-label floating>\n\n       <font color="#FFFFFF">\n\n        &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <ion-icon color="#23aadb" item-left name="person"></ion-icon>\n\n           \n\n         <b>Last Name</b>\n\n       </font>\n\n       </ion-label>\n\n            <ion-input required type="text" [(ngModel)]="lastname"></ion-input>\n\n          </ion-item>\n\n          <ion-item no-padding transparent>\n\n              <ion-label floating>\n\n              <font color="#FFFFFF">\n\n                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;     <ion-icon color="#23aadb"  item-left name="call"></ion-icon>\n\n       \n\n      <b>Phone Number</b>\n\n      </font>\n\n    </ion-label>\n\n  \n\n            <ion-input required type="number" [(ngModel)]="phone"></ion-input>\n\n          </ion-item>\n\n          <ion-item no-padding transparent>\n\n              <ion-label floating>\n\n              <font color="#FFFFFF">\n\n                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  <ion-icon color="#23aadb"  item-left name="key"></ion-icon>\n\n  \n\n           <b>Password</b>\n\n            </font>\n\n          </ion-label>\n\n            <ion-input required type="password" [(ngModel)]="password"></ion-input>\n\n          </ion-item>\n\n          <ion-item no-padding transparent>\n\n              <ion-label floating>\n\n              <font color="#FFFFFF">\n\n          \n\n                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  <ion-icon  color="#23aadb"  item-left name="key"></ion-icon>\n\n          <b>Confirm Password</b>\n\n            </font>\n\n          </ion-label>\n\n            <ion-input required type="password" [(ngModel)]="passwordc"></ion-input>\n\n          </ion-item>\n\n         \n\n        \n\n          <br>\n\n          <button ion-button   left [strong]="true" (click)="goback()">Go  Back</button>\n\n          <button ion-button  right [strong]="true" (click)="register()">{{btnt}}</button>\n\n        \n\n  \n\n  </ion-content>'/*ion-inline-end:"/Users/DarkLord/genpay/src/pages/register/register.html"*/,
+        selector: 'page-register',template:/*ion-inline-start:"/Users/DarkLord/genpay/src/pages/register/register.html"*/'\n\n<ion-header>\n\n    <ion-navbar>\n\n      <ion-title>\n\n     Register\n\n      </ion-title>\n\n    </ion-navbar>\n\n  </ion-header>\n\n  \n\n  <ion-content text-center class="getstarta">\n\n    <div style="margin: 0 auto; display: block;" >\n\n      <img     height="80"  src="assets/images/itclogo.png" />\n\n    </div>\n\n       \n\n  \n\n          <ion-item no-padding transparent  >\n\n              <ion-label floating >\n\n            <font color="#03afd6">\n\n              &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;<ion-icon color="#23aadb"  name="person"></ion-icon>\n\n          \n\n      \n\n              &nbsp;&nbsp; <b>First Name</b>\n\n          </font>\n\n        </ion-label>\n\n            <ion-input required type="text" [(ngModel)]="firstname"></ion-input>\n\n          </ion-item>\n\n          <ion-item no-padding transparent>\n\n               <ion-label floating>\n\n       <font color="#03afd6">\n\n        &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <ion-icon color="#23aadb" item-left name="person"></ion-icon>\n\n           \n\n         <b>Last Name</b>\n\n       </font>\n\n       </ion-label>\n\n            <ion-input required type="text" [(ngModel)]="lastname"></ion-input>\n\n          </ion-item>\n\n          <ion-item no-padding transparent>\n\n              <ion-label floating>\n\n              <font color="#03afd6">\n\n                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;     <ion-icon color="#23aadb"  item-left name="call"></ion-icon>\n\n       \n\n      <b>Phone Number</b>\n\n      </font>\n\n    </ion-label>\n\n  \n\n            <ion-input required type="number" [(ngModel)]="phone"></ion-input>\n\n          </ion-item>\n\n          <ion-item no-padding transparent>\n\n              <ion-label floating>\n\n              <font color="#03afd6">\n\n                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  <ion-icon color="#23aadb"  item-left name="key"></ion-icon>\n\n  \n\n           <b>Password</b>\n\n            </font>\n\n          </ion-label>\n\n            <ion-input required type="password" [(ngModel)]="password"></ion-input>\n\n          </ion-item>\n\n          <ion-item no-padding transparent>\n\n              <ion-label floating>\n\n              <font color="#03afd6">\n\n          \n\n                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  <ion-icon  color="#23aadb"  item-left name="key"></ion-icon>\n\n          <b>Confirm Password</b>\n\n            </font>\n\n          </ion-label>\n\n            <ion-input required type="password" [(ngModel)]="passwordc"></ion-input>\n\n          </ion-item>\n\n         \n\n        \n\n          <br>\n\n          <button ion-button   color="danger" left [strong]="true" (click)="goback()">Go  Back</button>\n\n          <button ion-button  color="secondary"  right [strong]="true" (click)="register()">{{btnt}}</button>\n\n        \n\n  \n\n  </ion-content>'/*ion-inline-end:"/Users/DarkLord/genpay/src/pages/register/register.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ToastController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_5__providers_remote_service_remote_service__["a" /* RemoteServiceProvider */]])
 ], RegisterPage);
@@ -1700,27 +1708,27 @@ var map = {
 		17
 	],
 	"../pages/billeref/billeref.module": [
-		309,
+		304,
 		16
 	],
 	"../pages/billerlookup/billerlookup.module": [
-		304,
+		306,
 		15
 	],
 	"../pages/billerpay/billerpay.module": [
-		307,
+		305,
 		14
 	],
 	"../pages/changepassword/changepassword.module": [
-		305,
+		309,
 		13
 	],
 	"../pages/editprofile/editprofile.module": [
-		308,
+		307,
 		12
 	],
 	"../pages/forgot/forgot.module": [
-		306,
+		308,
 		11
 	],
 	"../pages/forgot2/forgot2.module": [
@@ -1728,7 +1736,7 @@ var map = {
 		10
 	],
 	"../pages/history/history.module": [
-		315,
+		312,
 		9
 	],
 	"../pages/historydata/historydata.module": [
@@ -1736,31 +1744,31 @@ var map = {
 		4
 	],
 	"../pages/main/main.module": [
-		314,
+		313,
 		8
 	],
 	"../pages/profile/profile.module": [
-		312,
+		314,
 		1
 	],
 	"../pages/profilecat/profilecat.module": [
-		313,
+		315,
 		0
 	],
 	"../pages/recentbillers/recentbillers.module": [
-		318,
+		317,
 		3
 	],
 	"../pages/recentbillers2/recentbillers2.module": [
-		317,
+		316,
 		2
 	],
 	"../pages/register/register.module": [
-		319,
+		318,
 		7
 	],
 	"../pages/settings/settings.module": [
-		316,
+		319,
 		6
 	],
 	"../pages/statement/statement.module": [
@@ -1910,22 +1918,22 @@ AppModule = __decorate([
                 links: [
                     { loadChildren: '../pages/authenticate/authenticate.module#AuthenticatePageModule', name: 'AuthenticatePage', segment: 'authenticate', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/biller/biller.module#BillerPageModule', name: 'BillerPage', segment: 'biller', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/billerlookup/billerlookup.module#BillerLookupPageModule', name: 'BillerLookupPage', segment: 'billerlookup', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/changepassword/changepassword.module#ChangepasswordPageModule', name: 'ChangepasswordPage', segment: 'changepassword', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/forgot/forgot.module#ForgotPageModule', name: 'ForgotPage', segment: 'forgot', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/billerpay/billerpay.module#BillerPayPageModule', name: 'BillerPayPage', segment: 'billerpay', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/editprofile/editprofile.module#EditprofilePageModule', name: 'EditprofilePage', segment: 'editprofile', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/billeref/billeref.module#BillerRefPageModule', name: 'BillerRefPage', segment: 'billeref', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/billerpay/billerpay.module#BillerPayPageModule', name: 'BillerPayPage', segment: 'billerpay', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/billerlookup/billerlookup.module#BillerLookupPageModule', name: 'BillerLookupPage', segment: 'billerlookup', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/editprofile/editprofile.module#EditprofilePageModule', name: 'EditprofilePage', segment: 'editprofile', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/forgot/forgot.module#ForgotPageModule', name: 'ForgotPage', segment: 'forgot', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/changepassword/changepassword.module#ChangepasswordPageModule', name: 'ChangepasswordPage', segment: 'changepassword', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/forgot2/forgot2.module#ForgotPage2Module', name: 'Forgot2Page', segment: 'forgot2', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/historydata/historydata.module#HistoryDataPageModule', name: 'HistoryDataPage', segment: 'historydata', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/history/history.module#HistoryPageModule', name: 'HistoryPage', segment: 'history', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/main/main.module#MainPageModule', name: 'MainPage', segment: 'main', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/profile/profile.module#ProfilePageModule', name: 'ProfilePage', segment: 'profile', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/profilecat/profilecat.module#ProfilePageCatModule', name: 'ProfilePageCat', segment: 'profilecat', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/main/main.module#MainPageModule', name: 'MainPage', segment: 'main', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/history/history.module#HistoryPageModule', name: 'HistoryPage', segment: 'history', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/settings/settings.module#SettingsPageModule', name: 'SettingsPage', segment: 'settings', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/recentbillers2/recentbillers2.module#RecentBillers2PageModule', name: 'RecentBillers2Page', segment: 'recentbillers2', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/recentbillers/recentbillers.module#RecentBillersPageModule', name: 'RecentBillersPage', segment: 'recentbillers', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/register/register.module#RegisterPageModule', name: 'RegisterPage', segment: 'register', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/settings/settings.module#SettingsPageModule', name: 'SettingsPage', segment: 'settings', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/statement/statement.module#StatementPageModule', name: 'StatementPage', segment: 'statement', priority: 'low', defaultHistory: [] }
                 ]
             }),
@@ -2386,7 +2394,7 @@ var MainPage = (function () {
 }());
 MainPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-main',template:/*ion-inline-start:"/Users/DarkLord/genpay/src/pages/main/main.html"*/'<!--\n\n  Generated template for the ProfilePage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n  \n\n      <ion-navbar>\n\n      <ion-title>Main Menu</ion-title >\n\n    </ion-navbar>\n\n  \n\n  </ion-header>\n\n  \n\n  \n\n  <ion-content class="topbar"  padding>\n\n    <div class="topbarr">\n\n  <h1 text-center ><font text-center class="app-font"  color="#FFFFFF"><b text-center>GENPAY</b></font></h1>\n\n    \n\n  <br>\n\n  <div text-center><font  color="#003e70" class="app-font2"><b>Welcome</b></font><font class="app-font2"  color="#003e70"><b>{{name}}</b></font> </div>\n\n <!-- <div class=\'container\'><div class="align-left"></div><div class="align-right"><font><b>{{phone}}</b></font></div></div> -->\n\n<br>\n\n <div text-center><font color="#003e70"><b  text-center>{{phone}}</b></font></div>\n\n</div>\n\n\n\n<br>\n\n<br>\n\n<ion-item-divider text-center class="bilh" color="#1fb8ffea">  <font text-center color="#ffffff" class="app-font"><b text-center>MENU</b></font></ion-item-divider>\n\n  \n\n  <div class="topbar2"  >\n\n   \n\n      <ion-item  transparent class="listh" (click)="torecentbillers()" >\n\n        \n\n      <font color="#FFFFF"  style="size: 20px">\n\n          <ion-icon  style="padding-right: 10px" name="clipboard"></ion-icon><font    class="bil"><b>Recent Billers</b></font>\n\n    \n\n          \n\n      </font>\n\n   \n\n      </ion-item>\n\n      <ion-item  transparent class="listh" (click)="tobillers()">\n\n          <font color="#FFFFFF"  style="size:30px">\n\n              <ion-icon style="padding-right: 10px" name="clipboard" ></ion-icon><font  color="#FFFFFF" class="bil"><b>Billers</b></font>\n\n              \n\n          </font>\n\n          <br>\n\n          </ion-item>\n\n          <ion-item  transparent class="listh" (click)="topaymenthistory()">\n\n              <font color="#FFFFF" >\n\n                  <ion-icon style="padding-right: 10px" name="clock"></ion-icon><font  color="#FFFFFF"class="bil" ><b>Payments History</b></font>\n\n                  \n\n              </font>\n\n              <br>\n\n              </ion-item>\n\n              <ion-item transparent class="listh" (click)="tosettings()">\n\n                <font color="#FFFFFFF" >\n\n                    <ion-icon style="padding-right: 10px" name="settings"></ion-icon><font color="#FFFFFF" class="bil"><b>Settings</b></font>\n\n                    \n\n                </font>\n\n                <br>\n\n                </ion-item>\n\n            \n\n              \n\n      </div>\n\n      <br>\n\n      <br>\n\n      <br>\n\n      <br>\n\n      <div padding-top ></div>\n\n      <div padding-top >\n\n            <button  class="logb" [disabled]="isd" [strong]="true" ion-button large (click)="logout()">Log Out\n\n              </button>\n\n        </div>\n\n  </ion-content>\n\n  '/*ion-inline-end:"/Users/DarkLord/genpay/src/pages/main/main.html"*/,
+        selector: 'page-main',template:/*ion-inline-start:"/Users/DarkLord/genpay/src/pages/main/main.html"*/'<!--\n\n  Generated template for the ProfilePage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n  \n\n      <ion-navbar>\n\n      <ion-title>Main Menu</ion-title >\n\n    </ion-navbar>\n\n  \n\n  </ion-header>\n\n  \n\n  \n\n  <ion-content  padding>\n\n    <div class="topbarr">\n\n  <h1 text-center ><font text-center class="app-font"  color="#000000"><b text-center>GENPAY</b></font></h1>\n\n\n\n  <br>\n\n  <div text-center><font  color="#003e70" class="app-font2"><b>Welcome</b></font><font class="app-font2"  color="#003e70"><b>{{name}}</b></font> </div>\n\n <!-- <div class=\'container\'><div class="align-left"></div><div class="align-right"><font><b>{{phone}}</b></font></div></div> -->\n\n<br>\n\n <div text-center><font color="#003e70"><b  text-center>{{phone}}</b></font></div>\n\n</div>\n\n\n\n<br>\n\n<br>\n\n<!--<ion-item-divider text-center class="bilh" color="#1fb8ffea">  <font text-center color="#ffffff" class="app-font"><b text-center>MENU</b></font></ion-item-divider>-->\n\n<div class="menud">\n\n \n\n      <ion-item  id="rounded" class="topbarm" (click)="torecentbillers()" >\n\n        \n\n      <font color="#FFFFF"  style="size: 20px">\n\n        <font ><ion-icon  style="padding-right: 10px" name="clipboard"></ion-icon></font><font    class="bil"><b>Recent Billers</b></font>\n\n    \n\n          \n\n      </font>\n\n   \n\n      </ion-item>\n\n     </div>\n\n     <div class="menud">\n\n      <ion-item    id="rounded" class="topbarm" (click)="tobillers()">\n\n          <font color="#FFFFFF"  style="size:30px">\n\n              <ion-icon style="padding-right: 10px" name="clipboard" ></ion-icon><font  color="#FFFFFF" class="bil"><b>Billers</b></font>\n\n              \n\n          </font>\n\n        \n\n          </ion-item>\n\n          </div>\n\n        <div class="menud">\n\n          <ion-item  id="rounded" class="topbarm" (click)="topaymenthistory()">\n\n              <font color="#FFFFF" >\n\n                  <ion-icon style="padding-right: 10px" name="clock"></ion-icon><font  color="#FFFFFF"class="bil" ><b>Payments History</b></font>\n\n                  \n\n              </font>\n\n            \n\n              </ion-item>\n\n\n\n       <div  class="menud">\n\n              <ion-item   id = "rounded" class="topbarm" (click)="tosettings()">\n\n                <font color="#FFFFFFF" >\n\n                    <ion-icon style="padding-right: 10px" name="settings"></ion-icon><font color="#FFFFFF" class="bil"><b>Settings</b></font>\n\n                    \n\n                </font>\n\n           \n\n                </ion-item>\n\n                </div>\n\n            \n\n              </div>\n\n     \n\n      <br>\n\n      <br>\n\n   \n\n      <div padding-top ></div>\n\n      <div padding-top >\n\n            <button  class="logb" [disabled]="isd" color="danger" [strong]="true" ion-button large (click)="logout()">Log Out\n\n              </button>\n\n        </div>\n\n  </ion-content>\n\n  '/*ion-inline-end:"/Users/DarkLord/genpay/src/pages/main/main.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__ionic_native_onesignal__["a" /* OneSignal */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ToastController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_6__providers_remote_service_remote_service__["a" /* RemoteServiceProvider */]])
 ], MainPage);
@@ -2518,7 +2526,7 @@ var HomePage = (function () {
                 _this.options.cssClass = _this.class;
                 _this.vibration.vibrate(500);
                 _this.presentToast("Account Not Activated!");
-                _this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_7__pages_authenticate_authenticate__["a" /* AuthenticatePage */], { data: _this.phone.toString() });
+                _this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_7__pages_authenticate_authenticate__["a" /* AuthenticatePage */], { data: _this.phone });
                 // this.class="str";
             }
             else if (data.responseCode == "46") {
@@ -2590,11 +2598,12 @@ var HomePage = (function () {
 }());
 HomePage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-home',template:/*ion-inline-start:"/Users/DarkLord/genpay/src/pages/home/home.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>\n\n   LOGIN\n\n    </ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content  text-center padding class="getstart">\n\n\n\n  <br>\n\n\n\n    <h1 text-center >   <div style="margin: 0 auto; display: block;" >\n\n        <img     height="80"  src="assets/images/itclogo.png" />\n\n      </div>\n\n         <font class="app-font" color="#FFFFFF"><b>GENPAY</b></font></h1>\n\n    <br>\n\n  <ion-item  padding-top transparent  >\n\n   \n\n    <ion-label text-center floating><font color="#FFFFFF"><ion-icon   color="#FFFFFF" item-left name="person"></ion-icon>\n\n      <b>{{f1}}</b></font></ion-label>\n\n <ion-input type="number"  class="btnp"  [(ngModel)]="phone" (ngModelChange)="searchchanged1($event)" name="title"></ion-input>\n\n </ion-item>\n\n <ion-item   padding-top transparent>\n\n  \n\n   <ion-label  text-center floating ><font color="#FFFFFF                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           " ><ion-icon color="#ffff"  item-left name="key"></ion-icon>\n\n    <b>{{f2}}</b></font></ion-label>\n\n<ion-input type="password"  class="btnp" [(ngModel)]="password" (ngModelChange)="searchchanged2($event)"name="title"></ion-input>\n\n</ion-item>\n\n <br>\n\n \n\n <!--\n\n <ion-item>\n\n <ion-label floating >Enter your Password </ion-label>\n\n <ion-input type="password" [(ngModel)]="pass" name="title"></ion-input>\n\n </ion-item>\n\n-->\n\n \n\n \n\n <div class="ss">\n\n    <button  ion-button class="logb" [disabled]="isd"  [strong]="true"[block]="true" large (click)="login()">{{btnt}}\n\n      </button>\n\n</div>\n\n\n\n<br>\n\n<a (click)="forgot()" ><font color="lightblue">Forgot Password? Or Sign up Below</font></a>\n\n<br>\n\n<br>\n\n<br>\n\n<br>\n\n<br>\n\n<div class="ss">\n\n  <button   ion-button color="primary" ion-button large (click)="openregister()">Sign up</button>\n\n</div>\n\n<!--<div class=\'container\'><div class="align-left"><ion-label fixed><b>New User?</b></ion-label> </div><div class="align-right"><button   ion-button color="secondary" (click)="openregister()">Signup</button></div></div> -->\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"/Users/DarkLord/genpay/src/pages/home/home.html"*/
+        selector: 'page-home',template:/*ion-inline-start:"/Users/DarkLord/genpay/src/pages/home/home.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>\n\n   LOGIN\n\n    </ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content  text-center padding class="getstartaa">\n\n\n\n  <br>\n\n\n\n    <h1 text-center >   <div style="margin: 0 auto; display: block;" >\n\n        <img     height="80"  src="assets/images/itclogo.png" />\n\n      </div>\n\n         <font class="app-font" color="#03afd6"><b>GENPAY</b></font></h1>\n\n    <br>\n\n  <ion-item  padding-top transparent  >\n\n   \n\n    <ion-label text-center floating><font color="#03afd6"><ion-icon   color="#03afd6" item-left name="person"></ion-icon>\n\n      <b>{{f1}}</b></font></ion-label>\n\n <ion-input type="number"  class="btnp"  [(ngModel)]="phone"  name="title"></ion-input>\n\n </ion-item>\n\n <ion-item   padding-top transparent>\n\n  \n\n   <ion-label  text-center floating ><font color="#03afd6" ><ion-icon color="#ffff"  item-left name="key"></ion-icon>  <b>{{f2}}</b></font></ion-label>\n\n<ion-input type="password"   class="btnp" [(ngModel)]="password" name="title"></ion-input>\n\n</ion-item>\n\n <br>\n\n \n\n <!--\n\n <ion-item>\n\n <ion-label floating >Enter your Password </ion-label>\n\n <ion-input type="password" [(ngModel)]="pass" name="title"></ion-input>\n\n </ion-item>\n\n-->\n\n \n\n \n\n <div class="ss">\n\n    <button  ion-button class="logb" [disabled]="isd"  [strong]="true"[block]="true" large (click)="login()">{{btnt}}\n\n      </button>\n\n</div>\n\n\n\n<br>\n\n<a (click)="forgot()" ><font color="lightblue">Forgot Password? Or Sign up Below</font></a>\n\n<br>\n\n<br>\n\n<br>\n\n<br>\n\n<br>\n\n<div class="ss">\n\n  <button   ion-button color="primary" ion-button large (click)="openregister()">Sign up</button>\n\n</div>\n\n<!--<div class=\'container\'><div class="align-left"><ion-label fixed><b>New User?</b></ion-label> </div><div class="align-right"><button   ion-button color="secondary" (click)="openregister()">Signup</button></div></div> -->\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"/Users/DarkLord/genpay/src/pages/home/home.html"*/
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */], __WEBPACK_IMPORTED_MODULE_8__ionic_native_vibration__["a" /* Vibration */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ToastController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_5__providers_remote_service_remote_service__["a" /* RemoteServiceProvider */]])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_8__ionic_native_vibration__["a" /* Vibration */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_8__ionic_native_vibration__["a" /* Vibration */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ToastController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ToastController */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_5__providers_remote_service_remote_service__["a" /* RemoteServiceProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__providers_remote_service_remote_service__["a" /* RemoteServiceProvider */]) === "function" && _f || Object])
 ], HomePage);
 
+var _a, _b, _c, _d, _e, _f;
 //# sourceMappingURL=home.js.map
 
 /***/ }),
@@ -2717,7 +2726,7 @@ var BillerRefPage = (function () {
 }());
 BillerRefPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-biller',template:/*ion-inline-start:"/Users/DarkLord/genpay/src/pages/billeref/billeref.html"*/'<!--\n\n  Generated template for the BillerPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>BILLER PAYMENT</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content class="topbar" padding>\n\n  \n\n        <br>\n\n        <img>\n\n        <div class="topbar2">\n\n         <h1 text-center ><font color="#FFFFFF"  class="app-font"><b>{{billername}}</b></font></h1>\n\n         <br>\n\n         <br>\n\n         <br>\n\n         <br>\n\n       <ion-label text-center><font color="#FFFFFF"><b>Enter Payment Reference</b></font></ion-label>\n\n       <ion-item transparent>\n\n       \n\n       <ion-input type="text"  class="btnp" [(ngModel)]="payref" name="title"></ion-input>\n\n       \n\n       </ion-item>\n\n       <br>\n\n       <button   class="logb" [disabled]="isd" ion-button  (click)="continue()">Continue</button>\n\n       \n\n      <br>\n\n      </div>\n\n     \n\n</ion-content>\n\n'/*ion-inline-end:"/Users/DarkLord/genpay/src/pages/billeref/billeref.html"*/,
+        selector: 'page-biller',template:/*ion-inline-start:"/Users/DarkLord/genpay/src/pages/billeref/billeref.html"*/'<!--\n\n  Generated template for the BillerPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>BILLER PAYMENT</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content class="topbar61" padding>\n\n  \n\n        <br>\n\n        <img>\n\n        <div class="topbar62">\n\n         <h1 text-center ><font color="#03afd6"  class="app-font"><b>{{billername}}</b></font></h1>\n\n         <br>\n\n         <br>\n\n         <br>\n\n         <br>\n\n       <ion-label text-center><font color="#03afd6"><b>Enter Payment Reference</b></font></ion-label>\n\n       <ion-item transparent>\n\n       \n\n       <ion-input type="text"  class="btnp" [(ngModel)]="payref" name="title"></ion-input>\n\n       \n\n       </ion-item>\n\n       <br>\n\n       <button   class="logb" [strong]="true" [disabled]="isd" ion-button  (click)="continue()">Continue</button>\n\n       \n\n      <br>\n\n      </div>\n\n     \n\n</ion-content>\n\n'/*ion-inline-end:"/Users/DarkLord/genpay/src/pages/billeref/billeref.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */], __WEBPACK_IMPORTED_MODULE_4__providers_remote_service_remote_service__["a" /* RemoteServiceProvider */], __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ToastController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]])
 ], BillerRefPage);
@@ -2780,7 +2789,7 @@ var AuthenticatePage = (function () {
         console.log('ionViewDidLoad AuthenticatePage');
         this.btnt = "Activate";
         this.phone = this.data;
-        alert("Code Resend Will be Available after 1 minutes incase you dont receive any verification code");
+        alert("You can request for the verification code again after 1 minute using the Resend button if the Verification Code delays");
     };
     AuthenticatePage.prototype.resend = function () {
         var _this = this;
@@ -2799,18 +2808,13 @@ var AuthenticatePage = (function () {
         });
     };
     AuthenticatePage.prototype.activate = function () {
+        var _this = this;
         this.isd = true;
         this.btnt = "Please wait.....";
         this.url = "http://34.242.75.122/api/v1/verifyCode";
         //alert(this.url);
         var body = { 'code': this.code, 'phoneNumber': this.data.toString() };
-        console.log(body);
-        this.getPost(this.url, body);
-        //this.getPost(this.url);
-    };
-    AuthenticatePage.prototype.getPost = function (url, body) {
-        var _this = this;
-        this.remoteService.getPosts2(url, body).subscribe(function (data) {
+        this.remoteService.getPosts2(this.url, body).subscribe(function (data) {
             console.log(data);
             _this.udata = data;
             _this.btnt = "Continue";
@@ -2835,6 +2839,43 @@ var AuthenticatePage = (function () {
             }
             //console.log(data);
         });
+        console.log(body);
+        // this.getPost(this.url,body);
+        //this.getPost(this.url);
+    };
+    AuthenticatePage.prototype.getPost = function (url, body) {
+        /*
+        this.remoteService.getPosts2(url,body).subscribe((data)=>{
+      console.log(data);
+      this.udata = data;
+      this.btnt="Continue";
+      this.isd = false;
+      if(data.responseCode=="49"){
+        this.class ="toast-failure";
+    
+      this.presentToast("Invalid Code!");
+      
+      }
+      else if(data.responseCode=="200"){
+       // this.class ="toast-success";
+        this.navCtrl.setRoot(HomePage);
+        
+      alert("Account Activated!");
+      }
+      else if(data.status=="02"){
+        this.class ="toast-failure";
+      alert("Access Denied!");
+      }
+      else{
+        this.class ="toast-success";
+        this.navCtrl.setRoot(HomePage);
+        
+      //this.presentToast("Access Granted!")
+      }
+      
+      //console.log(data);
+        });
+        */
     };
     AuthenticatePage.prototype.presentToast = function (msg) {
         var _this = this;
@@ -2855,11 +2896,12 @@ var AuthenticatePage = (function () {
 }());
 AuthenticatePage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-authenticate',template:/*ion-inline-start:"/Users/DarkLord/genpay/src/pages/authenticate/authenticate.html"*/'<!--\n\n  Generated template for the AuthenticatePage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>Authenticate</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content class="topbar" text-center padding>\n\n  \n\n        <br>\n\n      \n\n          <h1 text-center ><font color="#FFFFFF" class="app-font">GENPAY</font></h1>\n\n          <br>\n\n          <img>\n\n          <ion-label fixed><font><b>{{phone}}</b></font></ion-label>\n\n<font color="#FFFFFF"><b>You will receive a txt message containing the code for verification shortly</b></font>\n\n        <ion-item  transparent *ngIf="sfn" padding-top  >\n\n         \n\n          <ion-label floating><font color="#FFFFFF" ><b>Enter Verification Code</b></font></ion-label>\n\n       <ion-input type="text"  class="btnp" [(ngModel)]="code" name="title"></ion-input>\n\n       </ion-item>\n\n       <br>\n\n       <br>\n\n      \n\n       <div class="ss">\n\n        <button   class="rb" [disabled]="resd" ion-button (click)="resend()"><font color="#FFFFFF"><b>Resend Code</b></font>\n\n          </button>\n\n    </div>\n\n       <br>\n\n       <br>\n\n       <font>By activating, you agree to our <b><a>Terms & Conditions</a></b> and <b><a>Privacy Policy</a></b> </font>\n\n       <br> <br> <br>\n\n       <div class="ss">\n\n          <button   class="logb" [disabled]="isd" ion-button large (click)="activate()">{{btnt}}\n\n            </button>\n\n      </div>\n\n      \n\n\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"/Users/DarkLord/genpay/src/pages/authenticate/authenticate.html"*/,
+        selector: 'page-authenticate',template:/*ion-inline-start:"/Users/DarkLord/genpay/src/pages/authenticate/authenticate.html"*/'<!--\n\n  Generated template for the AuthenticatePage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>Authenticate</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content class="to" text-center padding>\n\n  \n\n        <br>\n\n      \n\n          <h1 text-center ><font color="#03afd6" class="app-font">GENPAY</font></h1>\n\n          <br>\n\n          <img>\n\n          <h2 text-center><font color="#000000" ><b>{{phone}}</b></font></h2>\n\n<font color="#03afd6"><b>You will receive a txt message containing the code for verification shortly</b></font>\n\n        <ion-item  transparent *ngIf="sfn" padding-top  >\n\n         \n\n          <ion-label text-center floating><font color="#03afd6" ><b>Enter Verification Code</b></font></ion-label>\n\n       <ion-input type="text"  class="btnp" [(ngModel)]="code" name="title"></ion-input>\n\n       </ion-item>\n\n       <br>\n\n       <br>\n\n      \n\n       <div class="ss">\n\n        <button   class="rb" [disabled]="resd" ion-button large (click)="resend()"><font color="#FFFFFF"><b>Resend Code</b></font>\n\n          </button>\n\n    </div>\n\n       <br>\n\n       <br>\n\n       <font>By activating, you agree to our <b><a>Terms & Conditions</a></b> and <b><a>Privacy Policy</a></b> </font>\n\n       <br> <br> <br>\n\n       <div class="ss">\n\n          <button   class="logb" [disabled]="isd" ion-button large (click)="activate()">{{btnt}}\n\n            </button>\n\n      </div>\n\n      \n\n\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"/Users/DarkLord/genpay/src/pages/authenticate/authenticate.html"*/,
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ToastController */], __WEBPACK_IMPORTED_MODULE_2__providers_remote_service_remote_service__["a" /* RemoteServiceProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ToastController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ToastController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__providers_remote_service_remote_service__["a" /* RemoteServiceProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__providers_remote_service_remote_service__["a" /* RemoteServiceProvider */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]) === "function" && _d || Object])
 ], AuthenticatePage);
 
+var _a, _b, _c, _d;
 //# sourceMappingURL=authenticate.js.map
 
 /***/ }),

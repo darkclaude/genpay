@@ -1,21 +1,38 @@
 page-biller {
-
+    ion-input {
+        text-align: center;
+        color:  #000000;
+        }
+    input{
+        text-align: center;
+        color:  #000000;
+        font-size : 30px;
+    }
+}
+ion-input {
+    text-align: center;
+    color:  #000000;
+    }
+input{
+    text-align: center;
+    color:  #000000;
+    font-size : 30px;
 }
 div{
     
         margin-left: auto;
         margin-right: auto;
     }
-    .topbar {
-        background-image: url('../assets/images/bg7.png');
+    .topbar52{
+       // background-image: url('../assets/images/bk4.jpg');
       // background-color : #f9fbfc;
    }
 
-   .topbar2 {
-    background-image: url('../assets/images/bg14.png');
+   .topbar51{
+  //  background-image: url('../assets/images/bg14.png');
 
 //color:#006cc5b6;
-  // background-color : #f9fbfc;
+ background-color : #f9fbfc;
 }
 hr {
     display: block;

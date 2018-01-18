@@ -13,10 +13,10 @@
   </ion-header>
   
   
-  <ion-content class="topbar"  padding>
+  <ion-content  padding>
     <div class="topbarr">
-  <h1 text-center ><font text-center class="app-font"  color="#FFFFFF"><b text-center>GENPAY</b></font></h1>
-    
+  <h1 text-center ><font text-center class="app-font"  color="#000000"><b text-center>GENPAY</b></font></h1>
+
   <br>
   <div text-center><font  color="#003e70" class="app-font2"><b>Welcome</b></font><font class="app-font2"  color="#003e70"><b>{{name}}</b></font> </div>
  <!-- <div class='container'><div class="align-left"></div><div class="align-right"><font><b>{{phone}}</b></font></div></div> -->
@@ -26,50 +26,55 @@
 
 <br>
 <br>
-<ion-item-divider text-center class="bilh" color="#1fb8ffea">  <font text-center color="#ffffff" class="app-font"><b text-center>MENU</b></font></ion-item-divider>
-  
-  <div class="topbar2"  >
-   
-      <ion-item  transparent class="listh" (click)="torecentbillers()" >
+<!--<ion-item-divider text-center class="bilh" color="#1fb8ffea">  <font text-center color="#ffffff" class="app-font"><b text-center>MENU</b></font></ion-item-divider>-->
+<div class="menud">
+ 
+      <ion-item  id="rounded" class="topbarm" (click)="torecentbillers()" >
         
       <font color="#FFFFF"  style="size: 20px">
-          <ion-icon  style="padding-right: 10px" name="clipboard"></ion-icon><font    class="bil"><b>Recent Billers</b></font>
+        <font ><ion-icon  style="padding-right: 10px" name="clipboard"></ion-icon></font><font    class="bil"><b>Recent Billers</b></font>
     
           
       </font>
    
       </ion-item>
-      <ion-item  transparent class="listh" (click)="tobillers()">
+     </div>
+     <div class="menud">
+      <ion-item    id="rounded" class="topbarm" (click)="tobillers()">
           <font color="#FFFFFF"  style="size:30px">
               <ion-icon style="padding-right: 10px" name="clipboard" ></ion-icon><font  color="#FFFFFF" class="bil"><b>Billers</b></font>
               
           </font>
-          <br>
+        
           </ion-item>
-          <ion-item  transparent class="listh" (click)="topaymenthistory()">
+          </div>
+        <div class="menud">
+          <ion-item  id="rounded" class="topbarm" (click)="topaymenthistory()">
               <font color="#FFFFF" >
                   <ion-icon style="padding-right: 10px" name="clock"></ion-icon><font  color="#FFFFFF"class="bil" ><b>Payments History</b></font>
                   
               </font>
-              <br>
+            
               </ion-item>
-              <ion-item transparent class="listh" (click)="tosettings()">
+
+       <div  class="menud">
+              <ion-item   id = "rounded" class="topbarm" (click)="tosettings()">
                 <font color="#FFFFFFF" >
                     <ion-icon style="padding-right: 10px" name="settings"></ion-icon><font color="#FFFFFF" class="bil"><b>Settings</b></font>
                     
                 </font>
-                <br>
+           
                 </ion-item>
+                </div>
             
-              
-      </div>
+              </div>
+     
       <br>
       <br>
-      <br>
-      <br>
+   
       <div padding-top ></div>
       <div padding-top >
-            <button  class="logb" [disabled]="isd" [strong]="true" ion-button large (click)="logout()">Log Out
+            <button  class="logb" [disabled]="isd" color="danger" [strong]="true" ion-button large (click)="logout()">Log Out
               </button>
         </div>
   </ion-content>

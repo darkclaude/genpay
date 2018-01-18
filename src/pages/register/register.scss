@@ -8,12 +8,31 @@ page-register {
       text-align: center;
       margin: 0 auto;
     }
+    ion-input {
+        text-align: center;
+        color:  #000000;
+        }
+    input{
+        text-align: center;
+        color:  #000000;
+        font-size : 30px;
+    }
+}
+ion-input {
+    text-align: center;
+    color:  #000000;
+    }
+input{
+    text-align: center;
+    color:  #000000;
+    font-size : 30px;
 }
 ion-label{
     margin-left: auto;
     margin-right: auto;
 }
-.getstart { background-image: url('../assets/images/bg7.png')}
+.getstart {// background-image: url('../assets/images/bg7.png')
+}
     .form {
       padding: 10px;
       overflow: hidden;

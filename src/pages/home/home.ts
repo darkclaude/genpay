@@ -119,7 +119,7 @@ else if(data.responseCode=="43"){
   this.options.cssClass= this.class;
   this.vibration.vibrate(500);
   this.presentToast("Account Not Activated!");
-  this.navCtrl.setRoot(AuthenticatePage,{data: this.phone.toString()});
+  this.navCtrl.setRoot(AuthenticatePage,{data: this.phone});
   
  // this.class="str";
 

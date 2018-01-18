@@ -49,7 +49,7 @@ export class AuthenticatePage {
     console.log('ionViewDidLoad AuthenticatePage');
     this.btnt = "Activate";
     this.phone = this.data;
-    alert("Code Resend Will be Available after 1 minutes incase you dont receive any verification code")
+    alert("You can request for the verification code again after 1 minute using the Resend button if the Verification Code delays");
   }
 
   resend(): void{ 
@@ -74,14 +74,45 @@ alert("Code has been Resent");
    
      this.url="http://34.242.75.122/api/v1/verifyCode";
      //alert(this.url);
-     var body = {'code': this.code,'phoneNumber':this.data.toString()}
+     var body = {'code': this.code,'phoneNumber':this.data.toString() }
+     this.remoteService.getPosts2(this.url,body).subscribe((data)=>{
+      console.log(data);
+      this.udata = data;
+      this.btnt="Continue";
+      this.isd = false;
+      if(data.responseCode=="49"){
+        this.class ="toast-failure";
+    
+      this.presentToast("Invalid Code!");
+      
+      }
+      else if(data.responseCode=="200"){
+       // this.class ="toast-success";
+        this.navCtrl.setRoot(HomePage);
+        
+      alert("Account Activated!");
+      }
+      else if(data.status=="02"){
+        this.class ="toast-failure";
+      alert("Access Denied!");
+      }
+      else{
+        this.class ="toast-success";
+        this.navCtrl.setRoot(HomePage);
+        
+      //this.presentToast("Access Granted!")
+      }
+      
+      //console.log(data);
+        });
      console.log(body)
-    this.getPost(this.url,body);
+   // this.getPost(this.url,body);
    
     
     //this.getPost(this.url);
   }
   getPost(url: string,body: any){
+    /*
     this.remoteService.getPosts2(url,body).subscribe((data)=>{
   console.log(data);
   this.udata = data;
@@ -112,6 +143,7 @@ alert("Code has been Resent");
   
   //console.log(data);
     });
+    */
   }
   
 presentToast(msg: string) {

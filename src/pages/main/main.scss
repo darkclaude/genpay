@@ -1,12 +1,29 @@
 page-main {
 
 }
+#rounded {
+    width: 100%;
+    height: 4em;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 10px;
+    margin-bottom: 10px;  
+}
 .topbar {
-     background-image: url('../assets/images/bg7.png');
+  
    // background-color : #f9fbfc;
 }
+#pda{
+    padding-top: 10px;
+}
+.topbarm{
+    height: 4em;
+   
+      background-image: url('../assets/images/bg7.png');
+     
+}
 .topbar2 {
-    background-image: url('../assets/images/bg14.png');
+    background-image: url('../assets/images/bg12.png');
 
 //color:#006cc5b6;
   // background-color : #f9fbfc;
@@ -25,11 +42,13 @@ page-main {
 .align-left{ float: left;width:50%; }
 .align-right{float: right;width:50%}
 .listh {
-    background-color: #ffffff;
+    background-color: #65c7f5;
   
 }
+// height: 18%;
+
 .listh:hover {
-    background-color: #ccd4e2;
+    background-color: #4a85d1;
 }
 .bilh{
     font-size: 20px;
