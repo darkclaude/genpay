@@ -4,6 +4,40 @@
             "outputFile": "/Users/DarkLord/genpay/platforms/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml",
             "map": [
                 {
+                    "source": "/Users/DarkLord/genpay/platforms/android/app/build/generated/res/google-services/debug/values/values.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "55,199,308,390,494,597,717",
+                        "endColumns": "143,108,81,103,102,119,97",
+                        "endOffsets": "194,303,385,489,592,712,810"
+                    },
+                    "to": {
+                        "startLines": "6,8,9,10,11,12,13",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "448,674,783,865,969,1072,1192",
+                        "endColumns": "143,108,81,103,102,119,97",
+                        "endOffsets": "587,778,860,964,1067,1187,1285"
+                    }
+                },
+                {
+                    "source": "/private/var/root/.gradle/caches/transforms-1/files-1.1/play-services-basement-11.8.0.aar/59560c1419db2542f546ce534a318566/res/values/values.xml",
+                    "from": {
+                        "startLines": "4,7",
+                        "startColumns": "0,0",
+                        "startOffsets": "274,437",
+                        "endColumns": "63,166",
+                        "endOffsets": "337,603"
+                    },
+                    "to": {
+                        "startLines": "2,5",
+                        "startColumns": "4,4",
+                        "startOffsets": "105,281",
+                        "endColumns": "67,166",
+                        "endOffsets": "168,443"
+                    }
+                },
+                {
                     "source": "/Users/DarkLord/genpay/platforms/android/app/src/main/res/values/strings.xml",
                     "from": {
                         "startLines": "4,2,3",
@@ -13,11 +47,28 @@
                         "endOffsets": "217,94,153"
                     },
                     "to": {
-                        "startLines": "2,3,4",
+                        "startLines": "3,4,14",
                         "startColumns": "4,4,4",
-                        "startOffsets": "55,119,163",
+                        "startOffsets": "173,237,1290",
                         "endColumns": "63,43,58",
-                        "endOffsets": "114,158,217"
+                        "endOffsets": "232,276,1344"
+                    }
+                },
+                {
+                    "source": "/private/var/root/.gradle/caches/transforms-1/files-1.1/firebase-messaging-11.8.0.aar/dc3055577a90c7485018afe904add94f/res/values/values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "176",
+                        "endColumns": "77",
+                        "endOffsets": "253"
+                    },
+                    "to": {
+                        "startLines": "7",
+                        "startColumns": "4",
+                        "startOffsets": "592",
+                        "endColumns": "81",
+                        "endOffsets": "669"
                     }
                 }
             ]

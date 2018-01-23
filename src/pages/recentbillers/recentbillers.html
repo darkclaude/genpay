@@ -7,17 +7,17 @@
 <ion-header>
 
     <ion-navbar>
-    <ion-title>Recent Billers</ion-title>
+    <ion-title>Favourite Billers</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content class="topbar"padding>
+<ion-content class="topbarkplm"padding>
 
 <ion-item detail-push  color="#23aadb" text-wrap class="listh"  (click)="recentacc(d)" *ngFor="let d of data" >
 
-  <font color=#23aadb><b>{{d.merchantName}}</b></font>  <font color="#23aadb" float-right></font>
+  <font color=#23aadb><b>{{d.merchantName}}</b></font> <br> <font color="#23aadb" float-left><b>{{d.accountRef}}</b></font>
 
 
 </ion-item>

@@ -5,6 +5,9 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { DatePickerModule } from 'ionic3-datepicker';
+import { FCM  } from '@ionic-native/fcm'
+//import { } from '@ionic-native/sss'
+
 //import { RemoteServiceProvider } from '../providers/remote-service/remote-service';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -101,6 +104,7 @@ import { Vibration } from '@ionic-native/vibration';
     StatusBar,
     OneSignal,
     Vibration,
+    FCM,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     RemoteServiceProvider

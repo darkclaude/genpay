@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-
+import { FCM  } from '@ionic-native/fcm'
 import { AuthenticatePage } from '../pages/authenticate/authenticate';
 import { HomePage } from '../pages/home/home';
 import { RegisterPage } from '../pages/register/register';
@@ -25,7 +25,7 @@ import { BillerRefPage } from '../pages/billeref/billeref';
 export class MyApp {
 rootPage:any = HomePage;
 
-  constructor(private oneSignal : OneSignal,platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
+  constructor(private fcm: FCM,private oneSignal : OneSignal,platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
@@ -38,9 +38,25 @@ rootPage:any = HomePage;
       //  .handleNotificationOpened(this.notificationOpenedCallback)
       //  .endInit();
     
-
-      try {
+      fcm.onNotification().subscribe(data=>{
+        if(data.wasTapped){
+          console.log("Received in background");
+        } else {
+          console.log("Received in foreground");
+        };
+      })
       
+      fcm.onTokenRefresh().subscribe(token=>{
+     //   backend.registerToken(token);
+      })
+      try {
+        fcm.getToken().then(token=>{
+       //   backend.registerToken(token);
+        })
+        
+      
+        
+      /*
       //this.oneSignal.startInit('4975cd1d-9d10-41c8-9cda-c5852513ab7f', '347536568651');
       this.oneSignal.startInit('82928709-50f8-4861-830f-a57f718bb3f7', '813645120142');
       
@@ -55,7 +71,7 @@ rootPage:any = HomePage;
       });
      //this.oneSignal.enableVibrate(true);
       this.oneSignal.endInit();
-     
+     */
       } catch (error) {
         
       }
@@ -63,11 +79,11 @@ rootPage:any = HomePage;
     });
   }
 
-
+/*
    notificationOpenedCallback = function(jsonData) {
     console.log('notificationOpenedCallback: ' + JSON.stringify(jsonData));
   };
-
+*/
   getApiUrl : string = "https://jsonplaceholder.typicode.com/posts";
 
   

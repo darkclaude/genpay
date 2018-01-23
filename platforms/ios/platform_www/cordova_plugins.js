@@ -25,6 +25,14 @@ module.exports = [
     ]
   },
   {
+    "id": "cordova-plugin-screen-orientation.screenorientation",
+    "file": "plugins/cordova-plugin-screen-orientation/www/screenorientation.js",
+    "pluginId": "cordova-plugin-screen-orientation",
+    "clobbers": [
+      "cordova.plugins.screenorientation"
+    ]
+  },
+  {
     "id": "cordova-plugin-splashscreen.SplashScreen",
     "file": "plugins/cordova-plugin-splashscreen/www/splashscreen.js",
     "pluginId": "cordova-plugin-splashscreen",
@@ -50,6 +58,14 @@ module.exports = [
     ]
   },
   {
+    "id": "cordova-sqlite-storage.SQLitePlugin",
+    "file": "plugins/cordova-sqlite-storage/www/SQLitePlugin.js",
+    "pluginId": "cordova-sqlite-storage",
+    "clobbers": [
+      "SQLitePlugin"
+    ]
+  },
+  {
     "id": "ionic-plugin-keyboard.keyboard",
     "file": "plugins/ionic-plugin-keyboard/www/ios/keyboard.js",
     "pluginId": "ionic-plugin-keyboard",
@@ -59,11 +75,11 @@ module.exports = [
     "runs": true
   },
   {
-    "id": "cordova-sqlite-storage.SQLitePlugin",
-    "file": "plugins/cordova-sqlite-storage/www/SQLitePlugin.js",
-    "pluginId": "cordova-sqlite-storage",
+    "id": "cordova-plugin-fcm.FCMPlugin",
+    "file": "plugins/cordova-plugin-fcm/www/FCMPlugin.js",
+    "pluginId": "cordova-plugin-fcm",
     "clobbers": [
-      "SQLitePlugin"
+      "FCMPlugin"
     ]
   }
 ];
@@ -73,12 +89,14 @@ module.exports.metadata =
   "cordova-plugin-backlight": "0.0.1",
   "cordova-plugin-device": "1.1.7",
   "cordova-plugin-ionic-webview": "1.1.16",
+  "cordova-plugin-screen-orientation": "3.0.1",
   "cordova-plugin-splashscreen": "4.1.0",
   "cordova-plugin-statusbar": "2.4.1-dev",
   "cordova-plugin-vibration": "2.1.6",
   "cordova-plugin-whitelist": "1.3.3",
+  "cordova-sqlite-storage": "2.2.0",
   "ionic-plugin-keyboard": "2.2.1",
-  "cordova-sqlite-storage": "2.2.0"
+  "cordova-plugin-fcm": "2.1.2"
 };
 // BOTTOM OF METADATA
 });

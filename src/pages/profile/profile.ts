@@ -61,9 +61,14 @@ snip2: boolean = false;
   ga(){
     this.storage.get('governlist').then((val) => {
       //  console.log(val)
-     //  this.data= JSON.parse(val);
-
-   this.navCtrl.push("ProfilePageCat",{data: val});
+     //  this.data JSON.parse(val);
+   if(val == null || !(val.length > 0) ){
+     alert("No Merchants available at the moment")
+   }
+   else{
+    this.navCtrl.push("ProfilePageCat",{data: val});
+   }
+  
       // console.log(this.gdata);
       });
      
@@ -74,8 +79,13 @@ snip2: boolean = false;
   sl(){
     this.storage.get('schoollist').then((val) => {
       //  console.log(val)
-
-      this.navCtrl.push("ProfilePageCat",{data: val});
+if(val == null || !(val.length > 0)){
+alert("No Merchants available at the moment")
+}
+else{
+  this.navCtrl.push("ProfilePageCat",{data: val});
+}
+      
       // console.log(this.gdata);
       });
      
@@ -83,17 +93,27 @@ snip2: boolean = false;
   fn(){
     this.storage.get('financelist').then((val) => {
       //  console.log(val)
-   
+    if(val == null || !(val.length > 0)){
+alert("No Merchants available at the moment")
+    }
+    else{
       this.navCtrl.push("ProfilePageCat",{data: val});
       // console.log(this.gdata);
+    }
+   
       });
      
   }
   bng(){
     this.storage.get('bettinggameslist').then((val) => {
       //  console.log(val)
-     
-   this.navCtrl.push("ProfilePageCat",{data: val});
+     if(val == null || !(val.length > 0)){
+     alert("No Merchants available at the moment")
+     }
+     else{
+      this.navCtrl.push("ProfilePageCat",{data: val});
+     }
+ 
       // console.log(this.gdata);
       });
      
@@ -101,8 +121,13 @@ snip2: boolean = false;
   ut(){
     this.storage.get('utilitylist').then((val) => {
       //  console.log(val)
-     
-   this.navCtrl.push("ProfilePageCat",{data: val});
+     if(val == null || !(val.length > 0)){
+alert("No Merchants available at the moment")
+     }
+     else{
+      this.navCtrl.push("ProfilePageCat",{data: val});
+     }
+  
       // console.log(this.gdata);
       });
      
@@ -110,35 +135,58 @@ snip2: boolean = false;
   pt(){
     this.storage.get('paytv').then((val) => {
       //  console.log(val)
-    
-   this.navCtrl.push("ProfilePageCat",{data: val});
-      // console.log(this.gdata);
+    if(val == null || !(val.length > 0)){
+     alert("No Merchants available at the moment")
+    }
+    else{
+      this.navCtrl.push("ProfilePageCat",{data: val});
+
+    }
+
       });
      
   }
   hc(){
     this.storage.get('healthcare').then((val) => {
-       console.log(val)
-    
-   this.navCtrl.push("ProfilePageCat",{data: val});
+     //  console.log(val)
+    if(val == null || !(val.length > 0)){
+alert("No Merchants available at the moment")
+    }
+    else{
+      this.navCtrl.push("ProfilePageCat",{data: val});
+    }
+   
       // console.log(this.gdata);
       });
      
   }
   it(){
+ 
     this.storage.get('internet').then((val) => {
       //  console.log(val)
-    
-   this.navCtrl.push("ProfilePageCat",{data: val});
+      if(val == null || !(val.length > 0)){
+alert("No Merchants available at the moment")
+      }
+      else{
+        this.navCtrl.push("ProfilePageCat",{data: val});
+      }
+
+  
       // console.log(this.gdata);
       });
      
   }
   air(){
+  
     this.storage.get('airline').then((val) => {
       //  console.log(val)
-    
-   this.navCtrl.push("ProfilePageCat",{data: val});
+      if(val == null || !(val.length > 0)){
+      alert("No Merchants available at the moment")
+      }
+      else{
+        this.navCtrl.push("ProfilePageCat",{data: val});
+      }
+  
       // console.log(this.gdata);
       });
      
@@ -146,10 +194,15 @@ snip2: boolean = false;
   
   at(){
     this.storage.get('airtime').then((val) => {
-      //  console.log(val)
-    
-   this.navCtrl.push("ProfilePageCat",{data: val});
+   //alert(val)//console.log(val)
+    if(val == null || !(val.length > 0)){
+alert("No Merchants available at the moment")
+    }
+    else{
+      this.navCtrl.push("ProfilePageCat",{data: val});
       // console.log(this.gdata);
+    }
+ 
       });
      
   }
@@ -157,47 +210,77 @@ snip2: boolean = false;
     this.storage.get('insurance').then((val) => {
       //  console.log(val)
     
-   this.navCtrl.push("ProfilePageCat",{data: val});
-      // console.log(this.gdata);
+      if(val == null || !(val.length > 0)){
+        alert("No Merchants available at the moment")
+            }
+            else{
+              this.navCtrl.push("ProfilePageCat",{data: val});
+              // console.log(this.gdata);
+            }
       });
   }
   ong(){
     this.storage.get('oilgas').then((val) => {
       //  console.log(val)
-    
-   this.navCtrl.push("ProfilePageCat",{data: val});
+      if(val == null || !(val.length > 0)){
+        alert("No Merchants available at the moment")
+            }
+            else{
+              this.navCtrl.push("ProfilePageCat",{data: val});
+              // console.log(this.gdata);
+            }
       // console.log(this.gdata);
       });
   }
   ngo(){
     this.storage.get('ngof').then((val) => {
       //  console.log(val)
-    
-   this.navCtrl.push("ProfilePageCat",{data: val});
+      if(val == null || !(val.length > 0)){
+        alert("No Merchants available at the moment")
+            }
+            else{
+              this.navCtrl.push("ProfilePageCat",{data: val});
+              // console.log(this.gdata);
+            }
       // console.log(this.gdata);
       });
   }
   ch(){
     this.storage.get('church').then((val) => {
       //  console.log(val)
-    
-   this.navCtrl.push("ProfilePageCat",{data: val});
+      if(val == null || !(val.length > 0)){
+        alert("No Merchants available at the moment")
+            }
+            else{
+              this.navCtrl.push("ProfilePageCat",{data: val});
+              // console.log(this.gdata);
+            }
       // console.log(this.gdata);
       });
   }
   mcn(){
     this.storage.get('merchants').then((val) => {
       //  console.log(val)
-    
-   this.navCtrl.push("ProfilePageCat",{data: val});
+      if(val == null || !(val.length > 0)){
+        alert("No Merchants available at the moment")
+            }
+            else{
+              this.navCtrl.push("ProfilePageCat",{data: val});
+              // console.log(this.gdata);
+            }
       // console.log(this.gdata);
       });
   }
   od(){
     this.storage.get('others').then((val) => {
       //  console.log(val)
-    
-   this.navCtrl.push("ProfilePageCat",{data: val});
+      if(val == null || !(val.length > 0)){
+        alert("No Merchants available at the moment")
+            }
+            else{
+              this.navCtrl.push("ProfilePageCat",{data: val});
+              // console.log(this.gdata);
+            }
       // console.log(this.gdata);
       });
   }

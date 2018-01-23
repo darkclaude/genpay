@@ -33,6 +33,9 @@
     },
     "ionic-plugin-keyboard": {
       "PACKAGE_NAME": "ITC.genpay"
+    },
+    "cordova-plugin-fcm": {
+      "PACKAGE_NAME": "com.itc.genpay"
     }
   },
   "dependent_plugins": {}

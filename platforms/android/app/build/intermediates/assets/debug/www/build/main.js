@@ -6,18 +6,18 @@ webpackJsonp([19],{
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RemoteServiceProvider; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_add_operator_map__ = __webpack_require__(175);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_add_operator_map__ = __webpack_require__(174);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs_add_operator_map__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(176);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_do__ = __webpack_require__(269);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(175);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_do__ = __webpack_require__(267);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_do___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_do__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_catch__ = __webpack_require__(177);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_catch__ = __webpack_require__(176);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_catch___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_catch__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_Observable__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_rxjs_Observable__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_observable_of__ = __webpack_require__(272);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_observable_of__ = __webpack_require__(270);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_observable_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_rxjs_add_observable_of__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rxjs_add_observable_throw__ = __webpack_require__(274);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rxjs_add_observable_throw__ = __webpack_require__(272);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rxjs_add_observable_throw___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_rxjs_add_observable_throw__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -98,8 +98,8 @@ RemoteServiceProvider = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_storage__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_billeref_billeref__ = __webpack_require__(45);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_billerlookup_billerlookup__ = __webpack_require__(112);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_billeref_billeref__ = __webpack_require__(37);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_billerlookup_billerlookup__ = __webpack_require__(118);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_remote_service_remote_service__ = __webpack_require__(10);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -257,12 +257,803 @@ BillerPage = __decorate([
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ChangepasswordPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_storage__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_main_main__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_remote_service_remote_service__ = __webpack_require__(10);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+
+/**
+ * Generated class for the ChangepasswordPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var ChangepasswordPage = (function () {
+    function ChangepasswordPage(loadingCtrl, remoteService, storage, toastCtrl, navCtrl, navParams) {
+        this.loadingCtrl = loadingCtrl;
+        this.remoteService = remoteService;
+        this.storage = storage;
+        this.toastCtrl = toastCtrl;
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.oldpass = '';
+        this.newpass = '';
+        this.newpassc = '';
+    }
+    ChangepasswordPage.prototype.changepass = function () {
+        var _this = this;
+        if (this.newpass.length < 1 || this.oldpass.length < 1 || this.newpassc.length < 1) {
+            this.class = "toast-failure";
+            this.presentToast("Empty Fields!");
+        }
+        else if (this.newpass != this.newpassc) {
+            this.class = "toast-failure";
+            this.presentToast("Passwords do not match");
+        }
+        else {
+            var loading_1 = this.loadingCtrl.create({
+                content: 'Please wait...'
+            });
+            loading_1.present();
+            this.storage.get('id').then(function (val) {
+                var body = { 'userId': val, 'oldPassword': _this.oldpass, 'newPassword': _this.newpass };
+                //this.url = 
+                console.log(body);
+                _this.url = "http://34.242.75.122/api/v1/password/change";
+                _this.remoteService.getPosts2(_this.url, body).subscribe(function (data) {
+                    loading_1.dismiss();
+                    console.log(data);
+                    _this.udata = data;
+                    if (data.responseCode == "200") {
+                        _this.class = "toast-success";
+                        console.log(data);
+                        _this.presentToast("Password changed successfully!");
+                    }
+                    else if (data.responseCode == "46") {
+                        _this.class = "toast-failure";
+                        _this.presentToast("Old password Incorrect!");
+                        // this.class="str";
+                    }
+                    else { }
+                });
+            });
+        }
+    };
+    ChangepasswordPage.prototype.presentToast = function (msg) {
+        var _this = this;
+        var toast = this.toastCtrl.create({
+            message: msg,
+            duration: 500,
+            cssClass: this.class,
+            position: 'button'
+        });
+        toast.onDidDismiss(function () {
+            // alert(this.)
+            if (_this.class == "toast-success") {
+                //alert("moving to Authen");
+                _this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_3__pages_main_main__["a" /* MainPage */]);
+            }
+            //  this.navCtrl.setRoot("ProfilePage",{data : JSON.stringify(this.udata)});
+        });
+        toast.present();
+    };
+    ChangepasswordPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad ChangepasswordPage');
+    };
+    return ChangepasswordPage;
+}());
+ChangepasswordPage = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+        selector: 'page-changepassword',template:/*ion-inline-start:"/Users/DarkLord/genpay/src/pages/changepassword/changepassword.html"*/'<!--\n\n  Generated template for the ChangepasswordPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>Change Password</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content class="topjkgbar" padding>\n\n\n\n    <div ion-fixed >\n\n  <ion-item   padding-top>\n\n     \n\n     <ion-label  floating><font color="#23aadb"><b>Enter Old Password</b></font></ion-label>\n\n  <ion-input type="password"  class="btnp" [(ngModel)]="oldpass"  name="title"></ion-input>\n\n  </ion-item>\n\n  <ion-item   >\n\n   \n\n    <ion-label   floating ><font color="#23aadb"><b>Enter New Password</b></font> </ion-label>\n\n <ion-input type="password"  class="btnp" [(ngModel)]="newpass" name="title"></ion-input>\n\n </ion-item>\n\n <ion-item  >\n\n  \n\n   <ion-label   floating ><font color="#23aadb" ><b>Confirm New Password</b> </font></ion-label>\n\n<ion-input type="password"  class="btnp" [(ngModel)]="newpassc" name="title"></ion-input>\n\n</ion-item>\n\n  <br>\n\n  <br>\n\n  <!--\n\n  <ion-item>\n\n  <ion-label floating >Enter your Password </ion-label>\n\n  <ion-input type="password" [(ngModel)]="pass" name="title"></ion-input>\n\n  </ion-item>\n\n -->\n\n  <br>\n\n  \n\n  <div >\n\n     <button   class="logb" [disabled]="isd" [block]="true" ion-button large (click)="changepass()">Change Password</button>\n\n      \n\n </div>\n\n</div>\n\n</ion-content>\n\n'/*ion-inline-end:"/Users/DarkLord/genpay/src/pages/changepassword/changepassword.html"*/,
+    }),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */], __WEBPACK_IMPORTED_MODULE_4__providers_remote_service_remote_service__["a" /* RemoteServiceProvider */], __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ToastController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]])
+], ChangepasswordPage);
+
+//# sourceMappingURL=changepassword.js.map
+
+/***/ }),
+
+/***/ 113:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EditprofilePage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_storage__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_main_main__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_settings_settings__ = __webpack_require__(59);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_remote_service_remote_service__ = __webpack_require__(10);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+
+
+/**
+ * Generated class for the EditprofilePage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var EditprofilePage = (function () {
+    function EditprofilePage(loadingCtrl, remoteService, storage, toastCtrl, navCtrl, navParams) {
+        var _this = this;
+        this.loadingCtrl = loadingCtrl;
+        this.remoteService = remoteService;
+        this.storage = storage;
+        this.toastCtrl = toastCtrl;
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.storage.get('fullname').then(function (val) {
+            //  console.log(val)
+            _this.name = val;
+        });
+        this.storage.get('phone').then(function (val) {
+            _this.phone = val;
+        });
+        this.storage.get('email').then(function (val) {
+            //  console.log(val)
+            _this.email = val;
+        });
+    }
+    EditprofilePage.prototype.addemail = function () {
+        var _this = this;
+        var loading = this.loadingCtrl.create({
+            content: 'Please wait...'
+        });
+        loading.present();
+        // http://0.0.0.0:8000/api/user/{user_id}/payHistory/{month}
+        this.storage.get('id').then(function (val) {
+            _this.url = "http://34.242.75.122/api/v1/user/" + val + "/email";
+            //alert(this.url);
+            var body = { 'email': _this.newemail };
+            console.log(body);
+            _this.remoteService.getPosts2(_this.url, body).subscribe(function (data) {
+                console.log(data);
+                loading.dismiss();
+                _this.udata = data;
+                //this.isd = false;
+                if (data.responseCode == "200") {
+                    alert("Your email has been added. A verification link has been sent to your email address. Check to verify your email address.");
+                    _this.email = _this.udata.data.email;
+                    _this.storage.set('email', _this.udata.data.email);
+                    _this.storage.set('email', _this.udata.data.email);
+                    _this.newemail = "";
+                }
+                else {
+                    alert("An Error Occured Try again");
+                }
+                //console.log(data);
+            });
+        });
+    };
+    EditprofilePage.prototype.presentToast = function (msg) {
+        var _this = this;
+        var toast = this.toastCtrl.create({
+            message: msg,
+            duration: 500,
+            cssClass: this.class,
+            position: 'button'
+        });
+        toast.onDidDismiss(function () {
+            // alert(this.)
+            _this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_3__pages_main_main__["a" /* MainPage */]);
+            _this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__pages_settings_settings__["a" /* SettingsPage */]);
+            if (_this.class == "toast-success") {
+                //alert("moving to Authen");
+                _this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_3__pages_main_main__["a" /* MainPage */], { data: JSON.stringify(_this.udata) });
+            }
+            //  this.navCtrl.setRoot("ProfilePage",{data : JSON.stringify(this.udata)});
+        });
+        toast.present();
+    };
+    EditprofilePage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad EditprofilePage');
+    };
+    return EditprofilePage;
+}());
+EditprofilePage = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+        selector: 'page-editprofile',template:/*ion-inline-start:"/Users/DarkLord/genpay/src/pages/editprofile/editprofile.html"*/'<!--\n\n  Generated template for the EditprofilePage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>EDIT PROFILE</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content  class="topballlr" padding>\n\n\n\n <br>\n\n  <h1 text-center ><font color="#23aadb"class="app-font"><b>PROFILE</b></font></h1>\n\n  <hr/>\n\n  <br>\n\n  <div class="topbar">\n\n    <ion-item text-wrap >\n\n   <font color="#23aadb"><b>Name:</b></font>&nbsp;&nbsp;<font color="#23aadb"><b>{{name}}</b></font>\n\n    </ion-item>\n\n    <ion-item text-wrap >\n\n        <font color="#23aadb"><b>Phone No:</b></font>&nbsp;&nbsp;<font color="#23aadb"><b>{{phone}}</b></font>\n\n         </ion-item  >\n\n         <ion-item text-wrap >\n\n            <font color="#23aadb"><b>Email:</b></font>&nbsp;&nbsp;<font color="#23aadb"><b>{{email}}</b></font>\n\n             </ion-item>\n\n   \n\n</div>\n\n<ion-item transparent >\n\n\n\n\n\n<ion-input   type="email"  class="btnp" [(ngModel)]="newemail" name="title"></ion-input>\n\n\n\n</ion-item>\n\n<br>\n\n<button   class="logb" [disabled]="isd" [block]="true" ion-button  (click)="addemail()">Add Email address</button>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"/Users/DarkLord/genpay/src/pages/editprofile/editprofile.html"*/,
+    }),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */], __WEBPACK_IMPORTED_MODULE_5__providers_remote_service_remote_service__["a" /* RemoteServiceProvider */], __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ToastController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]])
+], EditprofilePage);
+
+//# sourceMappingURL=editprofile.js.map
+
+/***/ }),
+
+/***/ 114:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HistoryPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_storage__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_remote_service_remote_service__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__statement_statement__ = __webpack_require__(115);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__historydata_historydata__ = __webpack_require__(116);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+
+
+/**
+ * Generated class for the SettingsPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var HistoryPage = (function () {
+    function HistoryPage(loadingCtrl, navParams, storage, toastCtrl, navCtrl, remoteService) {
+        this.loadingCtrl = loadingCtrl;
+        this.navParams = navParams;
+        this.storage = storage;
+        this.toastCtrl = toastCtrl;
+        this.navCtrl = navCtrl;
+        this.remoteService = remoteService;
+        // placeholderDate: null;
+        this.billername = '';
+        this.options = {
+            message: '',
+            duration: 1000,
+            cssClass: this.class,
+            position: 'middle'
+        };
+    }
+    HistoryPage.prototype.today = function () {
+        var _this = this;
+        var loading = this.loadingCtrl.create({
+            content: 'Please wait...'
+        });
+        loading.present();
+        // http://0.0.0.0:8000/api/user/{user_id}/payHistory/{month}
+        this.storage.get('id').then(function (val) {
+            _this.url = "http://34.242.75.122/api/v1/user/" + val + "/payHistory/today";
+            //alert(this.url);
+            var body = {};
+            _this.remoteService.getPosts(_this.url).subscribe(function (data) {
+                console.log(data);
+                loading.dismiss();
+                _this.udata = data;
+                //this.isd = false;
+                if (data.responseCode == "200") {
+                    _this.class = "toast-success";
+                    _this.options.duration = 1;
+                    _this.presentToast("");
+                }
+                else {
+                    _this.class = "toast-failure";
+                    alert("No History Data Available");
+                    //  this.presentToast("No History Data Available");
+                }
+                //console.log(data);
+            });
+        });
+    };
+    HistoryPage.prototype.week = function () {
+        var _this = this;
+        var loading = this.loadingCtrl.create({
+            content: 'Please wait...'
+        });
+        loading.present();
+        // http://0.0.0.0:8000/api/user/{user_id}/payHistory/{month}
+        this.storage.get('id').then(function (val) {
+            _this.url = "http://34.242.75.122/api/v1/user/" + val + "/payHistory/week";
+            //alert(this.url);
+            var body = {};
+            _this.remoteService.getPosts(_this.url).subscribe(function (data) {
+                console.log(data);
+                loading.dismiss();
+                _this.udata = data;
+                //this.isd = false;
+                if (data.responseCode == "200") {
+                    _this.class = "toast-success";
+                    _this.options.duration = 1;
+                    _this.presentToast("");
+                }
+                else {
+                    _this.class = "toast-failure";
+                    alert("No History Data Available");
+                    //  this.presentToast("No History Data Available");
+                }
+                //console.log(data);
+            });
+        });
+    };
+    HistoryPage.prototype.month = function () {
+        var _this = this;
+        var loading = this.loadingCtrl.create({
+            content: 'Please wait...'
+        });
+        loading.present();
+        // http://0.0.0.0:8000/api/user/{user_id}/payHistory/{month}
+        this.storage.get('id').then(function (val) {
+            _this.url = "http://34.242.75.122/api/v1/user/" + val + "/payHistory/month";
+            //alert(this.url);
+            var body = {};
+            _this.remoteService.getPosts(_this.url).subscribe(function (data) {
+                console.log(data);
+                loading.dismiss();
+                _this.udata = data;
+                //this.isd = false;
+                if (data.responseCode == "200") {
+                    _this.class = "toast-success";
+                    _this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_5__historydata_historydata__["a" /* HistoryDataPage */], { data: _this.udata });
+                    //this.options.duration= 1;
+                    //this.presentToast("");
+                }
+                else {
+                    _this.class = "toast-failure";
+                    alert("No History Data Available");
+                    //this.presentToast("No History Data Available");
+                }
+                //console.log(data);
+            });
+        });
+    };
+    HistoryPage.prototype.statement = function () {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__statement_statement__["a" /* StatementPage */]);
+    };
+    HistoryPage.prototype.presentToast = function (msg) {
+        var _this = this;
+        this.options.message = msg;
+        var toast = this.toastCtrl.create(this.options);
+        var s = 2;
+        toast.onDidDismiss(function () {
+            _this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_5__historydata_historydata__["a" /* HistoryDataPage */], { data: _this.udata });
+        });
+        toast.present();
+    };
+    HistoryPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad HistoryPage');
+    };
+    return HistoryPage;
+}());
+HistoryPage = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({template:/*ion-inline-start:"/Users/DarkLord/genpay/src/pages/history/history.html"*/'<!--\n\n  Generated template for the SettingsPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>Payment History</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content class="topbarP"padding>\n\n  <br><br>\n\n  <ion-item-divider class="bilh" color="#003e70">  <font color="#FFFFFF"><b>History</b></font></ion-item-divider>\n\n  <ion-item  detail-push  class="listh" (click)="today()">\n\n    <font color="#23aadb" >\n\n       <font class="bil"><b>Today</b></font>\n\n        \n\n    </font>\n\n    <br>\n\n    </ion-item>\n\n  <ion-item  detail-push  class="listh" (click)="week()">\n\n    <font color="#23aadb" >\n\n       <font class="bil"><b>This Week</b></font>\n\n        \n\n    </font>\n\n    <br>\n\n    </ion-item>\n\n    <ion-item  detail-push  class="listh" (click)="month()">\n\n        <font color="#23aadb">\n\n           <font class="bil"><b>This Month</b></font>\n\n            \n\n        </font>\n\n        <br>\n\n        </ion-item>\n\n        <div></div>\n\n    <br>\n\n    <ion-item-divider class="bilh" color="#003e70">  <font color="#FFFFFFF"><b>Statement</b></font></ion-item-divider>\n\n  \n\n    <ion-item  detail-push  class="listh" (click)="statement()">\n\n      <font color="#23aadb">\n\n         <font class="bil"><b>Email Statement</b></font>\n\n          \n\n      </font>\n\n      <br>\n\n      </ion-item>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"/Users/DarkLord/genpay/src/pages/history/history.html"*/,
+    }),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ToastController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_3__providers_remote_service_remote_service__["a" /* RemoteServiceProvider */]])
+], HistoryPage);
+
+//# sourceMappingURL=history.js.map
+
+/***/ }),
+
+/***/ 115:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return StatementPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_storage__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_remote_service_remote_service__ = __webpack_require__(10);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+/**
+ * Generated class for the SettingsPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var StatementPage = (function () {
+    function StatementPage(loadingCtrl, navParams, storage, toastCtrl, navCtrl, remoteService) {
+        this.loadingCtrl = loadingCtrl;
+        this.navParams = navParams;
+        this.storage = storage;
+        this.toastCtrl = toastCtrl;
+        this.navCtrl = navCtrl;
+        this.remoteService = remoteService;
+        this.billername = '';
+    }
+    StatementPage.prototype.setDate = function (event) {
+        this.from = new Date(event);
+    };
+    StatementPage.prototype.setDateT = function (event) {
+        this.to = new Date(event);
+    };
+    StatementPage.prototype.statement = function () {
+        var _this = this;
+        var loading = this.loadingCtrl.create({
+            content: 'Please wait...'
+        });
+        loading.present();
+        // http://0.0.0.0:8000/api/user/{user_id}/payHistory/{month}
+        this.storage.get('id').then(function (val) {
+            _this.url = "http://34.242.75.122/api/v1/user/" + val + "/statement";
+            //alert(this.url);
+            var body = { 'user_id': val, 'from': _this.from, 'to': _this.to };
+            console.log(body);
+            _this.remoteService.getPosts2(_this.url, body).subscribe(function (data) {
+                console.log(data);
+                setTimeout(function () {
+                    loading.dismiss();
+                }, 6000);
+                loading.dismiss();
+                _this.udata = data;
+                //this.isd = false;
+                if (data.responseCode == "200") {
+                    alert("Success! Statement has been sent your email");
+                }
+                else if (data.responseCode == "400") {
+                    alert("Please Add an Email First in Settings");
+                }
+                else if (data.responseCode == "401") {
+                    alert("Kindly Verify your email the Link has been sent");
+                }
+                else if (data.responseCode == "44") {
+                    alert("No Transaction History Available");
+                }
+                else {
+                }
+                //console.log(data);
+            });
+        });
+    };
+    StatementPage.prototype.presentToast = function (msg) {
+        var toast = this.toastCtrl.create({
+            message: msg,
+            duration: 1000,
+            cssClass: this.class,
+            position: 'button'
+        });
+        var s = 2;
+        toast.onDidDismiss(function () {
+        });
+        toast.present();
+    };
+    StatementPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad HistoryPage');
+    };
+    return StatementPage;
+}());
+StatementPage = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({template:/*ion-inline-start:"/Users/DarkLord/genpay/src/pages/statement/statement.html"*/'<!--\n\n  Generated template for the SettingsPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>Email Statement</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content class="topbarkk" padding>\n\n\n\n  \n\n  <ion-item-divider color="#003e70"class="bil" > <font color="#23aadb"> <b>Transactions Statement</b></font></ion-item-divider>\n\n\n\n  <ion-item>\n\n    <span ion-datepicker (ionChanged)="setDate($event);" ([value])="from"  clear class="ScheduleDate">\n\n      <span><font color="#23aadb">From:<ion-icon name="clipboard" item-left ></ion-icon></font><font color="#23aadb">{{from | date}}</font></span>\n\n      <div></div>\n\n    </span>\n\n  \n\n  </ion-item>\n\n  <ion-item>\n\n    <span ion-datepicker (ionChanged)="setDateT($event);" ([value])="to"  clear class="ScheduleDate">\n\n      <span><font color="#23aadb">To: &nbsp;&nbsp;&nbsp; <ion-icon name="clipboard" item-left ></ion-icon></font><font color="#23aadb">{{to | date}}</font></span>\n\n    </span>\n\n   </ion-item>\n\n\n\n  <br>\n\n   <button ion-button  [block]= "true"(click)="statement()"large right>Send Statement</button>\n\n\n\n   \n\n    <br><br>\n\n  \n\n\n\n</ion-content>\n\n'/*ion-inline-end:"/Users/DarkLord/genpay/src/pages/statement/statement.html"*/,
+    }),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ToastController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_3__providers_remote_service_remote_service__["a" /* RemoteServiceProvider */]])
+], StatementPage);
+
+//# sourceMappingURL=statement.js.map
+
+/***/ }),
+
+/***/ 116:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HistoryDataPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_storage__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_biller_biller__ = __webpack_require__(111);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_remote_service_remote_service__ = __webpack_require__(10);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+
+//import { Pipe, PipeTransform } from '@angular/core';
+/**
+ * Generated class for the ProfilePage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+//profile page
+var HistoryDataPage = (function () {
+    function HistoryDataPage(loadingCtrl, remoteService, storage, toastCtrl, navCtrl, navParams) {
+        this.loadingCtrl = loadingCtrl;
+        this.remoteService = remoteService;
+        this.storage = storage;
+        this.toastCtrl = toastCtrl;
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.data = [];
+        this.data2 = [];
+        this.term = '';
+        this.snip = true;
+        this.snip2 = false;
+        this.data = this.navParams.get("data").data;
+    }
+    HistoryDataPage.prototype.ga = function () {
+    };
+    HistoryDataPage.prototype.passdata = function (val) {
+        var _this = this;
+        var loading = this.loadingCtrl.create({
+            content: 'Please wait...'
+        });
+        loading.present();
+        var url = "http://172.18.12.212:8000/api/billers/" + val.merchantId.toString() + "/" + val.ova.toString();
+        //alert(this.url);
+        var body = {};
+        this.remoteService.getPosts(url).subscribe(function (data) {
+            console.log(data);
+            loading.dismiss();
+            // this.udata = data;
+            _this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__pages_biller_biller__["a" /* BillerPage */], { data: data });
+            //console.log(data);
+        });
+        //console.log(val)
+        // alert(val.phonenumber);
+        // this.sparam = val.phonenumber;
+        //console.log("Happy");
+    };
+    HistoryDataPage.prototype.searchFn = function (ev) {
+        this.term = ev.target.value;
+    };
+    HistoryDataPage.prototype.searchchanged = function (ch) {
+        if (ch.length > 0) {
+            this.snip = false;
+            this.snip2 = !this.snip;
+            console.log(this.snip);
+            console.log(this.snip2);
+            console.log("Search Active");
+        }
+        else {
+            this.snip = true;
+            this.snip2 = !this.snip;
+            console.log(this.snip);
+            console.log(this.snip2);
+            console.log("Now Empty");
+        }
+        console.log(ch);
+    };
+    return HistoryDataPage;
+}());
+HistoryDataPage = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({template:/*ion-inline-start:"/Users/DarkLord/genpay/src/pages/historydata/historydata.html"*/'<!--\n\n  Generated template for the ProfilePage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n    <ion-navbar>\n\n    <ion-title>History</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content class="topbarpl"padding>\n\n\n\n<ion-item color="#23aadb" text-wrap class="listh" *ngFor="let d of data" >\n\n\n\n  <font color=#23aadb><b>{{d.merchantName}}</b></font> <font color="#23aadb"float-right><b>GHS {{d.amount}}</b></font><br>\n\n\n\n   <br>\n\n\n\n    <font color="#23aadb" float-left>{{d.created_at}}</font>\n\n\n\n\n\n</ion-item>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"/Users/DarkLord/genpay/src/pages/historydata/historydata.html"*/,
+    }),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */], __WEBPACK_IMPORTED_MODULE_4__providers_remote_service_remote_service__["a" /* RemoteServiceProvider */], __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ToastController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]])
+], HistoryDataPage);
+
+//# sourceMappingURL=historydata.js.map
+
+/***/ }),
+
+/***/ 117:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BillerPayPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_storage__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_main_main__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_remote_service_remote_service__ = __webpack_require__(10);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+
+/**
+ * Generated class for the BillerPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var BillerPayPage = (function () {
+    function BillerPayPage(loadingCtrl, remoteService, storage, toastCtrl, navCtrl, navParams) {
+        this.loadingCtrl = loadingCtrl;
+        this.remoteService = remoteService;
+        this.storage = storage;
+        this.toastCtrl = toastCtrl;
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.billername = '';
+        this.data = this.navParams.get("data");
+        console.log(this.data);
+    }
+    BillerPayPage.prototype.changepass = function () {
+        var _this = this;
+        var body = {};
+        //this.url = 
+        this.url = "/api/verifyCode";
+        this.remoteService.getPosts2(this.url, body).subscribe(function (data) {
+            console.log(data);
+            _this.udata = data;
+            if (data.responseCode == 1) {
+                _this.class = "toast-success";
+                console.log(data);
+                _this.presentToast("Welcome " + data.data.fullName);
+            }
+            else if (data.responseCode == 0) {
+                _this.class = "toast-failure";
+                _this.presentToast("Account not found!");
+                // this.class="str";
+            }
+            else if (data.responseCode == 2) {
+                _this.class = "toast-failure";
+                _this.presentToast("Invalid Password!");
+                //  this.class="str";
+            }
+            else { }
+        });
+    };
+    BillerPayPage.prototype.presentToast = function (msg) {
+        var _this = this;
+        var toast = this.toastCtrl.create({
+            message: msg,
+            duration: 2000,
+            cssClass: this.class,
+            position: 'middle'
+        });
+        toast.onDidDismiss(function () {
+            // alert(this.)
+            if (_this.class == "toast-success") {
+                //alert("moving to Authen");
+                _this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_3__pages_main_main__["a" /* MainPage */]);
+            }
+            //  this.navCtrl.setRoot("ProfilePage",{data : JSON.stringify(this.udata)});
+        });
+        toast.present();
+    };
+    BillerPayPage.prototype.ionViewDidLoad = function () {
+        try {
+            this.billername = this.data.data[0].merchantName;
+        }
+        catch (error) {
+            this.billername = 'None';
+        }
+    };
+    BillerPayPage.prototype.pay2 = function () {
+        var _this = this;
+        var loading = this.loadingCtrl.create({
+            content: 'Please wait...'
+        });
+        loading.present();
+        var body = { 'ova': '', 'user_accountRef': '', 'amount': this.amount, 'paymentRef': '', 'user_id': '', 'product_id': '', 'merchant_id': '', 'merchant_name': '' };
+        //this.url = 
+        this.url = "http://34.242.75.122/api/v1/payment/pay";
+        //var body = {'accountRef':this.accountno,'user_id':'','productId':'','merchantId':'','serviceCode':'','apiIndex':''   };
+        //this.url = 
+        this.storage.get('ovat').then(function (valova) {
+            body.ova = valova;
+            _this.storage.get('id').then(function (val) {
+                body.user_id = val;
+                _this.storage.get('payref').then(function (val2) {
+                    body.paymentRef = val2;
+                    _this.storage.get('billeracc').then(function (val3) {
+                        body.user_accountRef = val3;
+                        console.log(_this.data.data[0]);
+                        body.merchant_id = _this.data.data[0].merchantId || _this.data.data[0].merchant_id;
+                        body.merchant_name = _this.data.data[0].merchantName;
+                        body.product_id = _this.data.data[0].productId || _this.data.data[0].merchant_id;
+                        console.log(body);
+                        _this.remoteService.getPosts2(_this.url, body).subscribe(function (data) {
+                            console.log(data);
+                            loading.dismiss();
+                            _this.udata = data;
+                            if (data.responseCode == "200") {
+                                _this.class = "toast-success";
+                                console.log(data);
+                                alert("A Bill prompt has been sent to you");
+                                _this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_3__pages_main_main__["a" /* MainPage */]);
+                                //   this.presentToast("Success, A bill prompt has been sent");
+                            }
+                            else {
+                                _this.class = "toast-failure";
+                                console.log(data);
+                                _this.presentToast("An Error Occured");
+                            }
+                        });
+                    });
+                });
+            });
+        });
+    };
+    BillerPayPage.prototype.pay = function () {
+        var _this = this;
+        var loading = this.loadingCtrl.create({
+            content: 'Please wait...'
+        });
+        loading.present();
+        setTimeout(function () {
+            loading.dismiss();
+            _this.class = "toast-failure";
+            _this.presentToast("No Further Data");
+        }, 2000);
+    };
+    return BillerPayPage;
+}());
+BillerPayPage = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+        selector: 'page-biller',template:/*ion-inline-start:"/Users/DarkLord/genpay/src/pages/billerpay/billerpay.html"*/'<!--\n\n  Generated template for the BillerPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>BILLER PAYMENT</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content class="topbar41" padding>\n\n \n\n        <br>\n\n        <img>\n\n        <div class="topbar42">\n\n         <h1 text-center ><font color="#03afd6" lass="app-font"><b>{{billername}}</b></font></h1>\n\n         <br>\n\n         <br>\n\n         <br>\n\n         <br>\n\n       <ion-label text-center><font color="#03afd6"><b>Enter Amount</b></font></ion-label>\n\n       <ion-item transparent>\n\n       \n\n       <ion-input type="text"  class="btnp" [(ngModel)]="amount" name="title"></ion-input>\n\n       \n\n       </ion-item>\n\n       <br>\n\n       <button   class="logb" [disabled]="isd" ion-button large (click)="pay2()">Pay</button>\n\n       <br>\n\n       \n\n      </div>\n\n     \n\n      \n\n</ion-content>\n\n'/*ion-inline-end:"/Users/DarkLord/genpay/src/pages/billerpay/billerpay.html"*/,
+    }),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */], __WEBPACK_IMPORTED_MODULE_4__providers_remote_service_remote_service__["a" /* RemoteServiceProvider */], __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ToastController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]])
+], BillerPayPage);
+
+//# sourceMappingURL=billerpay.js.map
+
+/***/ }),
+
+/***/ 118:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BillerLookupPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_storage__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_remote_service_remote_service__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_billeref_billeref__ = __webpack_require__(45);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_billeref_billeref__ = __webpack_require__(37);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -325,7 +1116,117 @@ BillerLookupPage = __decorate([
 
 /***/ }),
 
-/***/ 113:
+/***/ 119:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RecentBillersPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_storage__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__billeref_billeref__ = __webpack_require__(37);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_remote_service_remote_service__ = __webpack_require__(10);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+
+//import { Pipe, PipeTransform } from '@angular/core';
+/**
+ * Generated class for the ProfilePage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+//profile page
+var RecentBillersPage = (function () {
+    function RecentBillersPage(loadingCtrl, remoteService, storage, toastCtrl, navCtrl, navParams) {
+        this.loadingCtrl = loadingCtrl;
+        this.remoteService = remoteService;
+        this.storage = storage;
+        this.toastCtrl = toastCtrl;
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.data = [];
+        this.data2 = [];
+        this.term = '';
+        this.snip = true;
+        this.snip2 = false;
+        this.data = this.navParams.get("data").data;
+    }
+    RecentBillersPage.prototype.ga = function () {
+    };
+    RecentBillersPage.prototype.recentacc = function (biller) {
+        console.log(biller);
+        this.storage.set('billeracc', biller.accountRef);
+        this.storage.set('ovat', biller.ova);
+        //console.log(account);
+        console.log(this.data);
+        //console.log(account.ova);
+        var passer;
+        var dataa = [];
+        dataa.push(biller);
+        passer = { 'r': 1, 'b': 2, data: dataa };
+        console.log(passer);
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__billeref_billeref__["a" /* BillerRefPage */], { data: passer });
+        //console.log(biller);
+        /*
+        let loading = this.loadingCtrl.create({
+          content: 'Please wait...'
+        });
+        
+        loading.present();
+        // http://0.0.0.0:8000/api/user/{user_id}/payHistory/{month}
+         
+        this.storage.get('id').then((val) => {
+          let url="http://34.242.75.122/api/v1/recent/"+val+"/accounts";
+        
+        //alert(this.url);
+        var body = {'merchant_id':biller.merchant_id};
+        this.remoteService.getPosts2(url,body).subscribe((data)=>{
+          console.log(data);
+          loading.dismiss();
+          //this.udata = data;
+          //this.isd = false;
+          if(data.responseCode=="200"){
+           // this.class ="toast-success";
+           //alert()
+           this.navCtrl.push(RecentBillers2Page,{data: data})
+          
+          }
+         
+          else{
+          alert("Sorry an Error occured try again ");
+          }
+          //console.log(data);
+            });
+        });
+        */
+    };
+    return RecentBillersPage;
+}());
+RecentBillersPage = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({template:/*ion-inline-start:"/Users/DarkLord/genpay/src/pages/recentbillers/recentbillers.html"*/'<!--\n\n  Generated template for the ProfilePage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n    <ion-navbar>\n\n    <ion-title>Favourite Billers</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content class="topbarkplm"padding>\n\n\n\n<ion-item detail-push  color="#23aadb" text-wrap class="listh"  (click)="recentacc(d)" *ngFor="let d of data" >\n\n\n\n  <font color=#23aadb><b>{{d.merchantName}}</b></font> <br> <font color="#23aadb" float-left><b>{{d.accountRef}}</b></font>\n\n\n\n\n\n</ion-item>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"/Users/DarkLord/genpay/src/pages/recentbillers/recentbillers.html"*/,
+    }),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */], __WEBPACK_IMPORTED_MODULE_4__providers_remote_service_remote_service__["a" /* RemoteServiceProvider */], __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ToastController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]])
+], RecentBillersPage);
+
+//# sourceMappingURL=recentbillers.js.map
+
+/***/ }),
+
+/***/ 120:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -496,7 +1397,7 @@ RegisterPage = __decorate([
 
 /***/ }),
 
-/***/ 114:
+/***/ 121:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -505,7 +1406,7 @@ RegisterPage = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_storage__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_remote_service_remote_service__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__forgot2_forgot2__ = __webpack_require__(115);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__forgot2_forgot2__ = __webpack_require__(122);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -608,7 +1509,7 @@ ForgotPage = __decorate([
 
 /***/ }),
 
-/***/ 115:
+/***/ 122:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -717,724 +1618,121 @@ Forgot2Page = __decorate([
 
 /***/ }),
 
-/***/ 116:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ 131:
+/***/ (function(module, exports) {
 
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ChangepasswordPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_storage__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_main_main__ = __webpack_require__(32);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_remote_service_remote_service__ = __webpack_require__(10);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-
-
-/**
- * Generated class for the ChangepasswordPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-var ChangepasswordPage = (function () {
-    function ChangepasswordPage(loadingCtrl, remoteService, storage, toastCtrl, navCtrl, navParams) {
-        this.loadingCtrl = loadingCtrl;
-        this.remoteService = remoteService;
-        this.storage = storage;
-        this.toastCtrl = toastCtrl;
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-        this.oldpass = '';
-        this.newpass = '';
-        this.newpassc = '';
-    }
-    ChangepasswordPage.prototype.changepass = function () {
-        var _this = this;
-        if (this.newpass.length < 1 || this.oldpass.length < 1 || this.newpassc.length < 1) {
-            this.class = "toast-failure";
-            this.presentToast("Empty Fields!");
-        }
-        else if (this.newpass != this.newpassc) {
-            this.class = "toast-failure";
-            this.presentToast("Passwords do not match");
-        }
-        else {
-            var loading_1 = this.loadingCtrl.create({
-                content: 'Please wait...'
-            });
-            loading_1.present();
-            this.storage.get('id').then(function (val) {
-                var body = { 'userId': val, 'oldPassword': _this.oldpass, 'newPassword': _this.newpass };
-                //this.url = 
-                console.log(body);
-                _this.url = "http://34.242.75.122/api/v1/password/change";
-                _this.remoteService.getPosts2(_this.url, body).subscribe(function (data) {
-                    loading_1.dismiss();
-                    console.log(data);
-                    _this.udata = data;
-                    if (data.responseCode == "200") {
-                        _this.class = "toast-success";
-                        console.log(data);
-                        _this.presentToast("Password changed successfully!");
-                    }
-                    else if (data.responseCode == "46") {
-                        _this.class = "toast-failure";
-                        _this.presentToast("Old password Incorrect!");
-                        // this.class="str";
-                    }
-                    else { }
-                });
-            });
-        }
-    };
-    ChangepasswordPage.prototype.presentToast = function (msg) {
-        var _this = this;
-        var toast = this.toastCtrl.create({
-            message: msg,
-            duration: 500,
-            cssClass: this.class,
-            position: 'button'
-        });
-        toast.onDidDismiss(function () {
-            // alert(this.)
-            if (_this.class == "toast-success") {
-                //alert("moving to Authen");
-                _this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_3__pages_main_main__["a" /* MainPage */]);
-            }
-            //  this.navCtrl.setRoot("ProfilePage",{data : JSON.stringify(this.udata)});
-        });
-        toast.present();
-    };
-    ChangepasswordPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad ChangepasswordPage');
-    };
-    return ChangepasswordPage;
-}());
-ChangepasswordPage = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-changepassword',template:/*ion-inline-start:"/Users/DarkLord/genpay/src/pages/changepassword/changepassword.html"*/'<!--\n\n  Generated template for the ChangepasswordPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>Change Password</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content class="topbar" padding>\n\n\n\n    <div ion-fixed >\n\n  <ion-item  transparent padding-top>\n\n     \n\n     <ion-label  floating><font color="FFFFFF"><b>Enter Old Password</b></font></ion-label>\n\n  <ion-input type="password"  class="btnp" [(ngModel)]="oldpass"  name="title"></ion-input>\n\n  </ion-item>\n\n  <ion-item  transparent >\n\n   \n\n    <ion-label   floating ><font color="FFFFFF"><b>Enter New Password</b></font> </ion-label>\n\n <ion-input type="password"  class="btnp" [(ngModel)]="newpass" name="title"></ion-input>\n\n </ion-item>\n\n <ion-item transparent >\n\n  \n\n   <ion-label   floating ><font color="FFFFFF" ><b>Confirm New Password</b> </font></ion-label>\n\n<ion-input type="password"  class="btnp" [(ngModel)]="newpassc" name="title"></ion-input>\n\n</ion-item>\n\n  <br>\n\n  <br>\n\n  <!--\n\n  <ion-item>\n\n  <ion-label floating >Enter your Password </ion-label>\n\n  <ion-input type="password" [(ngModel)]="pass" name="title"></ion-input>\n\n  </ion-item>\n\n -->\n\n  <br>\n\n  \n\n  <div >\n\n     <button   class="logb" [disabled]="isd" ion-button large (click)="changepass()">Change Password</button>\n\n      \n\n </div>\n\n</div>\n\n</ion-content>\n\n'/*ion-inline-end:"/Users/DarkLord/genpay/src/pages/changepassword/changepassword.html"*/,
-    }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */], __WEBPACK_IMPORTED_MODULE_4__providers_remote_service_remote_service__["a" /* RemoteServiceProvider */], __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ToastController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]])
-], ChangepasswordPage);
-
-//# sourceMappingURL=changepassword.js.map
+function webpackEmptyAsyncContext(req) {
+	// Here Promise.resolve().then() is used instead of new Promise() to prevent
+	// uncatched exception popping up in devtools
+	return Promise.resolve().then(function() {
+		throw new Error("Cannot find module '" + req + "'.");
+	});
+}
+webpackEmptyAsyncContext.keys = function() { return []; };
+webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
+module.exports = webpackEmptyAsyncContext;
+webpackEmptyAsyncContext.id = 131;
 
 /***/ }),
 
-/***/ 117:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ 173:
+/***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EditprofilePage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_storage__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_main_main__ = __webpack_require__(32);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_settings_settings__ = __webpack_require__(59);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_remote_service_remote_service__ = __webpack_require__(10);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
+var map = {
+	"../pages/authenticate/authenticate.module": [
+		303,
+		18
+	],
+	"../pages/biller/biller.module": [
+		311,
+		17
+	],
+	"../pages/billeref/billeref.module": [
+		306,
+		16
+	],
+	"../pages/billerlookup/billerlookup.module": [
+		304,
+		15
+	],
+	"../pages/billerpay/billerpay.module": [
+		310,
+		14
+	],
+	"../pages/changepassword/changepassword.module": [
+		305,
+		13
+	],
+	"../pages/editprofile/editprofile.module": [
+		309,
+		12
+	],
+	"../pages/forgot/forgot.module": [
+		307,
+		11
+	],
+	"../pages/forgot2/forgot2.module": [
+		308,
+		10
+	],
+	"../pages/history/history.module": [
+		315,
+		9
+	],
+	"../pages/historydata/historydata.module": [
+		312,
+		4
+	],
+	"../pages/main/main.module": [
+		313,
+		8
+	],
+	"../pages/profile/profile.module": [
+		317,
+		1
+	],
+	"../pages/profilecat/profilecat.module": [
+		314,
+		0
+	],
+	"../pages/recentbillers/recentbillers.module": [
+		316,
+		3
+	],
+	"../pages/recentbillers2/recentbillers2.module": [
+		320,
+		2
+	],
+	"../pages/register/register.module": [
+		319,
+		7
+	],
+	"../pages/settings/settings.module": [
+		318,
+		6
+	],
+	"../pages/statement/statement.module": [
+		321,
+		5
+	]
 };
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+function webpackAsyncContext(req) {
+	var ids = map[req];
+	if(!ids)
+		return Promise.reject(new Error("Cannot find module '" + req + "'."));
+	return __webpack_require__.e(ids[1]).then(function() {
+		return __webpack_require__(ids[0]);
+	});
 };
-
-
-
-
-
-
-
-
-/**
- * Generated class for the EditprofilePage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-var EditprofilePage = (function () {
-    function EditprofilePage(loadingCtrl, remoteService, storage, toastCtrl, navCtrl, navParams) {
-        var _this = this;
-        this.loadingCtrl = loadingCtrl;
-        this.remoteService = remoteService;
-        this.storage = storage;
-        this.toastCtrl = toastCtrl;
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-        this.storage.get('fullname').then(function (val) {
-            //  console.log(val)
-            _this.name = val;
-        });
-        this.storage.get('phone').then(function (val) {
-            _this.phone = val;
-        });
-        this.storage.get('email').then(function (val) {
-            //  console.log(val)
-            _this.email = val;
-        });
-    }
-    EditprofilePage.prototype.addemail = function () {
-        var _this = this;
-        var loading = this.loadingCtrl.create({
-            content: 'Please wait...'
-        });
-        loading.present();
-        // http://0.0.0.0:8000/api/user/{user_id}/payHistory/{month}
-        this.storage.get('id').then(function (val) {
-            _this.url = "http://34.242.75.122/api/v1/user/" + val + "/email";
-            //alert(this.url);
-            var body = { 'email': _this.newemail };
-            console.log(body);
-            _this.remoteService.getPosts2(_this.url, body).subscribe(function (data) {
-                console.log(data);
-                loading.dismiss();
-                _this.udata = data;
-                //this.isd = false;
-                if (data.responseCode == "200") {
-                    alert("Your email has been added. A verification link has been sent to your email address. Check to verify your email address.");
-                    _this.email = _this.udata.data.email;
-                    _this.storage.set('email', _this.udata.data.email);
-                    _this.storage.set('email', _this.udata.data.email);
-                    _this.newemail = "";
-                }
-                else {
-                    alert("An Error Occured Try again");
-                }
-                //console.log(data);
-            });
-        });
-    };
-    EditprofilePage.prototype.presentToast = function (msg) {
-        var _this = this;
-        var toast = this.toastCtrl.create({
-            message: msg,
-            duration: 500,
-            cssClass: this.class,
-            position: 'button'
-        });
-        toast.onDidDismiss(function () {
-            // alert(this.)
-            _this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_3__pages_main_main__["a" /* MainPage */]);
-            _this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__pages_settings_settings__["a" /* SettingsPage */]);
-            if (_this.class == "toast-success") {
-                //alert("moving to Authen");
-                _this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_3__pages_main_main__["a" /* MainPage */], { data: JSON.stringify(_this.udata) });
-            }
-            //  this.navCtrl.setRoot("ProfilePage",{data : JSON.stringify(this.udata)});
-        });
-        toast.present();
-    };
-    EditprofilePage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad EditprofilePage');
-    };
-    return EditprofilePage;
-}());
-EditprofilePage = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-editprofile',template:/*ion-inline-start:"/Users/DarkLord/genpay/src/pages/editprofile/editprofile.html"*/'<!--\n\n  Generated template for the EditprofilePage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>EDIT PROFILE</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content  class="topbar" padding>\n\n\n\n <br>\n\n  <h1 text-center ><font color="#FFFFFF"class="app-font"><b>GENPAY</b></font></h1>\n\n  <br>\n\n  <div class="topbar">\n\n    <ion-item text-wrap >\n\n   <font color="#23aadb"><b>Name:</b></font>&nbsp;&nbsp;<font color="#23aadb"><b>{{name}}</b></font>\n\n    </ion-item>\n\n    <ion-item text-wrap >\n\n        <font color="#23aadb"><b>Phone No:</b></font>&nbsp;&nbsp;<font color="#23aadb"><b>{{phone}}</b></font>\n\n         </ion-item  >\n\n         <ion-item text-wrap >\n\n            <font color="#23aadb"><b>Email:</b></font>&nbsp;&nbsp;<font color="#23aadb"><b>{{email}}</b></font>\n\n             </ion-item>\n\n   \n\n</div>\n\n<ion-item transparent >\n\n\n\n\n\n<ion-input   type="email"  class="btnp" [(ngModel)]="newemail" name="title"></ion-input>\n\n\n\n</ion-item>\n\n<br>\n\n<button   class="logb" [disabled]="isd" ion-button  (click)="addemail()">Add Email address</button>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"/Users/DarkLord/genpay/src/pages/editprofile/editprofile.html"*/,
-    }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */], __WEBPACK_IMPORTED_MODULE_5__providers_remote_service_remote_service__["a" /* RemoteServiceProvider */], __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ToastController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]])
-], EditprofilePage);
-
-//# sourceMappingURL=editprofile.js.map
+webpackAsyncContext.keys = function webpackAsyncContextKeys() {
+	return Object.keys(map);
+};
+webpackAsyncContext.id = 173;
+module.exports = webpackAsyncContext;
 
 /***/ }),
 
-/***/ 118:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HistoryPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_storage__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_remote_service_remote_service__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__statement_statement__ = __webpack_require__(119);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__historydata_historydata__ = __webpack_require__(120);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-
-
-
-/**
- * Generated class for the SettingsPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-var HistoryPage = (function () {
-    function HistoryPage(loadingCtrl, navParams, storage, toastCtrl, navCtrl, remoteService) {
-        this.loadingCtrl = loadingCtrl;
-        this.navParams = navParams;
-        this.storage = storage;
-        this.toastCtrl = toastCtrl;
-        this.navCtrl = navCtrl;
-        this.remoteService = remoteService;
-        // placeholderDate: null;
-        this.billername = '';
-        this.options = {
-            message: '',
-            duration: 1000,
-            cssClass: this.class,
-            position: 'middle'
-        };
-    }
-    HistoryPage.prototype.today = function () {
-        var _this = this;
-        var loading = this.loadingCtrl.create({
-            content: 'Please wait...'
-        });
-        loading.present();
-        // http://0.0.0.0:8000/api/user/{user_id}/payHistory/{month}
-        this.storage.get('id').then(function (val) {
-            _this.url = "http://34.242.75.122/api/v1/user/" + val + "/payHistory/today";
-            //alert(this.url);
-            var body = {};
-            _this.remoteService.getPosts(_this.url).subscribe(function (data) {
-                console.log(data);
-                loading.dismiss();
-                _this.udata = data;
-                //this.isd = false;
-                if (data.responseCode == "200") {
-                    _this.class = "toast-success";
-                    _this.options.duration = 1;
-                    _this.presentToast("");
-                }
-                else {
-                    _this.class = "toast-failure";
-                    alert("No History Data Available");
-                    //  this.presentToast("No History Data Available");
-                }
-                //console.log(data);
-            });
-        });
-    };
-    HistoryPage.prototype.week = function () {
-        var _this = this;
-        var loading = this.loadingCtrl.create({
-            content: 'Please wait...'
-        });
-        loading.present();
-        // http://0.0.0.0:8000/api/user/{user_id}/payHistory/{month}
-        this.storage.get('id').then(function (val) {
-            _this.url = "http://34.242.75.122/api/v1/user/" + val + "/payHistory/week";
-            //alert(this.url);
-            var body = {};
-            _this.remoteService.getPosts(_this.url).subscribe(function (data) {
-                console.log(data);
-                loading.dismiss();
-                _this.udata = data;
-                //this.isd = false;
-                if (data.responseCode == "200") {
-                    _this.class = "toast-success";
-                    _this.options.duration = 1;
-                    _this.presentToast("");
-                }
-                else {
-                    _this.class = "toast-failure";
-                    alert("No History Data Available");
-                    //  this.presentToast("No History Data Available");
-                }
-                //console.log(data);
-            });
-        });
-    };
-    HistoryPage.prototype.month = function () {
-        var _this = this;
-        var loading = this.loadingCtrl.create({
-            content: 'Please wait...'
-        });
-        loading.present();
-        // http://0.0.0.0:8000/api/user/{user_id}/payHistory/{month}
-        this.storage.get('id').then(function (val) {
-            _this.url = "http://34.242.75.122/api/v1/user/" + val + "/payHistory/month";
-            //alert(this.url);
-            var body = {};
-            _this.remoteService.getPosts(_this.url).subscribe(function (data) {
-                console.log(data);
-                loading.dismiss();
-                _this.udata = data;
-                //this.isd = false;
-                if (data.responseCode == "200") {
-                    _this.class = "toast-success";
-                    _this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_5__historydata_historydata__["a" /* HistoryDataPage */], { data: _this.udata });
-                    //this.options.duration= 1;
-                    //this.presentToast("");
-                }
-                else {
-                    _this.class = "toast-failure";
-                    alert("No History Data Available");
-                    //this.presentToast("No History Data Available");
-                }
-                //console.log(data);
-            });
-        });
-    };
-    HistoryPage.prototype.statement = function () {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__statement_statement__["a" /* StatementPage */]);
-    };
-    HistoryPage.prototype.presentToast = function (msg) {
-        var _this = this;
-        this.options.message = msg;
-        var toast = this.toastCtrl.create(this.options);
-        var s = 2;
-        toast.onDidDismiss(function () {
-            _this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_5__historydata_historydata__["a" /* HistoryDataPage */], { data: _this.udata });
-        });
-        toast.present();
-    };
-    HistoryPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad HistoryPage');
-    };
-    return HistoryPage;
-}());
-HistoryPage = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({template:/*ion-inline-start:"/Users/DarkLord/genpay/src/pages/history/history.html"*/'<!--\n\n  Generated template for the SettingsPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>Payment History</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content class="topbar"padding>\n\n  <br><br>\n\n  <ion-item-divider class="bilh" color="#003e70">  <font color="#23aadb"><b>History</b></font></ion-item-divider>\n\n  <ion-item  detail-push  class="listh" (click)="today()">\n\n    <font color="#23aadb" >\n\n       <font class="bil">Today</font>\n\n        \n\n    </font>\n\n    <br>\n\n    </ion-item>\n\n  <ion-item  detail-push  class="listh" (click)="week()">\n\n    <font color="#23aadb" >\n\n       <font class="bil">This Week</font>\n\n        \n\n    </font>\n\n    <br>\n\n    </ion-item>\n\n    <ion-item  detail-push  class="listh" (click)="month()">\n\n        <font color="#23aadb">\n\n           <font class="bil">This Month</font>\n\n            \n\n        </font>\n\n        <br>\n\n        </ion-item>\n\n        <div></div>\n\n    <br>\n\n    <ion-item-divider class="bilh" color="#003e70">  <font color="#23aadb"><b>Statement</b></font></ion-item-divider>\n\n  \n\n    <ion-item  detail-push  class="listh" (click)="statement()">\n\n      <font color="#23aadb">\n\n         <font class="bil">Email Statement</font>\n\n          \n\n      </font>\n\n      <br>\n\n      </ion-item>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"/Users/DarkLord/genpay/src/pages/history/history.html"*/,
-    }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ToastController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_3__providers_remote_service_remote_service__["a" /* RemoteServiceProvider */]])
-], HistoryPage);
-
-//# sourceMappingURL=history.js.map
-
-/***/ }),
-
-/***/ 119:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return StatementPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_storage__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_remote_service_remote_service__ = __webpack_require__(10);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-
-/**
- * Generated class for the SettingsPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-var StatementPage = (function () {
-    function StatementPage(loadingCtrl, navParams, storage, toastCtrl, navCtrl, remoteService) {
-        this.loadingCtrl = loadingCtrl;
-        this.navParams = navParams;
-        this.storage = storage;
-        this.toastCtrl = toastCtrl;
-        this.navCtrl = navCtrl;
-        this.remoteService = remoteService;
-        this.billername = '';
-    }
-    StatementPage.prototype.setDate = function (event) {
-        this.from = new Date(event);
-    };
-    StatementPage.prototype.setDateT = function (event) {
-        this.to = new Date(event);
-    };
-    StatementPage.prototype.statement = function () {
-        var _this = this;
-        var loading = this.loadingCtrl.create({
-            content: 'Please wait...'
-        });
-        loading.present();
-        // http://0.0.0.0:8000/api/user/{user_id}/payHistory/{month}
-        this.storage.get('id').then(function (val) {
-            _this.url = "http://34.242.75.122/api/v1/user/" + val + "/statement";
-            //alert(this.url);
-            var body = { 'user_id': val, 'from': _this.from, 'to': _this.to };
-            console.log(body);
-            _this.remoteService.getPosts2(_this.url, body).subscribe(function (data) {
-                console.log(data);
-                setTimeout(function () {
-                    loading.dismiss();
-                }, 6000);
-                loading.dismiss();
-                _this.udata = data;
-                //this.isd = false;
-                if (data.responseCode == "200") {
-                    alert("Success! Statement has been sent your email");
-                }
-                else if (data.responseCode == "400") {
-                    alert("Please Add an Email First in Settings");
-                }
-                else if (data.responseCode == "401") {
-                    alert("Kindly Verify your email the Link has been sent");
-                }
-                else if (data.responseCode == "44") {
-                    alert("No Transaction History Available");
-                }
-                else {
-                }
-                //console.log(data);
-            });
-        });
-    };
-    StatementPage.prototype.presentToast = function (msg) {
-        var toast = this.toastCtrl.create({
-            message: msg,
-            duration: 1000,
-            cssClass: this.class,
-            position: 'button'
-        });
-        var s = 2;
-        toast.onDidDismiss(function () {
-        });
-        toast.present();
-    };
-    StatementPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad HistoryPage');
-    };
-    return StatementPage;
-}());
-StatementPage = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({template:/*ion-inline-start:"/Users/DarkLord/genpay/src/pages/statement/statement.html"*/'<!--\n\n  Generated template for the SettingsPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>Email Statement</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content class="topbar" padding>\n\n\n\n  \n\n  <ion-item-divider color="#003e70"class="bil" > <font color="#23aadb"> <b>Transactions Statement</b></font></ion-item-divider>\n\n\n\n  <ion-item>\n\n    <span ion-datepicker (ionChanged)="setDate($event);" ([value])="from"  clear class="ScheduleDate">\n\n      <span><font color="#23aadb">From:<ion-icon name="clipboard" item-left ></ion-icon></font><font color="#23aadb">{{from | date}}</font></span>\n\n      <div></div>\n\n    </span>\n\n  \n\n  </ion-item>\n\n  <ion-item>\n\n    <span ion-datepicker (ionChanged)="setDateT($event);" ([value])="to"  clear class="ScheduleDate">\n\n      <span><font color="#23aadb">To: &nbsp;&nbsp;&nbsp; <ion-icon name="clipboard" item-left ></ion-icon></font><font color="#23aadb">{{to | date}}</font></span>\n\n    </span>\n\n   </ion-item>\n\n\n\n  <br>\n\n   <button ion-button (click)="statement()"large right>Send Statement</button>\n\n\n\n   \n\n    <br><br>\n\n  \n\n\n\n</ion-content>\n\n'/*ion-inline-end:"/Users/DarkLord/genpay/src/pages/statement/statement.html"*/,
-    }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ToastController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_3__providers_remote_service_remote_service__["a" /* RemoteServiceProvider */]])
-], StatementPage);
-
-//# sourceMappingURL=statement.js.map
-
-/***/ }),
-
-/***/ 120:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HistoryDataPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_storage__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_biller_biller__ = __webpack_require__(111);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_remote_service_remote_service__ = __webpack_require__(10);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-
-
-//import { Pipe, PipeTransform } from '@angular/core';
-/**
- * Generated class for the ProfilePage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-//profile page
-var HistoryDataPage = (function () {
-    function HistoryDataPage(loadingCtrl, remoteService, storage, toastCtrl, navCtrl, navParams) {
-        this.loadingCtrl = loadingCtrl;
-        this.remoteService = remoteService;
-        this.storage = storage;
-        this.toastCtrl = toastCtrl;
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-        this.data = [];
-        this.data2 = [];
-        this.term = '';
-        this.snip = true;
-        this.snip2 = false;
-        this.data = this.navParams.get("data").data;
-    }
-    HistoryDataPage.prototype.ga = function () {
-    };
-    HistoryDataPage.prototype.passdata = function (val) {
-        var _this = this;
-        var loading = this.loadingCtrl.create({
-            content: 'Please wait...'
-        });
-        loading.present();
-        var url = "http://172.18.12.212:8000/api/billers/" + val.merchantId.toString() + "/" + val.ova.toString();
-        //alert(this.url);
-        var body = {};
-        this.remoteService.getPosts(url).subscribe(function (data) {
-            console.log(data);
-            loading.dismiss();
-            // this.udata = data;
-            _this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__pages_biller_biller__["a" /* BillerPage */], { data: data });
-            //console.log(data);
-        });
-        //console.log(val)
-        // alert(val.phonenumber);
-        // this.sparam = val.phonenumber;
-        //console.log("Happy");
-    };
-    HistoryDataPage.prototype.searchFn = function (ev) {
-        this.term = ev.target.value;
-    };
-    HistoryDataPage.prototype.searchchanged = function (ch) {
-        if (ch.length > 0) {
-            this.snip = false;
-            this.snip2 = !this.snip;
-            console.log(this.snip);
-            console.log(this.snip2);
-            console.log("Search Active");
-        }
-        else {
-            this.snip = true;
-            this.snip2 = !this.snip;
-            console.log(this.snip);
-            console.log(this.snip2);
-            console.log("Now Empty");
-        }
-        console.log(ch);
-    };
-    return HistoryDataPage;
-}());
-HistoryDataPage = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({template:/*ion-inline-start:"/Users/DarkLord/genpay/src/pages/historydata/historydata.html"*/'<!--\n\n  Generated template for the ProfilePage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n    <ion-navbar>\n\n    <ion-title>History</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content class="topbar"padding>\n\n\n\n<ion-item color="#23aadb" text-wrap class="listh" *ngFor="let d of data" >\n\n\n\n  <font color=#23aadb><b>{{d.merchantName}}</b></font> <font color="#23aadb"float-right><b>GHS {{d.amount}}</b></font><br>\n\n\n\n   <br>\n\n\n\n    <font color="#23aadb" float-left>{{d.created_at}}</font>\n\n\n\n\n\n</ion-item>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"/Users/DarkLord/genpay/src/pages/historydata/historydata.html"*/,
-    }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */], __WEBPACK_IMPORTED_MODULE_4__providers_remote_service_remote_service__["a" /* RemoteServiceProvider */], __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ToastController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]])
-], HistoryDataPage);
-
-//# sourceMappingURL=historydata.js.map
-
-/***/ }),
-
-/***/ 121:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RecentBillersPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_storage__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_recentbillers2_recentbillers2__ = __webpack_require__(122);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_remote_service_remote_service__ = __webpack_require__(10);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-
-
-//import { Pipe, PipeTransform } from '@angular/core';
-/**
- * Generated class for the ProfilePage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-//profile page
-var RecentBillersPage = (function () {
-    function RecentBillersPage(loadingCtrl, remoteService, storage, toastCtrl, navCtrl, navParams) {
-        this.loadingCtrl = loadingCtrl;
-        this.remoteService = remoteService;
-        this.storage = storage;
-        this.toastCtrl = toastCtrl;
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-        this.data = [];
-        this.data2 = [];
-        this.term = '';
-        this.snip = true;
-        this.snip2 = false;
-        this.data = this.navParams.get("data").data;
-    }
-    RecentBillersPage.prototype.ga = function () {
-    };
-    RecentBillersPage.prototype.recentacc = function (biller) {
-        var _this = this;
-        console.log(biller);
-        console.log(biller);
-        var loading = this.loadingCtrl.create({
-            content: 'Please wait...'
-        });
-        loading.present();
-        // http://0.0.0.0:8000/api/user/{user_id}/payHistory/{month}
-        this.storage.get('id').then(function (val) {
-            var url = "http://34.242.75.122/api/v1/recent/" + val + "/accounts";
-            //alert(this.url);
-            var body = { 'merchant_id': biller.merchant_id };
-            _this.remoteService.getPosts2(url, body).subscribe(function (data) {
-                console.log(data);
-                loading.dismiss();
-                //this.udata = data;
-                //this.isd = false;
-                if (data.responseCode == "200") {
-                    // this.class ="toast-success";
-                    //alert()
-                    _this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__pages_recentbillers2_recentbillers2__["a" /* RecentBillers2Page */], { data: data });
-                }
-                else {
-                    alert("Sorry an Error occured try again ");
-                }
-                //console.log(data);
-            });
-        });
-    };
-    return RecentBillersPage;
-}());
-RecentBillersPage = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({template:/*ion-inline-start:"/Users/DarkLord/genpay/src/pages/recentbillers/recentbillers.html"*/'<!--\n\n  Generated template for the ProfilePage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n    <ion-navbar>\n\n    <ion-title>Recent Billers</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content class="topbar"padding>\n\n\n\n<ion-item detail-push  color="#23aadb" text-wrap class="listh"  (click)="recentacc(d)" *ngFor="let d of data" >\n\n\n\n  <font color=#23aadb><b>{{d.merchantName}}</b></font>  <font color="#23aadb" float-right></font>\n\n\n\n\n\n</ion-item>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"/Users/DarkLord/genpay/src/pages/recentbillers/recentbillers.html"*/,
-    }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */], __WEBPACK_IMPORTED_MODULE_4__providers_remote_service_remote_service__["a" /* RemoteServiceProvider */], __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ToastController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]])
-], RecentBillersPage);
-
-//# sourceMappingURL=recentbillers.js.map
-
-/***/ }),
-
-/***/ 122:
+/***/ 225:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1443,7 +1741,7 @@ RecentBillersPage = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_storage__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_remote_service_remote_service__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__billeref_billeref__ = __webpack_require__(45);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__billeref_billeref__ = __webpack_require__(37);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1502,7 +1800,7 @@ var RecentBillers2Page = (function () {
     return RecentBillers2Page;
 }());
 RecentBillers2Page = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({template:/*ion-inline-start:"/Users/DarkLord/genpay/src/pages/recentbillers2/recentbillers2.html"*/'<!--\n\n  Generated template for the ProfilePage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n    <ion-navbar>\n\n    <ion-title>Recent Billers</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content class="topbar"padding>\n\n\n\n<ion-item detail-push  color="#23aadb" text-wrap class="listh"  (click)="recentacc2(d)" *ngFor="let d of data2" >\n\n\n\n  <font color=#23aadb><b>{{d.accountRef}}</b></font>  <font color="#23aadb" float-right></font>\n\n\n\n\n\n</ion-item>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"/Users/DarkLord/genpay/src/pages/recentbillers2/recentbillers2.html"*/,
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({template:/*ion-inline-start:"/Users/DarkLord/genpay/src/pages/recentbillers2/recentbillers2.html"*/'<!--\n\n  Generated template for the ProfilePage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n    <ion-navbar>\n\n    <ion-title>Recent Billers</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content class="topbarq333"padding>\n\n\n\n<ion-item detail-push  color="#23aadb" text-wrap class="listh"  (click)="recentacc2(d)" *ngFor="let d of data2" >\n\n\n\n  <font color=#23aadb><b>{{d.accountRef}}</b></font>  <font color="#23aadb" float-right></font>\n\n\n\n\n\n</ion-item>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"/Users/DarkLord/genpay/src/pages/recentbillers2/recentbillers2.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */], __WEBPACK_IMPORTED_MODULE_3__providers_remote_service_remote_service__["a" /* RemoteServiceProvider */], __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ToastController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]])
 ], RecentBillers2Page);
@@ -1511,294 +1809,13 @@ RecentBillers2Page = __decorate([
 
 /***/ }),
 
-/***/ 123:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BillerPayPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_storage__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_main_main__ = __webpack_require__(32);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_remote_service_remote_service__ = __webpack_require__(10);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-
-
-/**
- * Generated class for the BillerPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-var BillerPayPage = (function () {
-    function BillerPayPage(loadingCtrl, remoteService, storage, toastCtrl, navCtrl, navParams) {
-        this.loadingCtrl = loadingCtrl;
-        this.remoteService = remoteService;
-        this.storage = storage;
-        this.toastCtrl = toastCtrl;
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-        this.billername = '';
-        this.data = this.navParams.get("data");
-        console.log(this.data);
-    }
-    BillerPayPage.prototype.changepass = function () {
-        var _this = this;
-        var body = {};
-        //this.url = 
-        this.url = "/api/verifyCode";
-        this.remoteService.getPosts2(this.url, body).subscribe(function (data) {
-            console.log(data);
-            _this.udata = data;
-            if (data.responseCode == 1) {
-                _this.class = "toast-success";
-                console.log(data);
-                _this.presentToast("Welcome " + data.data.fullName);
-            }
-            else if (data.responseCode == 0) {
-                _this.class = "toast-failure";
-                _this.presentToast("Account not found!");
-                // this.class="str";
-            }
-            else if (data.responseCode == 2) {
-                _this.class = "toast-failure";
-                _this.presentToast("Invalid Password!");
-                //  this.class="str";
-            }
-            else { }
-        });
-    };
-    BillerPayPage.prototype.presentToast = function (msg) {
-        var _this = this;
-        var toast = this.toastCtrl.create({
-            message: msg,
-            duration: 2000,
-            cssClass: this.class,
-            position: 'middle'
-        });
-        toast.onDidDismiss(function () {
-            // alert(this.)
-            if (_this.class == "toast-success") {
-                //alert("moving to Authen");
-                _this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_3__pages_main_main__["a" /* MainPage */]);
-            }
-            //  this.navCtrl.setRoot("ProfilePage",{data : JSON.stringify(this.udata)});
-        });
-        toast.present();
-    };
-    BillerPayPage.prototype.ionViewDidLoad = function () {
-        try {
-            this.billername = this.data.data[0].merchantName;
-        }
-        catch (error) {
-            this.billername = 'None';
-        }
-    };
-    BillerPayPage.prototype.pay2 = function () {
-        var _this = this;
-        var loading = this.loadingCtrl.create({
-            content: 'Please wait...'
-        });
-        loading.present();
-        var body = { 'ova': '', 'user_accountRef': '', 'amount': this.amount, 'paymentRef': '', 'user_id': '', 'product_id': '', 'merchant_id': '', 'merchant_name': '' };
-        //this.url = 
-        this.url = "http://34.242.75.122/api/v1/payment/pay";
-        //var body = {'accountRef':this.accountno,'user_id':'','productId':'','merchantId':'','serviceCode':'','apiIndex':''   };
-        //this.url = 
-        this.storage.get('ovat').then(function (valova) {
-            body.ova = valova;
-            _this.storage.get('id').then(function (val) {
-                body.user_id = val;
-                _this.storage.get('payref').then(function (val2) {
-                    body.paymentRef = val2;
-                    _this.storage.get('billeracc').then(function (val3) {
-                        body.user_accountRef = val3;
-                        console.log(_this.data.data[0]);
-                        body.merchant_id = _this.data.data[0].merchantId || _this.data.data[0].merchant_id;
-                        body.merchant_name = _this.data.data[0].merchantName;
-                        body.product_id = _this.data.data[0].productId || _this.data.data[0].merchant_id;
-                        console.log(body);
-                        _this.remoteService.getPosts2(_this.url, body).subscribe(function (data) {
-                            console.log(data);
-                            loading.dismiss();
-                            _this.udata = data;
-                            if (data.responseCode == "200") {
-                                _this.class = "toast-success";
-                                console.log(data);
-                                alert("A Bill prompt has been sent to you");
-                                _this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_3__pages_main_main__["a" /* MainPage */]);
-                                //   this.presentToast("Success, A bill prompt has been sent");
-                            }
-                            else {
-                                _this.class = "toast-failure";
-                                console.log(data);
-                                _this.presentToast("An Error Occured");
-                            }
-                        });
-                    });
-                });
-            });
-        });
-    };
-    BillerPayPage.prototype.pay = function () {
-        var _this = this;
-        var loading = this.loadingCtrl.create({
-            content: 'Please wait...'
-        });
-        loading.present();
-        setTimeout(function () {
-            loading.dismiss();
-            _this.class = "toast-failure";
-            _this.presentToast("No Further Data");
-        }, 2000);
-    };
-    return BillerPayPage;
-}());
-BillerPayPage = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-biller',template:/*ion-inline-start:"/Users/DarkLord/genpay/src/pages/billerpay/billerpay.html"*/'<!--\n\n  Generated template for the BillerPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>BILLER PAYMENT</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content class="topbar41" padding>\n\n \n\n        <br>\n\n        <img>\n\n        <div class="topbar42">\n\n         <h1 text-center ><font color="#03afd6" lass="app-font"><b>{{billername}}</b></font></h1>\n\n         <br>\n\n         <br>\n\n         <br>\n\n         <br>\n\n       <ion-label text-center><font color="#03afd6"><b>Enter Amount</b></font></ion-label>\n\n       <ion-item transparent>\n\n       \n\n       <ion-input type="text"  class="btnp" [(ngModel)]="amount" name="title"></ion-input>\n\n       \n\n       </ion-item>\n\n       <br>\n\n       <button   class="logb" [disabled]="isd" ion-button large (click)="pay2()">Pay</button>\n\n       <br>\n\n       \n\n      </div>\n\n     \n\n      \n\n</ion-content>\n\n'/*ion-inline-end:"/Users/DarkLord/genpay/src/pages/billerpay/billerpay.html"*/,
-    }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */], __WEBPACK_IMPORTED_MODULE_4__providers_remote_service_remote_service__["a" /* RemoteServiceProvider */], __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ToastController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]])
-], BillerPayPage);
-
-//# sourceMappingURL=billerpay.js.map
-
-/***/ }),
-
-/***/ 132:
-/***/ (function(module, exports) {
-
-function webpackEmptyAsyncContext(req) {
-	// Here Promise.resolve().then() is used instead of new Promise() to prevent
-	// uncatched exception popping up in devtools
-	return Promise.resolve().then(function() {
-		throw new Error("Cannot find module '" + req + "'.");
-	});
-}
-webpackEmptyAsyncContext.keys = function() { return []; };
-webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
-module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = 132;
-
-/***/ }),
-
-/***/ 174:
-/***/ (function(module, exports, __webpack_require__) {
-
-var map = {
-	"../pages/authenticate/authenticate.module": [
-		303,
-		18
-	],
-	"../pages/biller/biller.module": [
-		304,
-		17
-	],
-	"../pages/billeref/billeref.module": [
-		305,
-		16
-	],
-	"../pages/billerlookup/billerlookup.module": [
-		302,
-		15
-	],
-	"../pages/billerpay/billerpay.module": [
-		311,
-		14
-	],
-	"../pages/changepassword/changepassword.module": [
-		306,
-		13
-	],
-	"../pages/editprofile/editprofile.module": [
-		310,
-		12
-	],
-	"../pages/forgot/forgot.module": [
-		307,
-		11
-	],
-	"../pages/forgot2/forgot2.module": [
-		308,
-		10
-	],
-	"../pages/history/history.module": [
-		312,
-		9
-	],
-	"../pages/historydata/historydata.module": [
-		309,
-		4
-	],
-	"../pages/main/main.module": [
-		315,
-		8
-	],
-	"../pages/profile/profile.module": [
-		313,
-		1
-	],
-	"../pages/profilecat/profilecat.module": [
-		314,
-		0
-	],
-	"../pages/recentbillers/recentbillers.module": [
-		316,
-		3
-	],
-	"../pages/recentbillers2/recentbillers2.module": [
-		317,
-		2
-	],
-	"../pages/register/register.module": [
-		319,
-		7
-	],
-	"../pages/settings/settings.module": [
-		318,
-		6
-	],
-	"../pages/statement/statement.module": [
-		320,
-		5
-	]
-};
-function webpackAsyncContext(req) {
-	var ids = map[req];
-	if(!ids)
-		return Promise.reject(new Error("Cannot find module '" + req + "'."));
-	return __webpack_require__.e(ids[1]).then(function() {
-		return __webpack_require__(ids[0]);
-	});
-};
-webpackAsyncContext.keys = function webpackAsyncContextKeys() {
-	return Object.keys(map);
-};
-webpackAsyncContext.id = 174;
-module.exports = webpackAsyncContext;
-
-/***/ }),
-
-/***/ 225:
+/***/ 226:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(226);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(243);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(227);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(244);
 
 
 Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
@@ -1806,7 +1823,7 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 
 /***/ }),
 
-/***/ 243:
+/***/ 244:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1814,33 +1831,34 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(29);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(221);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__ = __webpack_require__(222);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ionic3_datepicker__ = __webpack_require__(298);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__app_component__ = __webpack_require__(301);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_home_home__ = __webpack_require__(36);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__providers_remote_service_remote_service__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__angular_http__ = __webpack_require__(176);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__ionic_native_onesignal__ = __webpack_require__(86);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__ionic_storage__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_authenticate_authenticate__ = __webpack_require__(58);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_register_register__ = __webpack_require__(113);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_settings_settings__ = __webpack_require__(59);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_main_main__ = __webpack_require__(32);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_changepassword_changepassword__ = __webpack_require__(116);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_editprofile_editprofile__ = __webpack_require__(117);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_biller_biller__ = __webpack_require__(111);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pages_historydata_historydata__ = __webpack_require__(120);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__pages_billeref_billeref__ = __webpack_require__(45);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__pages_billerpay_billerpay__ = __webpack_require__(123);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__pages_billerlookup_billerlookup__ = __webpack_require__(112);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__pages_history_history__ = __webpack_require__(118);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__pages_statement_statement__ = __webpack_require__(119);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__pages_forgot_forgot__ = __webpack_require__(114);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__pages_recentbillers_recentbillers__ = __webpack_require__(121);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__pages_recentbillers2_recentbillers2__ = __webpack_require__(122);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__pages_forgot2_forgot2__ = __webpack_require__(115);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__ionic_native_vibration__ = __webpack_require__(180);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(220);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__ = __webpack_require__(221);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ionic3_datepicker__ = __webpack_require__(299);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ionic_native_fcm__ = __webpack_require__(224);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__app_component__ = __webpack_require__(302);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_home_home__ = __webpack_require__(36);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__providers_remote_service_remote_service__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__angular_http__ = __webpack_require__(175);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__ionic_native_onesignal__ = __webpack_require__(86);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__ionic_storage__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_authenticate_authenticate__ = __webpack_require__(58);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_register_register__ = __webpack_require__(120);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_settings_settings__ = __webpack_require__(59);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_main_main__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_changepassword_changepassword__ = __webpack_require__(112);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_editprofile_editprofile__ = __webpack_require__(113);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pages_biller_biller__ = __webpack_require__(111);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__pages_historydata_historydata__ = __webpack_require__(116);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__pages_billeref_billeref__ = __webpack_require__(37);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__pages_billerpay_billerpay__ = __webpack_require__(117);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__pages_billerlookup_billerlookup__ = __webpack_require__(118);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__pages_history_history__ = __webpack_require__(114);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__pages_statement_statement__ = __webpack_require__(115);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__pages_forgot_forgot__ = __webpack_require__(121);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__pages_recentbillers_recentbillers__ = __webpack_require__(119);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__pages_recentbillers2_recentbillers2__ = __webpack_require__(225);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__pages_forgot2_forgot2__ = __webpack_require__(122);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__ionic_native_vibration__ = __webpack_require__(179);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1853,6 +1871,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
+//import { } from '@ionic-native/sss'
 //import { RemoteServiceProvider } from '../providers/remote-service/remote-service';
 
 
@@ -1888,91 +1908,92 @@ var AppModule = (function () {
 AppModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["L" /* NgModule */])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* MyApp */],
-            __WEBPACK_IMPORTED_MODULE_7__pages_home_home__["a" /* HomePage */],
-            __WEBPACK_IMPORTED_MODULE_13__pages_register_register__["a" /* RegisterPage */],
-            __WEBPACK_IMPORTED_MODULE_20__pages_billeref_billeref__["a" /* BillerRefPage */],
-            __WEBPACK_IMPORTED_MODULE_15__pages_main_main__["a" /* MainPage */],
-            __WEBPACK_IMPORTED_MODULE_28__pages_forgot2_forgot2__["a" /* Forgot2Page */],
-            __WEBPACK_IMPORTED_MODULE_19__pages_historydata_historydata__["a" /* HistoryDataPage */],
-            __WEBPACK_IMPORTED_MODULE_23__pages_history_history__["a" /* HistoryPage */],
-            __WEBPACK_IMPORTED_MODULE_24__pages_statement_statement__["a" /* StatementPage */],
-            __WEBPACK_IMPORTED_MODULE_25__pages_forgot_forgot__["a" /* ForgotPage */],
-            __WEBPACK_IMPORTED_MODULE_26__pages_recentbillers_recentbillers__["a" /* RecentBillersPage */],
-            __WEBPACK_IMPORTED_MODULE_21__pages_billerpay_billerpay__["a" /* BillerPayPage */],
+            __WEBPACK_IMPORTED_MODULE_7__app_component__["a" /* MyApp */],
+            __WEBPACK_IMPORTED_MODULE_8__pages_home_home__["a" /* HomePage */],
+            __WEBPACK_IMPORTED_MODULE_14__pages_register_register__["a" /* RegisterPage */],
+            __WEBPACK_IMPORTED_MODULE_21__pages_billeref_billeref__["a" /* BillerRefPage */],
+            __WEBPACK_IMPORTED_MODULE_16__pages_main_main__["a" /* MainPage */],
+            __WEBPACK_IMPORTED_MODULE_29__pages_forgot2_forgot2__["a" /* Forgot2Page */],
+            __WEBPACK_IMPORTED_MODULE_20__pages_historydata_historydata__["a" /* HistoryDataPage */],
+            __WEBPACK_IMPORTED_MODULE_24__pages_history_history__["a" /* HistoryPage */],
+            __WEBPACK_IMPORTED_MODULE_25__pages_statement_statement__["a" /* StatementPage */],
+            __WEBPACK_IMPORTED_MODULE_26__pages_forgot_forgot__["a" /* ForgotPage */],
+            __WEBPACK_IMPORTED_MODULE_27__pages_recentbillers_recentbillers__["a" /* RecentBillersPage */],
+            __WEBPACK_IMPORTED_MODULE_22__pages_billerpay_billerpay__["a" /* BillerPayPage */],
             //ProfilePage2,
-            __WEBPACK_IMPORTED_MODULE_27__pages_recentbillers2_recentbillers2__["a" /* RecentBillers2Page */],
-            __WEBPACK_IMPORTED_MODULE_22__pages_billerlookup_billerlookup__["a" /* BillerLookupPage */],
-            __WEBPACK_IMPORTED_MODULE_14__pages_settings_settings__["a" /* SettingsPage */],
-            __WEBPACK_IMPORTED_MODULE_16__pages_changepassword_changepassword__["a" /* ChangepasswordPage */],
-            __WEBPACK_IMPORTED_MODULE_18__pages_biller_biller__["a" /* BillerPage */],
+            __WEBPACK_IMPORTED_MODULE_28__pages_recentbillers2_recentbillers2__["a" /* RecentBillers2Page */],
+            __WEBPACK_IMPORTED_MODULE_23__pages_billerlookup_billerlookup__["a" /* BillerLookupPage */],
+            __WEBPACK_IMPORTED_MODULE_15__pages_settings_settings__["a" /* SettingsPage */],
+            __WEBPACK_IMPORTED_MODULE_17__pages_changepassword_changepassword__["a" /* ChangepasswordPage */],
+            __WEBPACK_IMPORTED_MODULE_19__pages_biller_biller__["a" /* BillerPage */],
             //SearchPipe,
-            __WEBPACK_IMPORTED_MODULE_17__pages_editprofile_editprofile__["a" /* EditprofilePage */],
-            __WEBPACK_IMPORTED_MODULE_12__pages_authenticate_authenticate__["a" /* AuthenticatePage */]
+            __WEBPACK_IMPORTED_MODULE_18__pages_editprofile_editprofile__["a" /* EditprofilePage */],
+            __WEBPACK_IMPORTED_MODULE_13__pages_authenticate_authenticate__["a" /* AuthenticatePage */]
             //  SearchPipe
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
             __WEBPACK_IMPORTED_MODULE_5_ionic3_datepicker__["a" /* DatePickerModule */],
-            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["d" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* MyApp */], {}, {
+            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["d" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_7__app_component__["a" /* MyApp */], {}, {
                 links: [
-                    { loadChildren: '../pages/billerlookup/billerlookup.module#BillerLookupPageModule', name: 'BillerLookupPage', segment: 'billerlookup', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/authenticate/authenticate.module#AuthenticatePageModule', name: 'AuthenticatePage', segment: 'authenticate', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/biller/biller.module#BillerPageModule', name: 'BillerPage', segment: 'biller', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/billeref/billeref.module#BillerRefPageModule', name: 'BillerRefPage', segment: 'billeref', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/billerlookup/billerlookup.module#BillerLookupPageModule', name: 'BillerLookupPage', segment: 'billerlookup', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/changepassword/changepassword.module#ChangepasswordPageModule', name: 'ChangepasswordPage', segment: 'changepassword', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/billeref/billeref.module#BillerRefPageModule', name: 'BillerRefPage', segment: 'billeref', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/forgot/forgot.module#ForgotPageModule', name: 'ForgotPage', segment: 'forgot', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/forgot2/forgot2.module#ForgotPage2Module', name: 'Forgot2Page', segment: 'forgot2', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/historydata/historydata.module#HistoryDataPageModule', name: 'HistoryDataPage', segment: 'historydata', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/editprofile/editprofile.module#EditprofilePageModule', name: 'EditprofilePage', segment: 'editprofile', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/billerpay/billerpay.module#BillerPayPageModule', name: 'BillerPayPage', segment: 'billerpay', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/history/history.module#HistoryPageModule', name: 'HistoryPage', segment: 'history', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/profile/profile.module#ProfilePageModule', name: 'ProfilePage', segment: 'profile', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/profilecat/profilecat.module#ProfilePageCatModule', name: 'ProfilePageCat', segment: 'profilecat', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/biller/biller.module#BillerPageModule', name: 'BillerPage', segment: 'biller', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/historydata/historydata.module#HistoryDataPageModule', name: 'HistoryDataPage', segment: 'historydata', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/main/main.module#MainPageModule', name: 'MainPage', segment: 'main', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/profilecat/profilecat.module#ProfilePageCatModule', name: 'ProfilePageCat', segment: 'profilecat', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/history/history.module#HistoryPageModule', name: 'HistoryPage', segment: 'history', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/recentbillers/recentbillers.module#RecentBillersPageModule', name: 'RecentBillersPage', segment: 'recentbillers', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/recentbillers2/recentbillers2.module#RecentBillers2PageModule', name: 'RecentBillers2Page', segment: 'recentbillers2', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/profile/profile.module#ProfilePageModule', name: 'ProfilePage', segment: 'profile', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/settings/settings.module#SettingsPageModule', name: 'SettingsPage', segment: 'settings', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/register/register.module#RegisterPageModule', name: 'RegisterPage', segment: 'register', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/recentbillers2/recentbillers2.module#RecentBillers2PageModule', name: 'RecentBillers2Page', segment: 'recentbillers2', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/statement/statement.module#StatementPageModule', name: 'StatementPage', segment: 'statement', priority: 'low', defaultHistory: [] }
                 ]
             }),
-            __WEBPACK_IMPORTED_MODULE_11__ionic_storage__["a" /* IonicStorageModule */].forRoot({
+            __WEBPACK_IMPORTED_MODULE_12__ionic_storage__["a" /* IonicStorageModule */].forRoot({
                 name: '__mydb',
                 driverOrder: ['sqlite', 'websql', 'indexeddb']
             }),
-            __WEBPACK_IMPORTED_MODULE_9__angular_http__["c" /* HttpModule */],
+            __WEBPACK_IMPORTED_MODULE_10__angular_http__["c" /* HttpModule */],
         ],
         bootstrap: [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["b" /* IonicApp */]],
         entryComponents: [
-            __WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* MyApp */],
-            __WEBPACK_IMPORTED_MODULE_7__pages_home_home__["a" /* HomePage */],
-            __WEBPACK_IMPORTED_MODULE_13__pages_register_register__["a" /* RegisterPage */],
-            __WEBPACK_IMPORTED_MODULE_15__pages_main_main__["a" /* MainPage */],
-            __WEBPACK_IMPORTED_MODULE_19__pages_historydata_historydata__["a" /* HistoryDataPage */],
-            __WEBPACK_IMPORTED_MODULE_21__pages_billerpay_billerpay__["a" /* BillerPayPage */],
-            __WEBPACK_IMPORTED_MODULE_25__pages_forgot_forgot__["a" /* ForgotPage */],
-            __WEBPACK_IMPORTED_MODULE_28__pages_forgot2_forgot2__["a" /* Forgot2Page */],
-            __WEBPACK_IMPORTED_MODULE_26__pages_recentbillers_recentbillers__["a" /* RecentBillersPage */],
-            __WEBPACK_IMPORTED_MODULE_27__pages_recentbillers2_recentbillers2__["a" /* RecentBillers2Page */],
+            __WEBPACK_IMPORTED_MODULE_7__app_component__["a" /* MyApp */],
+            __WEBPACK_IMPORTED_MODULE_8__pages_home_home__["a" /* HomePage */],
+            __WEBPACK_IMPORTED_MODULE_14__pages_register_register__["a" /* RegisterPage */],
+            __WEBPACK_IMPORTED_MODULE_16__pages_main_main__["a" /* MainPage */],
+            __WEBPACK_IMPORTED_MODULE_20__pages_historydata_historydata__["a" /* HistoryDataPage */],
+            __WEBPACK_IMPORTED_MODULE_22__pages_billerpay_billerpay__["a" /* BillerPayPage */],
+            __WEBPACK_IMPORTED_MODULE_26__pages_forgot_forgot__["a" /* ForgotPage */],
+            __WEBPACK_IMPORTED_MODULE_29__pages_forgot2_forgot2__["a" /* Forgot2Page */],
+            __WEBPACK_IMPORTED_MODULE_27__pages_recentbillers_recentbillers__["a" /* RecentBillersPage */],
+            __WEBPACK_IMPORTED_MODULE_28__pages_recentbillers2_recentbillers2__["a" /* RecentBillers2Page */],
             // ProfilePage2,
-            __WEBPACK_IMPORTED_MODULE_22__pages_billerlookup_billerlookup__["a" /* BillerLookupPage */],
-            __WEBPACK_IMPORTED_MODULE_12__pages_authenticate_authenticate__["a" /* AuthenticatePage */],
-            __WEBPACK_IMPORTED_MODULE_23__pages_history_history__["a" /* HistoryPage */],
-            __WEBPACK_IMPORTED_MODULE_18__pages_biller_biller__["a" /* BillerPage */],
-            __WEBPACK_IMPORTED_MODULE_20__pages_billeref_billeref__["a" /* BillerRefPage */],
-            __WEBPACK_IMPORTED_MODULE_24__pages_statement_statement__["a" /* StatementPage */],
-            __WEBPACK_IMPORTED_MODULE_16__pages_changepassword_changepassword__["a" /* ChangepasswordPage */],
-            __WEBPACK_IMPORTED_MODULE_17__pages_editprofile_editprofile__["a" /* EditprofilePage */],
-            __WEBPACK_IMPORTED_MODULE_14__pages_settings_settings__["a" /* SettingsPage */]
+            __WEBPACK_IMPORTED_MODULE_23__pages_billerlookup_billerlookup__["a" /* BillerLookupPage */],
+            __WEBPACK_IMPORTED_MODULE_13__pages_authenticate_authenticate__["a" /* AuthenticatePage */],
+            __WEBPACK_IMPORTED_MODULE_24__pages_history_history__["a" /* HistoryPage */],
+            __WEBPACK_IMPORTED_MODULE_19__pages_biller_biller__["a" /* BillerPage */],
+            __WEBPACK_IMPORTED_MODULE_21__pages_billeref_billeref__["a" /* BillerRefPage */],
+            __WEBPACK_IMPORTED_MODULE_25__pages_statement_statement__["a" /* StatementPage */],
+            __WEBPACK_IMPORTED_MODULE_17__pages_changepassword_changepassword__["a" /* ChangepasswordPage */],
+            __WEBPACK_IMPORTED_MODULE_18__pages_editprofile_editprofile__["a" /* EditprofilePage */],
+            __WEBPACK_IMPORTED_MODULE_15__pages_settings_settings__["a" /* SettingsPage */]
         ],
         providers: [
             __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__["a" /* StatusBar */],
-            __WEBPACK_IMPORTED_MODULE_10__ionic_native_onesignal__["a" /* OneSignal */],
-            __WEBPACK_IMPORTED_MODULE_29__ionic_native_vibration__["a" /* Vibration */],
+            __WEBPACK_IMPORTED_MODULE_11__ionic_native_onesignal__["a" /* OneSignal */],
+            __WEBPACK_IMPORTED_MODULE_30__ionic_native_vibration__["a" /* Vibration */],
+            __WEBPACK_IMPORTED_MODULE_6__ionic_native_fcm__["a" /* FCM */],
             __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */],
             { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["v" /* ErrorHandler */], useClass: __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["c" /* IonicErrorHandler */] },
-            __WEBPACK_IMPORTED_MODULE_8__providers_remote_service_remote_service__["a" /* RemoteServiceProvider */]
+            __WEBPACK_IMPORTED_MODULE_9__providers_remote_service_remote_service__["a" /* RemoteServiceProvider */]
         ]
     })
 ], AppModule);
@@ -1981,17 +2002,18 @@ AppModule = __decorate([
 
 /***/ }),
 
-/***/ 301:
+/***/ 302:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(222);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(221);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_home_home__ = __webpack_require__(36);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_native_onesignal__ = __webpack_require__(86);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(221);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(220);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_fcm__ = __webpack_require__(224);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_home_home__ = __webpack_require__(36);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ionic_native_onesignal__ = __webpack_require__(86);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2007,15 +2029,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 //import {  ItemDetailsPageRegister  } from '../pages/item-details-register/item-details-register';
 var MyApp = (function () {
-    function MyApp(oneSignal, platform, statusBar, splashScreen) {
-        var _this = this;
+    function MyApp(fcm, oneSignal, platform, statusBar, splashScreen) {
+        this.fcm = fcm;
         this.oneSignal = oneSignal;
-        this.rootPage = __WEBPACK_IMPORTED_MODULE_4__pages_home_home__["a" /* HomePage */];
-        this.notificationOpenedCallback = function (jsonData) {
+        this.rootPage = __WEBPACK_IMPORTED_MODULE_5__pages_home_home__["a" /* HomePage */];
+        /*
+           notificationOpenedCallback = function(jsonData) {
             console.log('notificationOpenedCallback: ' + JSON.stringify(jsonData));
-        };
+          };
+        */
         this.getApiUrl = "https://jsonplaceholder.typicode.com/posts";
         platform.ready().then(function () {
             // Okay, so the platform is ready and our plugins are available.
@@ -2026,17 +2051,37 @@ var MyApp = (function () {
             //  .handleNotificationOpened(this.notificationOpenedCallback)
             //  .endInit();
             try {
+                fcm.getToken().then(function (token) {
+                    //   backend.registerToken(token);
+                });
+                fcm.onNotification().subscribe(function (data) {
+                    if (data.wasTapped) {
+                        console.log("Received in background");
+                    }
+                    else {
+                        console.log("Received in foreground");
+                    }
+                    ;
+                });
+                fcm.onTokenRefresh().subscribe(function (token) {
+                    //   backend.registerToken(token);
+                });
+                /*
                 //this.oneSignal.startInit('4975cd1d-9d10-41c8-9cda-c5852513ab7f', '347536568651');
-                _this.oneSignal.startInit('82928709-50f8-4861-830f-a57f718bb3f7', '813645120142');
-                _this.oneSignal.inFocusDisplaying(_this.oneSignal.OSInFocusDisplayOption.Notification);
-                _this.oneSignal.handleNotificationReceived().subscribe(function () {
-                    // do something when notification is received
+                this.oneSignal.startInit('82928709-50f8-4861-830f-a57f718bb3f7', '813645120142');
+                
+                this.oneSignal.inFocusDisplaying(this.oneSignal.OSInFocusDisplayOption.Notification);
+                
+                this.oneSignal.handleNotificationReceived().subscribe(() => {
+                 // do something when notification is received
                 });
-                _this.oneSignal.handleNotificationOpened().subscribe(function () {
-                    // do something when a notification is opened
+                
+                this.oneSignal.handleNotificationOpened().subscribe(() => {
+                  // do something when a notification is opened
                 });
-                //this.oneSignal.enableVibrate(true);
-                _this.oneSignal.endInit();
+               //this.oneSignal.enableVibrate(true);
+                this.oneSignal.endInit();
+               */
             }
             catch (error) {
             }
@@ -2047,7 +2092,7 @@ var MyApp = (function () {
 MyApp = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({template:/*ion-inline-start:"/Users/DarkLord/genpay/src/app/app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n\n'/*ion-inline-end:"/Users/DarkLord/genpay/src/app/app.html"*/
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_5__ionic_native_onesignal__["a" /* OneSignal */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4__ionic_native_fcm__["a" /* FCM */], __WEBPACK_IMPORTED_MODULE_6__ionic_native_onesignal__["a" /* OneSignal */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
 ], MyApp);
 
 //# sourceMappingURL=app.component.js.map
@@ -2066,8 +2111,8 @@ MyApp = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_home_home__ = __webpack_require__(36);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_settings_settings__ = __webpack_require__(59);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_remote_service_remote_service__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_history_history__ = __webpack_require__(118);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_recentbillers_recentbillers__ = __webpack_require__(121);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_history_history__ = __webpack_require__(114);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_recentbillers_recentbillers__ = __webpack_require__(119);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2128,6 +2173,7 @@ var MainPage = (function () {
         this.ong = [];
         this.air = [];
         this.hc = [];
+        this.rance = [];
         this.phone = '';
         try {
             this.storage.get('id').then(function (val) {
@@ -2214,6 +2260,7 @@ var MainPage = (function () {
                 _this.mch = [];
                 _this.ch = [];
                 _this.at = [];
+                _this.rance = [];
                 _this.od = [];
                 for (var i in _this.udata.data) {
                     //  console.log(this.udata.data[i]);
@@ -2237,16 +2284,21 @@ var MainPage = (function () {
                     }
                     else if (_this.udata.data[i].category == "healthcare") {
                         _this.hc.push(_this.udata.data[i]);
-                        console.log(_this.hc);
+                        // console.log(this.hc);
                     }
                     else if (_this.udata.data[i].category == "internet") {
                         _this.it.push(_this.udata.data[i]);
                     }
-                    else if (_this.udata.data[i].category = "oil_and_gas") {
+                    else if (_this.udata.data[i].category == "oil_and_gas") {
                         _this.ong.push(_this.udata.data[i]);
                     }
                     else if (_this.udata.data[i].category == "airline") {
                         _this.air.push(_this.udata.data[i]);
+                        // alert("Found 1");
+                    }
+                    else if (_this.udata.data[i].category == "insurance") {
+                        _this.rance.push(_this.udata.data[i]);
+                        // alert("Found 1");
                     }
                     else if (_this.udata.data[i].category == "ngos_and_foundations") {
                         _this.ngof.push(_this.udata.data[i]);
@@ -2280,6 +2332,8 @@ var MainPage = (function () {
                 _this.storage.set('church', JSON.stringify(_this.ch));
                 _this.storage.set('airtime', JSON.stringify(_this.at));
                 _this.storage.set('others', JSON.stringify(_this.od));
+                _this.storage.set('insurance', JSON.stringify(_this.rance));
+                ;
                 _this.storage.set('billerlist', JSON.stringify(_this.udata));
                 _this.navCtrl.push("ProfilePage", { data: JSON.stringify(_this.udata) });
             }
@@ -2313,10 +2367,10 @@ var MainPage = (function () {
         loading.present();
         // http://0.0.0.0:8000/api/user/{user_id}/payHistory/{month}
         this.storage.get('id').then(function (val) {
-            _this.url = "http://34.242.75.122/api/v1/recent/" + val;
+            _this.url = "http://34.242.75.122/api/v1/billers/favorite";
             //alert(this.url);
-            var body = {};
-            _this.remoteService.getPosts(_this.url).subscribe(function (data) {
+            var body = { 'user_id': val };
+            _this.remoteService.getPosts2(_this.url, body).subscribe(function (data) {
                 console.log(data);
                 loading.dismiss();
                 _this.udata = data;
@@ -2326,7 +2380,7 @@ var MainPage = (function () {
                     _this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_8__pages_recentbillers_recentbillers__["a" /* RecentBillersPage */], { data: _this.udata });
                 }
                 else {
-                    alert("Sorry you dont have any Recent billers");
+                    alert("Sorry you dont have any Favourite billers");
                 }
                 //console.log(data);
             });
@@ -2394,7 +2448,7 @@ var MainPage = (function () {
 }());
 MainPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-main',template:/*ion-inline-start:"/Users/DarkLord/genpay/src/pages/main/main.html"*/'<!--\n\n  Generated template for the ProfilePage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n  \n\n      <ion-navbar>\n\n      <ion-title>Main Menu</ion-title >\n\n    </ion-navbar>\n\n  \n\n  </ion-header>\n\n  \n\n  \n\n  <ion-content  padding>\n\n    <div class="topbarr">\n\n  <h1 text-center ><font text-center class="app-font"  color="#000000"><b text-center>GENPAY</b></font></h1>\n\n\n\n  <br>\n\n  <div text-center><font  color="#003e70" class="app-font2"><b>Welcome</b></font><font class="app-font2"  color="#003e70"><b>{{name}}</b></font> </div>\n\n <!-- <div class=\'container\'><div class="align-left"></div><div class="align-right"><font><b>{{phone}}</b></font></div></div> -->\n\n<br>\n\n <div text-center><font color="#003e70"><b  text-center>{{phone}}</b></font></div>\n\n</div>\n\n\n\n<br>\n\n<br>\n\n<!--<ion-item-divider text-center class="bilh" color="#1fb8ffea">  <font text-center color="#ffffff" class="app-font"><b text-center>MENU</b></font></ion-item-divider>-->\n\n<div class="menud">\n\n \n\n      <ion-item  id="rounded" class="topbarm" (click)="torecentbillers()" >\n\n        \n\n      <font color="#FFFFF"  style="size: 20px">\n\n        <font ><ion-icon  style="padding-right: 10px" name="clipboard"></ion-icon></font><font    class="bil"><b>Recent Billers</b></font>\n\n    \n\n          \n\n      </font>\n\n   \n\n      </ion-item>\n\n     </div>\n\n     <div class="menud">\n\n      <ion-item    id="rounded" class="topbarm" (click)="tobillers()">\n\n          <font color="#FFFFFF"  style="size:30px">\n\n              <ion-icon style="padding-right: 10px" name="clipboard" ></ion-icon><font  color="#FFFFFF" class="bil"><b>Billers</b></font>\n\n              \n\n          </font>\n\n        \n\n          </ion-item>\n\n          </div>\n\n        <div class="menud">\n\n          <ion-item  id="rounded" class="topbarm" (click)="topaymenthistory()">\n\n              <font color="#FFFFF" >\n\n                  <ion-icon style="padding-right: 10px" name="clock"></ion-icon><font  color="#FFFFFF"class="bil" ><b>Payments History</b></font>\n\n                  \n\n              </font>\n\n            \n\n              </ion-item>\n\n\n\n       <div  class="menud">\n\n              <ion-item   id = "rounded" class="topbarm" (click)="tosettings()">\n\n                <font color="#FFFFFFF" >\n\n                    <ion-icon style="padding-right: 10px" name="settings"></ion-icon><font color="#FFFFFF" class="bil"><b>Settings</b></font>\n\n                    \n\n                </font>\n\n           \n\n                </ion-item>\n\n                </div>\n\n            \n\n              </div>\n\n     \n\n      <br>\n\n      <br>\n\n   \n\n      <div padding-top ></div>\n\n      <div padding-top >\n\n            <button  class="logb" [disabled]="isd" color="danger" [strong]="true" ion-button large (click)="logout()">Log Out\n\n              </button>\n\n        </div>\n\n  </ion-content>\n\n  '/*ion-inline-end:"/Users/DarkLord/genpay/src/pages/main/main.html"*/,
+        selector: 'page-main',template:/*ion-inline-start:"/Users/DarkLord/genpay/src/pages/main/main.html"*/'<!--\n\n  Generated template for the ProfilePage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n  \n\n      <ion-navbar>\n\n      <ion-title>Main Menu</ion-title >\n\n    </ion-navbar>\n\n  \n\n  </ion-header>\n\n  \n\n  \n\n  <ion-content  padding>\n\n    <div class="topbarr">\n\n  <h1 text-center ><font text-center class="app-font"  color="#000000"><b text-center>GENPAY</b></font></h1>\n\n\n\n  <br>\n\n  <div text-center><font  color="#003e70" class="app-font2"><b>Welcome</b></font><font class="app-font2"  color="#003e70"><b>{{name}}</b></font> </div>\n\n <!-- <div class=\'container\'><div class="align-left"></div><div class="align-right"><font><b>{{phone}}</b></font></div></div> -->\n\n<br>\n\n <div text-center><font color="#003e70"><b  text-center>{{phone}}</b></font></div>\n\n</div>\n\n\n\n<br>\n\n<br>\n\n<!--<ion-item-divider text-center class="bilh" color="#1fb8ffea">  <font text-center color="#ffffff" class="app-font"><b text-center>MENU</b></font></ion-item-divider>-->\n\n<div class="menud">\n\n \n\n      <ion-item  id="rounded" class="topbarm" (click)="torecentbillers()" >\n\n        \n\n      <font color="#FFFFF"  style="size: 20px">\n\n        <font ><ion-icon  style="padding-right: 10px" name="clipboard"></ion-icon></font><font    class="bil"><b>Favourite Billers</b></font>\n\n    \n\n          \n\n      </font>\n\n   \n\n      </ion-item>\n\n     </div>\n\n     <div class="menud">\n\n      <ion-item    id="rounded" class="topbarm" (click)="tobillers()">\n\n          <font color="#FFFFFF"  style="size:30px">\n\n              <ion-icon style="padding-right: 10px" name="clipboard" ></ion-icon><font  color="#FFFFFF" class="bil"><b>Billers</b></font>\n\n              \n\n          </font>\n\n        \n\n          </ion-item>\n\n          </div>\n\n        <div class="menud">\n\n          <ion-item  id="rounded" class="topbarm" (click)="topaymenthistory()">\n\n              <font color="#FFFFF" >\n\n                  <ion-icon style="padding-right: 10px" name="clock"></ion-icon><font  color="#FFFFFF"class="bil" ><b>Payments History</b></font>\n\n                  \n\n              </font>\n\n            \n\n              </ion-item>\n\n\n\n       <div  class="menud">\n\n              <ion-item   id = "rounded" class="topbarm" (click)="tosettings()">\n\n                <font color="#FFFFFFF" >\n\n                    <ion-icon style="padding-right: 10px" name="settings"></ion-icon><font color="#FFFFFF" class="bil"><b>Settings</b></font>\n\n                    \n\n                </font>\n\n           \n\n                </ion-item>\n\n                </div>\n\n            \n\n              </div>\n\n     \n\n      <br>\n\n      <br>\n\n   \n\n      <div padding-top ></div>\n\n      <div padding-top >\n\n            <button  class="logb" [disabled]="isd" color="danger" [strong]="true" ion-button large (click)="logout()">Log Out\n\n              </button>\n\n        </div>\n\n  </ion-content>\n\n  '/*ion-inline-end:"/Users/DarkLord/genpay/src/pages/main/main.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__ionic_native_onesignal__["a" /* OneSignal */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ToastController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_6__providers_remote_service_remote_service__["a" /* RemoteServiceProvider */]])
 ], MainPage);
@@ -2412,11 +2466,11 @@ MainPage = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_storage__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_main_main__ = __webpack_require__(32);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_register_register__ = __webpack_require__(113);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_register_register__ = __webpack_require__(120);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_remote_service_remote_service__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_forgot_forgot__ = __webpack_require__(114);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_forgot_forgot__ = __webpack_require__(121);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_authenticate_authenticate__ = __webpack_require__(58);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ionic_native_vibration__ = __webpack_require__(180);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ionic_native_vibration__ = __webpack_require__(179);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2526,7 +2580,8 @@ var HomePage = (function () {
                 _this.options.cssClass = _this.class;
                 _this.vibration.vibrate(500);
                 _this.presentToast("Account Not Activated!");
-                _this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_7__pages_authenticate_authenticate__["a" /* AuthenticatePage */], { data: _this.phone.toString() });
+                console.log(data.data);
+                _this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_7__pages_authenticate_authenticate__["a" /* AuthenticatePage */], { data: data.data.phoneNumber });
                 // this.class="str";
             }
             else if (data.responseCode == "46") {
@@ -2607,7 +2662,7 @@ HomePage = __decorate([
 
 /***/ }),
 
-/***/ 45:
+/***/ 37:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2617,7 +2672,7 @@ HomePage = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_storage__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_main_main__ = __webpack_require__(32);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_remote_service_remote_service__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_billerpay_billerpay__ = __webpack_require__(123);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_billerpay_billerpay__ = __webpack_require__(117);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2807,18 +2862,13 @@ var AuthenticatePage = (function () {
         });
     };
     AuthenticatePage.prototype.activate = function () {
+        var _this = this;
         this.isd = true;
         this.btnt = "Please wait.....";
         this.url = "http://34.242.75.122/api/v1/verifyCode";
         //alert(this.url);
-        var body = { 'code': this.code, 'phoneNumber': this.data.toString() };
-        console.log(body);
-        this.getPost(this.url, body);
-        //this.getPost(this.url);
-    };
-    AuthenticatePage.prototype.getPost = function (url, body) {
-        var _this = this;
-        this.remoteService.getPosts2(url, body).subscribe(function (data) {
+        var body = { 'code': this.code, 'phoneNumber': this.data };
+        this.remoteService.getPosts2(this.url, body).subscribe(function (data) {
             console.log(data);
             _this.udata = data;
             _this.btnt = "Continue";
@@ -2843,6 +2893,43 @@ var AuthenticatePage = (function () {
             }
             //console.log(data);
         });
+        console.log(body);
+        // this.getPost(this.url,body);
+        //this.getPost(this.url);
+    };
+    AuthenticatePage.prototype.getPost = function (url, body) {
+        /*
+        this.remoteService.getPosts2(url,body).subscribe((data)=>{
+      console.log(data);
+      this.udata = data;
+      this.btnt="Continue";
+      this.isd = false;
+      if(data.responseCode=="49"){
+        this.class ="toast-failure";
+    
+      this.presentToast("Invalid Code!");
+      
+      }
+      else if(data.responseCode=="200"){
+       // this.class ="toast-success";
+        this.navCtrl.setRoot(HomePage);
+        
+      alert("Account Activated!");
+      }
+      else if(data.status=="02"){
+        this.class ="toast-failure";
+      alert("Access Denied!");
+      }
+      else{
+        this.class ="toast-success";
+        this.navCtrl.setRoot(HomePage);
+        
+      //this.presentToast("Access Granted!")
+      }
+      
+      //console.log(data);
+        });
+        */
     };
     AuthenticatePage.prototype.presentToast = function (msg) {
         var _this = this;
@@ -2879,8 +2966,8 @@ AuthenticatePage = __decorate([
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SettingsPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pages_changepassword_changepassword__ = __webpack_require__(116);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_editprofile_editprofile__ = __webpack_require__(117);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pages_changepassword_changepassword__ = __webpack_require__(112);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_editprofile_editprofile__ = __webpack_require__(113);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_storage__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_remote_service_remote_service__ = __webpack_require__(10);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -2928,7 +3015,7 @@ var SettingsPage = (function () {
 }());
 SettingsPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-settings',template:/*ion-inline-start:"/Users/DarkLord/genpay/src/pages/settings/settings.html"*/'<!--\n\n  Generated template for the SettingsPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>SETTINGS</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding class="getstart">\n\n\n\n  <ion-item  detail-push  color="#23aadb" class="listh" (click)="tochangepassword()" >\n\n    <font  color="#23aadb" >\n\n       <font class="bil"><b>Change Password</b></font>\n\n        \n\n    </font>\n\n    <br>\n\n    </ion-item>\n\n    <ion-item   detail-push  color="#23aadb" class="listh" (click)="toeditprofile()">\n\n        <font color="#23aadb">\n\n           <font class="bil"><b>Edit Profile</b></font>\n\n            \n\n        </font>\n\n        <br>\n\n        </ion-item>\n\n    \n\n</ion-content>\n\n'/*ion-inline-end:"/Users/DarkLord/genpay/src/pages/settings/settings.html"*/,
+        selector: 'page-settings',template:/*ion-inline-start:"/Users/DarkLord/genpay/src/pages/settings/settings.html"*/'<!--\n\n  Generated template for the SettingsPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>SETTINGS</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding class="getstkjjghart">\n\n\n\n  <ion-item  detail-push  color="#23aadb" class="listh" (click)="tochangepassword()" >\n\n    <font  color="#23aadb" >\n\n       <font class="bil"><b>Change Password</b></font>\n\n        \n\n    </font>\n\n    <br>\n\n    </ion-item>\n\n    <ion-item   detail-push  color="#23aadb" class="listh" (click)="toeditprofile()">\n\n        <font color="#23aadb">\n\n           <font class="bil"><b>Edit Profile</b></font>\n\n            \n\n        </font>\n\n        <br>\n\n        </ion-item>\n\n    \n\n</ion-content>\n\n'/*ion-inline-end:"/Users/DarkLord/genpay/src/pages/settings/settings.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */], __WEBPACK_IMPORTED_MODULE_4__ionic_storage__["b" /* Storage */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ToastController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_5__providers_remote_service_remote_service__["a" /* RemoteServiceProvider */]])
 ], SettingsPage);
@@ -2937,5 +3024,5 @@ SettingsPage = __decorate([
 
 /***/ })
 
-},[225]);
+},[226]);
 //# sourceMappingURL=main.js.map

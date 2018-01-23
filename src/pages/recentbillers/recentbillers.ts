@@ -8,6 +8,7 @@ import { AuthenticatePage } from '../../pages/authenticate/authenticate';
 import { HomePage } from '../../pages/home/home';
 import {BillerPage} from '../../pages/biller/biller';
 import { SettingsPage } from '../../pages/settings/settings';
+import { BillerRefPage } from '../billeref/billeref';
 import { RemoteServiceProvider } from '../../providers/remote-service/remote-service';
 //import { Pipe, PipeTransform } from '@angular/core';
 /**
@@ -52,8 +53,19 @@ snip2: boolean = false;
 
 recentacc(biller: any){
 console.log(biller)
-console.log(biller);
-
+this.storage.set('billeracc',biller.accountRef);
+  this.storage.set('ovat',biller.ova);
+  //console.log(account);
+  console.log(this.data);
+  //console.log(account.ova);
+  var passer ;
+  var dataa = [];
+  dataa.push(biller);
+  passer = {'r':1,'b':2,data: dataa};
+  console.log(passer);
+  this.navCtrl.push(BillerRefPage,{data : passer});
+//console.log(biller);
+/*
 let loading = this.loadingCtrl.create({
   content: 'Please wait...'
 });
@@ -84,6 +96,7 @@ this.remoteService.getPosts2(url,body).subscribe((data)=>{
   //console.log(data);
     });
 });
+*/
 }
 /*
 

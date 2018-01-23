@@ -13,10 +13,11 @@
 </ion-header>
 
 
-<ion-content  class="topbar" padding>
+<ion-content  class="topballlr" padding>
 
  <br>
-  <h1 text-center ><font color="#FFFFFF"class="app-font"><b>GENPAY</b></font></h1>
+  <h1 text-center ><font color="#23aadb"class="app-font"><b>PROFILE</b></font></h1>
+  <hr/>
   <br>
   <div class="topbar">
     <ion-item text-wrap >
@@ -37,6 +38,6 @@
 
 </ion-item>
 <br>
-<button   class="logb" [disabled]="isd" ion-button  (click)="addemail()">Add Email address</button>
+<button   class="logb" [disabled]="isd" [block]="true" ion-button  (click)="addemail()">Add Email address</button>
 
 </ion-content>

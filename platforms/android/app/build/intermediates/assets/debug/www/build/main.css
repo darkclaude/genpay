@@ -56977,6 +56977,17 @@ input {
   font-size: 20px;
 }
 
+page-changepassword ion-input {
+  text-align: center;
+  color: #000000;
+}
+
+page-changepassword input {
+  text-align: center;
+  color: #000000;
+  font-size: 30px;
+}
+
 .container {
   width: 100%;
 }
@@ -56994,6 +57005,17 @@ input {
 div {
   margin-left: auto;
   margin-right: auto;
+}
+
+ion-input {
+  text-align: center;
+  color: #000000;
+}
+
+input {
+  text-align: center;
+  color: #000000;
+  font-size: 30px;
 }
 
 .topbar {
@@ -57061,8 +57083,19 @@ input {
   width: 120px;
 }
 
+page-editprofile ion-input {
+  text-align: center;
+  color: #000000;
+}
+
 page-editprofile ion-input[type="email"] {
   font-size: 6px;
+}
+
+page-editprofile input {
+  text-align: center;
+  color: #000000;
+  font-size: 30px;
 }
 
 .div {
@@ -57114,6 +57147,17 @@ input {
   white-space: inherit;
   font-size: 40px;
   opacity: 0.7;
+}
+
+ion-input {
+  text-align: center;
+  color: #000000;
+}
+
+input {
+  text-align: center;
+  color: #000000;
+  font-size: 30px;
 }
 
 .app-font2 {

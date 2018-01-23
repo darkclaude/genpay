@@ -13,7 +13,7 @@
 </ion-header>
 
 
-<ion-content class="topbar" padding>
+<ion-content class="topbar72s7" padding>
 
     <ion-item>
        
@@ -23,7 +23,7 @@
 <ion-item  detail-push text-wrap class="listh" *ngFor="let d of data | search: sparam "  (click)="logdata(d)">
 <font color="#23aadb" >
    
-    <ion-icon  color="#23aadb"  style="padding-right: 10px" name="logo-buffer"></ion-icon> <b>{{d.merchantName}}</b></font>
+<b>{{d.merchantName}}</b></font>
 
 </ion-item>
 </div>
@@ -88,11 +88,12 @@
                     </ion-item>
                     <ion-item detail-push class="listh" (click)="air()">
                         <font color="#23aadb" >
-                            <ion-icon color="#23aadb"  style="padding-right: 10px" name="list"></ion-icon><font color="#23aadb"  class="bil"><b>>Airline</b></font>
+                            <ion-icon color="#23aadb"  style="padding-right: 10px" name="list"></ion-icon><font color="#23aadb"  class="bil"><b>Airline</b></font>
                             
                         </font>
                         
                         </ion-item>
+                        <!--
                         <ion-item detail-push class="listh" (click)="at()">
                             <font color="#23aadb" >
                                 <ion-icon color="#23aadb"  style="padding-right: 10px" name="list"></ion-icon><font color="#23aadb"  class="bil"><b>Airtime</b></font>
@@ -100,6 +101,7 @@
                             </font>
                             
                             </ion-item>
+                        -->
                         <ion-item detail-push class="listh" (click)="ins()">
                             <font color="#23aadb" >
                                 <ion-icon style="padding-right: 10px" name="list"></ion-icon><font color="#23aadb"  class="bil"><b>Insurance</b></font>

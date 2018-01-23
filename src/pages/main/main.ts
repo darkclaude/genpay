@@ -51,7 +51,7 @@ ins : any=[];
 ong: any=[];
 air: any=[];
 hc : any=[];
-
+rance: any=[];
 udata : any;
 phone : string='';
 btnt : string;
@@ -157,12 +157,14 @@ var s = 2;
     this.mch=[];
     this.ch=[];
     this.at=[];
+    this.rance=[];
  this.od=[];
      for(var i in this.udata.data){
      //  console.log(this.udata.data[i]);
        if(this.udata.data[i].category=="school"){
          this.sl.push(this.udata.data[i]);
        }
+       
       else if(this.udata.data[i].category=="utilities"){
         this.ut.push(this.udata.data[i]);
       }
@@ -180,16 +182,21 @@ var s = 2;
       }
       else if(this.udata.data[i].category=="healthcare"){
         this.hc.push(this.udata.data[i]);
-        console.log(this.hc);
+       // console.log(this.hc);
       }
       else if(this.udata.data[i].category=="internet"){
         this.it.push(this.udata.data[i]);
       }
-      else if(this.udata.data[i].category="oil_and_gas"){
+      else if(this.udata.data[i].category=="oil_and_gas"){
         this.ong.push(this.udata.data[i]);
       }
       else if(this.udata.data[i].category=="airline"){
         this.air.push(this.udata.data[i]);
+       // alert("Found 1");
+      }
+      else if(this.udata.data[i].category=="insurance"){
+        this.rance.push(this.udata.data[i]);
+       // alert("Found 1");
       }
       else if(this.udata.data[i].category=="ngos_and_foundations"){
         this.ngof.push(this.udata.data[i]);
@@ -208,6 +215,7 @@ var s = 2;
       }
       else{}
      }
+    
      this.storage.set('schoollist',JSON.stringify(this.sl));
      this.storage.set('financelist',JSON.stringify(this.fn));
      this.storage.set('governlist',JSON.stringify(this.ga));
@@ -223,6 +231,8 @@ var s = 2;
       this.storage.set('church',JSON.stringify(this.ch));
       this.storage.set('airtime',JSON.stringify(this.at));
       this.storage.set('others',JSON.stringify(this.od));
+      this.storage.set('insurance',JSON.stringify(this.rance));
+  ;
       this.storage.set('billerlist',JSON.stringify(this.udata));
       this.navCtrl.push("ProfilePage",{data : JSON.stringify(this.udata)});
    
@@ -262,11 +272,11 @@ torecentbillers(){
  // http://0.0.0.0:8000/api/user/{user_id}/payHistory/{month}
    
  this.storage.get('id').then((val) => {
-this.url="http://34.242.75.122/api/v1/recent/"+val;
+this.url="http://34.242.75.122/api/v1/billers/favorite";
 
   //alert(this.url);
-  var body = {}
-  this.remoteService.getPosts(this.url).subscribe((data)=>{
+  var body = {'user_id': val }
+  this.remoteService.getPosts2(this.url,body).subscribe((data)=>{
     console.log(data);
     loading.dismiss();
     this.udata = data;
@@ -279,7 +289,7 @@ this.url="http://34.242.75.122/api/v1/recent/"+val;
     }
    
     else{
-    alert("Sorry you dont have any Recent billers");
+    alert("Sorry you dont have any Favourite billers");
     }
     //console.log(data);
       });

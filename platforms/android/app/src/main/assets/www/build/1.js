@@ -1,6 +1,6 @@
 webpackJsonp([1],{
 
-/***/ 313:
+/***/ 317:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,8 +8,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ProfilePageModule", function() { return ProfilePageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__profile__ = __webpack_require__(322);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pipes_search_search__ = __webpack_require__(323);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__profile__ = __webpack_require__(324);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pipes_search_search__ = __webpack_require__(325);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -41,7 +41,7 @@ ProfilePageModule = __decorate([
 
 /***/ }),
 
-/***/ 322:
+/***/ 324:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -106,8 +106,13 @@ var ProfilePage = (function () {
         var _this = this;
         this.storage.get('governlist').then(function (val) {
             //  console.log(val)
-            //  this.data= JSON.parse(val);
-            _this.navCtrl.push("ProfilePageCat", { data: val });
+            //  this.data JSON.parse(val);
+            if (val == null || !(val.length > 0)) {
+                alert("No Merchants available at the moment");
+            }
+            else {
+                _this.navCtrl.push("ProfilePageCat", { data: val });
+            }
             // console.log(this.gdata);
         });
     };
@@ -115,7 +120,12 @@ var ProfilePage = (function () {
         var _this = this;
         this.storage.get('schoollist').then(function (val) {
             //  console.log(val)
-            _this.navCtrl.push("ProfilePageCat", { data: val });
+            if (val == null || !(val.length > 0)) {
+                alert("No Merchants available at the moment");
+            }
+            else {
+                _this.navCtrl.push("ProfilePageCat", { data: val });
+            }
             // console.log(this.gdata);
         });
     };
@@ -123,15 +133,25 @@ var ProfilePage = (function () {
         var _this = this;
         this.storage.get('financelist').then(function (val) {
             //  console.log(val)
-            _this.navCtrl.push("ProfilePageCat", { data: val });
-            // console.log(this.gdata);
+            if (val == null || !(val.length > 0)) {
+                alert("No Merchants available at the moment");
+            }
+            else {
+                _this.navCtrl.push("ProfilePageCat", { data: val });
+                // console.log(this.gdata);
+            }
         });
     };
     ProfilePage.prototype.bng = function () {
         var _this = this;
         this.storage.get('bettinggameslist').then(function (val) {
             //  console.log(val)
-            _this.navCtrl.push("ProfilePageCat", { data: val });
+            if (val == null || !(val.length > 0)) {
+                alert("No Merchants available at the moment");
+            }
+            else {
+                _this.navCtrl.push("ProfilePageCat", { data: val });
+            }
             // console.log(this.gdata);
         });
     };
@@ -139,7 +159,12 @@ var ProfilePage = (function () {
         var _this = this;
         this.storage.get('utilitylist').then(function (val) {
             //  console.log(val)
-            _this.navCtrl.push("ProfilePageCat", { data: val });
+            if (val == null || !(val.length > 0)) {
+                alert("No Merchants available at the moment");
+            }
+            else {
+                _this.navCtrl.push("ProfilePageCat", { data: val });
+            }
             // console.log(this.gdata);
         });
     };
@@ -147,15 +172,24 @@ var ProfilePage = (function () {
         var _this = this;
         this.storage.get('paytv').then(function (val) {
             //  console.log(val)
-            _this.navCtrl.push("ProfilePageCat", { data: val });
-            // console.log(this.gdata);
+            if (val == null || !(val.length > 0)) {
+                alert("No Merchants available at the moment");
+            }
+            else {
+                _this.navCtrl.push("ProfilePageCat", { data: val });
+            }
         });
     };
     ProfilePage.prototype.hc = function () {
         var _this = this;
         this.storage.get('healthcare').then(function (val) {
-            console.log(val);
-            _this.navCtrl.push("ProfilePageCat", { data: val });
+            //  console.log(val)
+            if (val == null || !(val.length > 0)) {
+                alert("No Merchants available at the moment");
+            }
+            else {
+                _this.navCtrl.push("ProfilePageCat", { data: val });
+            }
             // console.log(this.gdata);
         });
     };
@@ -163,7 +197,12 @@ var ProfilePage = (function () {
         var _this = this;
         this.storage.get('internet').then(function (val) {
             //  console.log(val)
-            _this.navCtrl.push("ProfilePageCat", { data: val });
+            if (val == null || !(val.length > 0)) {
+                alert("No Merchants available at the moment");
+            }
+            else {
+                _this.navCtrl.push("ProfilePageCat", { data: val });
+            }
             // console.log(this.gdata);
         });
     };
@@ -171,31 +210,52 @@ var ProfilePage = (function () {
         var _this = this;
         this.storage.get('airline').then(function (val) {
             //  console.log(val)
-            _this.navCtrl.push("ProfilePageCat", { data: val });
+            if (val == null || !(val.length > 0)) {
+                alert("No Merchants available at the moment");
+            }
+            else {
+                _this.navCtrl.push("ProfilePageCat", { data: val });
+            }
             // console.log(this.gdata);
         });
     };
     ProfilePage.prototype.at = function () {
         var _this = this;
         this.storage.get('airtime').then(function (val) {
-            //  console.log(val)
-            _this.navCtrl.push("ProfilePageCat", { data: val });
-            // console.log(this.gdata);
+            //alert(val)//console.log(val)
+            if (val == null || !(val.length > 0)) {
+                alert("No Merchants available at the moment");
+            }
+            else {
+                _this.navCtrl.push("ProfilePageCat", { data: val });
+                // console.log(this.gdata);
+            }
         });
     };
     ProfilePage.prototype.ins = function () {
         var _this = this;
         this.storage.get('insurance').then(function (val) {
             //  console.log(val)
-            _this.navCtrl.push("ProfilePageCat", { data: val });
-            // console.log(this.gdata);
+            if (val == null || !(val.length > 0)) {
+                alert("No Merchants available at the moment");
+            }
+            else {
+                _this.navCtrl.push("ProfilePageCat", { data: val });
+                // console.log(this.gdata);
+            }
         });
     };
     ProfilePage.prototype.ong = function () {
         var _this = this;
         this.storage.get('oilgas').then(function (val) {
             //  console.log(val)
-            _this.navCtrl.push("ProfilePageCat", { data: val });
+            if (val == null || !(val.length > 0)) {
+                alert("No Merchants available at the moment");
+            }
+            else {
+                _this.navCtrl.push("ProfilePageCat", { data: val });
+                // console.log(this.gdata);
+            }
             // console.log(this.gdata);
         });
     };
@@ -203,7 +263,13 @@ var ProfilePage = (function () {
         var _this = this;
         this.storage.get('ngof').then(function (val) {
             //  console.log(val)
-            _this.navCtrl.push("ProfilePageCat", { data: val });
+            if (val == null || !(val.length > 0)) {
+                alert("No Merchants available at the moment");
+            }
+            else {
+                _this.navCtrl.push("ProfilePageCat", { data: val });
+                // console.log(this.gdata);
+            }
             // console.log(this.gdata);
         });
     };
@@ -211,7 +277,13 @@ var ProfilePage = (function () {
         var _this = this;
         this.storage.get('church').then(function (val) {
             //  console.log(val)
-            _this.navCtrl.push("ProfilePageCat", { data: val });
+            if (val == null || !(val.length > 0)) {
+                alert("No Merchants available at the moment");
+            }
+            else {
+                _this.navCtrl.push("ProfilePageCat", { data: val });
+                // console.log(this.gdata);
+            }
             // console.log(this.gdata);
         });
     };
@@ -219,7 +291,13 @@ var ProfilePage = (function () {
         var _this = this;
         this.storage.get('merchants').then(function (val) {
             //  console.log(val)
-            _this.navCtrl.push("ProfilePageCat", { data: val });
+            if (val == null || !(val.length > 0)) {
+                alert("No Merchants available at the moment");
+            }
+            else {
+                _this.navCtrl.push("ProfilePageCat", { data: val });
+                // console.log(this.gdata);
+            }
             // console.log(this.gdata);
         });
     };
@@ -227,7 +305,13 @@ var ProfilePage = (function () {
         var _this = this;
         this.storage.get('others').then(function (val) {
             //  console.log(val)
-            _this.navCtrl.push("ProfilePageCat", { data: val });
+            if (val == null || !(val.length > 0)) {
+                alert("No Merchants available at the moment");
+            }
+            else {
+                _this.navCtrl.push("ProfilePageCat", { data: val });
+                // console.log(this.gdata);
+            }
             // console.log(this.gdata);
         });
     };
@@ -278,7 +362,7 @@ var ProfilePage = (function () {
 }());
 ProfilePage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-profile',template:/*ion-inline-start:"/Users/DarkLord/genpay/src/pages/profile/profile.html"*/'<!--\n\n  Generated template for the ProfilePage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n    <ion-navbar>\n\n    <ion-title>BILLERS </ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content class="topbar" padding>\n\n\n\n    <ion-item>\n\n       \n\n        <ion-searchbar class="low" [(ngModel)]= "sparam" placeholder="Search Billers" (ngModelChange)="searchchanged($event)" type="text" value=""></ion-searchbar>\n\n      </ion-item>\n\n      <div *ngIf="snip2">\n\n<ion-item  detail-push text-wrap class="listh" *ngFor="let d of data | search: sparam "  (click)="logdata(d)">\n\n<font color="#23aadb" >\n\n   \n\n    <ion-icon  color="#23aadb"  style="padding-right: 10px" name="logo-buffer"></ion-icon> <b>{{d.merchantName}}</b></font>\n\n\n\n</ion-item>\n\n</div>\n\n\n\n<div *ngIf="snip">\n\n    <ion-item detail-push class="listh" (click)="ga()">\n\n    <font color="#23aadb"  >\n\n        <ion-icon   color="#23aadb"  style="padding-right: 10px" name="list"></ion-icon><font color="#23aadb"  class="bil"><b>Government Agencies</b></font>\n\n        \n\n    </font>\n\n    \n\n    </ion-item>\n\n    <ion-item detail-push class="listh" (click)="ut()">\n\n        <font  color="#23aadb" >\n\n            <ion-icon style="padding-right: 10px" name="list"></ion-icon><font color="#23aadb" class="bil"><b>Utilities</b></font>\n\n            \n\n        </font>\n\n        \n\n        </ion-item>\n\n        <ion-item detail-push class="listh" (click)="bng()" >\n\n            <font color="#23aadb"  >\n\n                <ion-icon  color="#23aadb"  style="padding-right: 10px" name="list"></ion-icon><font  color="#23aadb"  class="bil"><b>Betting & Gaming</b></font>\n\n                \n\n            </font>\n\n            \n\n            </ion-item>\n\n            <ion-item detail-push class="listh" (click)="fn()">\n\n                <font color="#23aadb"  >\n\n                    <ion-icon style="padding-right: 10px" name="list"></ion-icon><font color="#23aadb"  class="bil"><b>Finance</b></font>\n\n                    \n\n                </font>\n\n\n\n                \n\n                </ion-item>\n\n    <ion-item detail-push class="listh" (click)="pt()">\n\n        <font color="#23aadb"  >\n\n            <ion-icon style="padding-right: 10px" name="list"></ion-icon><font color="#23aadb" class="bil"><b>PayTv</b></font>\n\n            \n\n        </font>\n\n        \n\n        </ion-item>\n\n        <ion-item detail-push class="listh" (click)="sl()">\n\n            <font color="#23aadb"  >\n\n                <ion-icon style="padding-right: 10px" name="list"></ion-icon><font color="#23aadb" class="bil" ><b>Schools</b></font>\n\n                \n\n            </font>\n\n            \n\n            </ion-item>\n\n            <ion-item detail-push class="listh" (click)="hc()">\n\n                <font color="#23aadb"  >\n\n                    <ion-icon color="#23aadb"  style="padding-right: 10px" name="list"></ion-icon><font color="#23aadb" class="bil"><b>Healthcare</b></font>\n\n                    \n\n                </font>\n\n                \n\n                </ion-item>\n\n                <ion-item detail-push class="listh" (click)="it()">\n\n                    <font color="#23aadb"  >\n\n                        <ion-icon color="#23aadb"  style="padding-right: 10px" name="list"></ion-icon><font olor="#23aadb" class="bil"><b>Internet</b></font>\n\n                        \n\n                    </font>\n\n                    \n\n                    </ion-item>\n\n                    <ion-item detail-push class="listh" (click)="air()">\n\n                        <font color="#23aadb" >\n\n                            <ion-icon color="#23aadb"  style="padding-right: 10px" name="list"></ion-icon><font color="#23aadb"  class="bil"><b>>Airline</b></font>\n\n                            \n\n                        </font>\n\n                        \n\n                        </ion-item>\n\n                        <ion-item detail-push class="listh" (click)="at()">\n\n                            <font color="#23aadb" >\n\n                                <ion-icon color="#23aadb"  style="padding-right: 10px" name="list"></ion-icon><font color="#23aadb"  class="bil"><b>Airtime</b></font>\n\n                                \n\n                            </font>\n\n                            \n\n                            </ion-item>\n\n                        <ion-item detail-push class="listh" (click)="ins()">\n\n                            <font color="#23aadb" >\n\n                                <ion-icon style="padding-right: 10px" name="list"></ion-icon><font color="#23aadb"  class="bil"><b>Insurance</b></font>\n\n                                \n\n                            </font>\n\n                            \n\n                            </ion-item>\n\n                            <ion-item detail-push class="listh" (click)="ong()">\n\n                                <font color="#23aadb" >\n\n                                    <ion-icon color="#23aadb"   style="padding-right: 10px" name="list"></ion-icon><font color="#23aadb"  class="bil"><b>Oil and Gas</b></font>\n\n                                    \n\n                                </font>\n\n                                \n\n                                </ion-item>\n\n                                <ion-item  detail-push class="listh" (click)="ngo()">\n\n                                    <font color="#23aadb" >\n\n                                        <ion-icon style="padding-right: 10px" name="list"></ion-icon><font class="bil"><b>NGO Foundations</b></font>\n\n                                        \n\n                                    </font>\n\n                                    \n\n                                    </ion-item>\n\n                                    <ion-item detail-push  class="listh" (click)="ch()">\n\n                                        <font color="#23aadb" >\n\n                                            <ion-icon style="padding-right: 10px" name="list"></ion-icon><font class="bil"><b>Church</b></font>\n\n                                            \n\n                                        </font>\n\n                                        \n\n                                        </ion-item>\n\n                                        <ion-item detail-push class="listh" (click)="mcn()">\n\n                                            <font color="#23aadb"  >\n\n                                                <ion-icon style="padding-right: 10px" name="list"></ion-icon><font class="bil"><b>General Merchants</b></font>\n\n                                                \n\n                                            </font>\n\n                                            \n\n                                            </ion-item>\n\n                                    <ion-item detail-push class="listh" (click)="od()">\n\n                                        <font color="#23aadb" >\n\n                                            <ion-icon style="padding-right: 10px" name="list"></ion-icon><font class="bil"><b>Other</b> </font>\n\n                                            \n\n                                        </font>\n\n                                    \n\n                                        </ion-item>\n\n    </div>\n\n</ion-content>\n\n'/*ion-inline-end:"/Users/DarkLord/genpay/src/pages/profile/profile.html"*/,
+        selector: 'page-profile',template:/*ion-inline-start:"/Users/DarkLord/genpay/src/pages/profile/profile.html"*/'<!--\n\n  Generated template for the ProfilePage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n    <ion-navbar>\n\n    <ion-title>BILLERS </ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content class="topbar72s7" padding>\n\n\n\n    <ion-item>\n\n       \n\n        <ion-searchbar class="low" [(ngModel)]= "sparam" placeholder="Search Billers" (ngModelChange)="searchchanged($event)" type="text" value=""></ion-searchbar>\n\n      </ion-item>\n\n      <div *ngIf="snip2">\n\n<ion-item  detail-push text-wrap class="listh" *ngFor="let d of data | search: sparam "  (click)="logdata(d)">\n\n<font color="#23aadb" >\n\n   \n\n<b>{{d.merchantName}}</b></font>\n\n\n\n</ion-item>\n\n</div>\n\n\n\n<div *ngIf="snip">\n\n    <ion-item detail-push class="listh" (click)="ga()">\n\n    <font color="#23aadb"  >\n\n        <ion-icon   color="#23aadb"  style="padding-right: 10px" name="list"></ion-icon><font color="#23aadb"  class="bil"><b>Government Agencies</b></font>\n\n        \n\n    </font>\n\n    \n\n    </ion-item>\n\n    <ion-item detail-push class="listh" (click)="ut()">\n\n        <font  color="#23aadb" >\n\n            <ion-icon style="padding-right: 10px" name="list"></ion-icon><font color="#23aadb" class="bil"><b>Utilities</b></font>\n\n            \n\n        </font>\n\n        \n\n        </ion-item>\n\n        <ion-item detail-push class="listh" (click)="bng()" >\n\n            <font color="#23aadb"  >\n\n                <ion-icon  color="#23aadb"  style="padding-right: 10px" name="list"></ion-icon><font  color="#23aadb"  class="bil"><b>Betting & Gaming</b></font>\n\n                \n\n            </font>\n\n            \n\n            </ion-item>\n\n            <ion-item detail-push class="listh" (click)="fn()">\n\n                <font color="#23aadb"  >\n\n                    <ion-icon style="padding-right: 10px" name="list"></ion-icon><font color="#23aadb"  class="bil"><b>Finance</b></font>\n\n                    \n\n                </font>\n\n\n\n                \n\n                </ion-item>\n\n    <ion-item detail-push class="listh" (click)="pt()">\n\n        <font color="#23aadb"  >\n\n            <ion-icon style="padding-right: 10px" name="list"></ion-icon><font color="#23aadb" class="bil"><b>PayTv</b></font>\n\n            \n\n        </font>\n\n        \n\n        </ion-item>\n\n        <ion-item detail-push class="listh" (click)="sl()">\n\n            <font color="#23aadb"  >\n\n                <ion-icon style="padding-right: 10px" name="list"></ion-icon><font color="#23aadb" class="bil" ><b>Schools</b></font>\n\n                \n\n            </font>\n\n            \n\n            </ion-item>\n\n            <ion-item detail-push class="listh" (click)="hc()">\n\n                <font color="#23aadb"  >\n\n                    <ion-icon color="#23aadb"  style="padding-right: 10px" name="list"></ion-icon><font color="#23aadb" class="bil"><b>Healthcare</b></font>\n\n                    \n\n                </font>\n\n                \n\n                </ion-item>\n\n                <ion-item detail-push class="listh" (click)="it()">\n\n                    <font color="#23aadb"  >\n\n                        <ion-icon color="#23aadb"  style="padding-right: 10px" name="list"></ion-icon><font olor="#23aadb" class="bil"><b>Internet</b></font>\n\n                        \n\n                    </font>\n\n                    \n\n                    </ion-item>\n\n                    <ion-item detail-push class="listh" (click)="air()">\n\n                        <font color="#23aadb" >\n\n                            <ion-icon color="#23aadb"  style="padding-right: 10px" name="list"></ion-icon><font color="#23aadb"  class="bil"><b>Airline</b></font>\n\n                            \n\n                        </font>\n\n                        \n\n                        </ion-item>\n\n                        <!--\n\n                        <ion-item detail-push class="listh" (click)="at()">\n\n                            <font color="#23aadb" >\n\n                                <ion-icon color="#23aadb"  style="padding-right: 10px" name="list"></ion-icon><font color="#23aadb"  class="bil"><b>Airtime</b></font>\n\n                                \n\n                            </font>\n\n                            \n\n                            </ion-item>\n\n                        -->\n\n                        <ion-item detail-push class="listh" (click)="ins()">\n\n                            <font color="#23aadb" >\n\n                                <ion-icon style="padding-right: 10px" name="list"></ion-icon><font color="#23aadb"  class="bil"><b>Insurance</b></font>\n\n                                \n\n                            </font>\n\n                            \n\n                            </ion-item>\n\n                            <ion-item detail-push class="listh" (click)="ong()">\n\n                                <font color="#23aadb" >\n\n                                    <ion-icon color="#23aadb"   style="padding-right: 10px" name="list"></ion-icon><font color="#23aadb"  class="bil"><b>Oil and Gas</b></font>\n\n                                    \n\n                                </font>\n\n                                \n\n                                </ion-item>\n\n                                <ion-item  detail-push class="listh" (click)="ngo()">\n\n                                    <font color="#23aadb" >\n\n                                        <ion-icon style="padding-right: 10px" name="list"></ion-icon><font class="bil"><b>NGO Foundations</b></font>\n\n                                        \n\n                                    </font>\n\n                                    \n\n                                    </ion-item>\n\n                                    <ion-item detail-push  class="listh" (click)="ch()">\n\n                                        <font color="#23aadb" >\n\n                                            <ion-icon style="padding-right: 10px" name="list"></ion-icon><font class="bil"><b>Church</b></font>\n\n                                            \n\n                                        </font>\n\n                                        \n\n                                        </ion-item>\n\n                                        <ion-item detail-push class="listh" (click)="mcn()">\n\n                                            <font color="#23aadb"  >\n\n                                                <ion-icon style="padding-right: 10px" name="list"></ion-icon><font class="bil"><b>General Merchants</b></font>\n\n                                                \n\n                                            </font>\n\n                                            \n\n                                            </ion-item>\n\n                                    <ion-item detail-push class="listh" (click)="od()">\n\n                                        <font color="#23aadb" >\n\n                                            <ion-icon style="padding-right: 10px" name="list"></ion-icon><font class="bil"><b>Other</b> </font>\n\n                                            \n\n                                        </font>\n\n                                    \n\n                                        </ion-item>\n\n    </div>\n\n</ion-content>\n\n'/*ion-inline-end:"/Users/DarkLord/genpay/src/pages/profile/profile.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */], __WEBPACK_IMPORTED_MODULE_4__providers_remote_service_remote_service__["a" /* RemoteServiceProvider */], __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ToastController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]])
 ], ProfilePage);
@@ -287,7 +371,7 @@ ProfilePage = __decorate([
 
 /***/ }),
 
-/***/ 323:
+/***/ 325:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

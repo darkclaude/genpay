@@ -74,7 +74,8 @@ alert("Code has been Resent");
    
      this.url="http://34.242.75.122/api/v1/verifyCode";
      //alert(this.url);
-     var body = {'code': this.code,'phoneNumber':this.data.toString() }
+     
+     var body = {'code': this.code,'phoneNumber':this.data }
      this.remoteService.getPosts2(this.url,body).subscribe((data)=>{
       console.log(data);
       this.udata = data;
