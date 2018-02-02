@@ -13,17 +13,17 @@
 </ion-header>
 
 
-<ion-content padding class="getstart">
+<ion-content padding class="gedsfststart">
   
       <br><br>
 
-       <ion-item transparent>
-        <ion-label floating><font color="white">Enter Confirmation Code</font></ion-label>
+       <ion-item >
+        <ion-label floating><font color="#23abdc">Enter Confirmation Code</font></ion-label>
        <ion-input type="text"  class="btnp" [(ngModel)]="code" name="title"></ion-input>
        
        </ion-item>
        <br>
-       <button   class="logb" [disabled]="isd" ion-button  (click)="forgot()">Recover</button>
+       <button   class="logb" [disabled]="isd" ion-button color="secondary" (click)="forgot()">Recover</button>
        
       
 </ion-content>

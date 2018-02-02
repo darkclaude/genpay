@@ -18,7 +18,7 @@ import { Forgot2Page } from '../forgot2/forgot2';
 
 @IonicPage()
 @Component({
-
+  selector: 'page-forgot',
   templateUrl: 'forgot.html',
 })
 export class ForgotPage {

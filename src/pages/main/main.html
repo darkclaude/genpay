@@ -29,8 +29,9 @@
 <!--<ion-item-divider text-center class="bilh" color="#1fb8ffea">  <font text-center color="#ffffff" class="app-font"><b text-center>MENU</b></font></ion-item-divider>-->
 <div class="menud">
  
-      <ion-item  id="rounded" class="topbarm" (click)="torecentbillers()" >
+      <ion-item  id="rounded" class="topbarm" (click)="torecentbillers()" *ngIf="hasfb">
         
+    
       <font color="#FFFFF"  style="size: 20px">
         <font ><ion-icon  style="padding-right: 10px" name="clipboard"></ion-icon></font><font    class="bil"><b>Favourite Billers</b></font>
     

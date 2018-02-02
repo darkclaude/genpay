@@ -16,8 +16,8 @@
 <ion-content class="topbar72s7" padding>
 
     <ion-item>
-       
-        <ion-searchbar class="low" [(ngModel)]= "sparam" placeholder="Search Billers" (ngModelChange)="searchchanged($event)" type="text" value=""></ion-searchbar>
+     
+        <ion-searchbar class="low" [(ngModel)]= "sparam" (ngModelChange)="searchchanged($event)" type="text" value=""></ion-searchbar>
       </ion-item>
       <div *ngIf="snip2">
 <ion-item  detail-push text-wrap class="listh" *ngFor="let d of data | search: sparam "  (click)="logdata(d)">

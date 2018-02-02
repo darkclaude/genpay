@@ -33,6 +33,7 @@ ut : any=[];
 bng : any=[];
 rt: any=[];
 pt: any=[];
+hasfb: boolean= true;
 options : any= {
   message:'',
   duration: 1000,
@@ -58,7 +59,11 @@ btnt : string;
 url : string;
 
   constructor(private oneSignal: OneSignal,private loadingCtrl: LoadingController ,private navParams: NavParams,public storage: Storage,private toastCtrl : ToastController ,private navCtrl: NavController,private remoteService : RemoteServiceProvider) {
-  try{
+  
+    this.storage.get('favbill').then((val) => {
+     this.hasfb = val;
+     });
+    try{
     
     this.storage.get('id').then((val) => {
       this.url="http://34.242.75.122/api/v1/pushToken";

@@ -38,24 +38,24 @@ rootPage:any = HomePage;
       //  .handleNotificationOpened(this.notificationOpenedCallback)
       //  .endInit();
     
-      fcm.onNotification().subscribe(data=>{
-        if(data.wasTapped){
-          console.log("Received in background");
-        } else {
-          console.log("Received in foreground");
-        };
-      })
-      
-      fcm.onTokenRefresh().subscribe(token=>{
-     //   backend.registerToken(token);
-      })
+   
       try {
         fcm.getToken().then(token=>{
        //   backend.registerToken(token);
         })
         
       
+        fcm.onNotification().subscribe(data=>{
+          if(data.wasTapped){
+            console.log("Received in background");
+          } else {
+            console.log("Received in foreground");
+          };
+        })
         
+        fcm.onTokenRefresh().subscribe(token=>{
+       //   backend.registerToken(token);
+        })
       /*
       //this.oneSignal.startInit('4975cd1d-9d10-41c8-9cda-c5852513ab7f', '347536568651');
       this.oneSignal.startInit('82928709-50f8-4861-830f-a57f718bb3f7', '813645120142');

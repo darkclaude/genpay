@@ -97,6 +97,7 @@ if(data.responseCode== "200"){
   this.storage.set('lastname',this.udata.data.lastName);
  this.storage.set('email',this.udata.data.email);
   this.storage.set('id',this.udata.data.id);
+  this.storage.set('favbill',this.udata.data.favoriteBiller)
   this.storage.set('apikey',this.udata.data.api_token);
   this.options.duration=1;
   this.options.cssClass= this.class;

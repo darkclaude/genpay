@@ -9,13 +9,17 @@ page-profile {
     background-color: #ffffff;
     opacity: 0.92;
 }
+
 .listh:hover {
     background-color: #ccd4e2;
 }
 ion-searchbar{
     width: 100%;
-
+    
+    //input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
 }
+//ion-searchbar:focus 
+
 
 .app-font{
     white-space: inherit;
